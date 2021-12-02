@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+
+        <record id="view_school_company_form" model="ir.ui.view">
+            <field name="name">e.school.company.form</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                 <xpath expr="//field[@name='name']" position="before">
+        		<div class="oe_button_box" name="button_box">
+
+
+                    <button type="object"
+                        name="action_view_student"
+                        class="oe_stat_button"
+		                icon="fa-users"
+                        >
+                        <field name="student_count" widget="statinfo" string="Students"/>
+                    </button>
+		       </div>
+                </xpath>
+
+		<xpath expr="//form/sheet/notebook/page" position="before">
+                       <page string="School Data" name="school_data">
+                           <group >
+                           <group >
+                             <field name="ministerial_number"  />
+                             <field name="school_type"  />
+                             <field name="period"  />
+
+                           </group>
+                           <group >
+                             <field name="phone"  />
+                             <field name="education_type"  />
+                             <field name="building_type"  />
+                           </group>
+                           </group >
+                     </page>
+		   </xpath>
+		<xpath expr="//form/sheet/notebook/page" position="after">
+
+                    <page string="Emplotees Data" name="employees">
+                           <group >
+                             <field name="manager_id"  />
+                             <field name="fund_officer"  />
+                             <field name="student_advisor"  />
+                           </group >
+                    </page>
+
+		   </xpath>
+
+            </field>
+        </record>
+
+
+        <record id="view_school_tree" model="ir.ui.view">
+            <field name="name">e.school.tree</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_tree"/>
+            <field name="arch" type="xml">
+		<xpath expr="//field[@name='partner_id']" position="replace">
+                             <field name="ministerial_number"  />
+                             <field name="school_type"/>
+                             <field name="education_type"  />
+		             
+		   </xpath>
+            </field>
+        </record>
+
+
+
+        <menuitem id="menu_school_company_form" parent="wallet_transaction_menu" name="Schools" sequence="2" action="base.action_res_company_form" />
+
+<!-- ____________________________________________________________________________________________________ -->
+
+
+        <record id="view_school_type_form" model="ir.ui.view">
+            <field name="name">e.school.type.form</field>
+            <field name="model">school.type</field>
+            <field name="arch" type="xml">
+                <form string="School type">
+                <header>
+                </header>
+                   <sheet>
+                           <group >
+                           <group >
+                             <field name="name"  />
+                             <field name="limit"  />
+                           </group>
+                           </group >
+                
+		   </sheet>
+               </form>
+            </field>
+        </record>
+        <record id="view_school_type_tree" model="ir.ui.view">
+            <field name="name">e.school.type.tree</field>
+            <field name="model">school.type</field>
+            <field name="arch" type="xml">
+                <tree string="School type">
+                             <field name="name"  />
+                             <field name="limit"/>
+		             
+               </tree>
+            </field>
+        </record>
+        <record id="action_school_type_form" model="ir.actions.act_window">
+            <field name="name">School type</field>
+            <field name="res_model">school.type</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="menu_school_type_form" parent="wallet_transaction_menu" name="School Type" sequence="4" action="action_school_type_form" />
+
+
+
+<!-- ____________________________________________________________________________________________________ -->
+
+
+        <record id="view_class_room_form" model="ir.ui.view">
+            <field name="name">e.class.room.form</field>
+            <field name="model">class.room</field>
+            <field name="arch" type="xml">
+                <form string="class room">
+                <header>
+                </header>
+                   <sheet>
+                           <group >
+                           <group >
+                             <field name="name"  />
+                           </group>
+                           </group >
+                
+		   </sheet>
+               </form>
+            </field>
+        </record>
+        <record id="view_class_room_tree" model="ir.ui.view">
+            <field name="name">e.class.room.tree</field>
+            <field name="model">class.room</field>
+            <field name="arch" type="xml">
+                <tree string="class_room">
+                             <field name="name"  />
+
+		             
+               </tree>
+            </field>
+        </record>
+        <record id="action_class_room_form" model="ir.actions.act_window">
+            <field name="name">class room</field>
+            <field name="res_model">class.room</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="menu_class_room_form" parent="wallet_transaction_menu" name="Class Room" sequence="4" action="action_class_room_form" />
+
+
+  <!-- _____________________________________________________________________________________________________ -->
+
+
+        <record id="view_students_need_form" model="ir.ui.view">
+            <field name="name">students.need.form</field>
+            <field name="model">students.need</field>
+            <field name="arch" type="xml">
+                <form string="students need">
+                <header>
+ 
+		<button name="confirm_action" type="object" string="Confirm" attrs="{'invisible': [ ('state', '=', 'confirmed')]}"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,confirmed"/>
+                </header>
+                   <sheet>
+
+
+
+                           <group >
+                           <group >
+                             <field name="date"  />
+                           </group>
+                           </group >
+                
+                    <notebook>
+                        <page name="students" string="Students">
+                                <field name="students_ids" nolabel="1">
+                                    <tree editable="bottom">
+                                               <field name="name"  />
+                                    </tree>
+                                </field>
+                        </page>
+		   </notebook>
+
+		   </sheet>
+               </form>
+            </field>
+        </record>
+        <record id="view_students_need_tree" model="ir.ui.view">
+            <field name="name">students.need.tree</field>
+            <field name="model">students.need</field>
+            <field name="arch" type="xml">
+                <tree string="students need">
+                             <field name="date"  />
+                             <field name="state"  />
+
+		             
+               </tree>
+            </field>
+        </record>
+        <record id="action_students_need_form" model="ir.actions.act_window">
+            <field name="name">students need</field>
+            <field name="res_model">students.need</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="menu_students_need_form" parent="wallet_transaction_menu" name="Students need"  action="action_students_need_form" />
+
+
+
+
+ <!-- _____________________________________________________________________________________________________ -->
+
+         <record id="school_calendar_calendar" model="ir.ui.view">
+            <field name="name">school.calendar.calendar</field>
+            <field name="model">school.calendar</field>
+            <field eval="2" name="priority"/>
+            <field name="arch" type="xml">
+                <calendar color="day_type" date_start="date_start" date_stop="date_stop" >
+                    <field name="day_type"/>
+                    
+                </calendar>
+            </field>
+        </record>
+
+
+
+        
+
+        
+
+        <record id="view_students_calendar_form" model="ir.ui.view">
+            <field name="name">school.calendar.form</field>
+            <field name="model">school.calendar</field>
+            <field name="arch" type="xml">
+                <form string="students calendar">
+               
+                   <sheet>
+
+
+
+                           <group >
+                           <group >
+                              <field name="date_start"  />
+                              <field name="date_stop"  invisible="1"/>
+                             <field name="semester_id"  />
+                             <field name="day_type"  />
+                             <field name="school_id"  />
+                           </group>
+                           </group >
+             
+
+		   </sheet>
+               </form>
+            </field>
+        </record>
+        <record id="view_students_calendar_tree" model="ir.ui.view">
+            <field name="name">school.calendar.tree</field>
+            <field name="model">school.calendar</field>
+            <field name="arch" type="xml">
+                <tree string="students need">
+                              <field name="date_start"  />
+
+                             <field name="day_type"  />
+                             <field name="school_id"  />
+		             
+               </tree>
+            </field>
+        </record>
+        <record id="action_students_calendar_form" model="ir.actions.act_window">
+            <field name="name">students calendar</field>
+            <field name="res_model">school.calendar</field>
+            <field name="view_mode">calendar,tree,form</field>
+
+        </record>
+        <menuitem id="menu_students_calendar_form" parent="wallet_transaction_menu" name="Student calendar"  action="action_students_calendar_form" />
+
+</odoo>
+
+

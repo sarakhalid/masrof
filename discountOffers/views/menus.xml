@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<!-- Menu items hierachy -->
+	    <menuitem id="menu_sale_sale_offer_id" name="Disscout Offer " parent="sale.sale_menu_root" action="discountOffers.discount_offer_view_action" sequence="2" />
+
+<!--	    <menuitem id="menu_sale_sale_offer_id" name="Disscout Offer " action="discountOffers.discount_offer_view_action" sequence="2" />-->
+
+
+
+
+
+</odoo>

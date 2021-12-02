@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_brand_stock_user,product.brand.stock.user,bi_product_brand.model_product_brand,stock.group_stock_user,1,0,0,0
+access_product_brand_stock_manager,product.brand.stock.manager,bi_product_brand.model_product_brand,stock.group_stock_manager,1,1,1,1
+access_product_brand_stock_portal,product.brand.stock.portal,bi_product_brand.model_product_brand,base.group_portal,1,0,0,0
+access_product_brand_stock_public,product.brand.stock.public,bi_product_brand.model_product_brand,base.group_public,1,0,0,0

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+
+        <record id="view_contract_form" model="ir.ui.view">
+            <field name="name">e.contract.form</field>
+            <field name="model">contract.contract</field>
+            <field name="arch" type="xml">
+                <form string="contract">
+                <header>
+			<button name="action_confirm" id="action_confirm"
+                        string="Confirm" class="btn-primary" type="object"
+                        attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+
+
+			<button name="action_approve" id="action_approve"
+                        string="Approve" class="btn-primary" type="object"
+                        attrs="{'invisible': [('state', '!=', 'confirmed')]}"/>
+                    
+                    <field name="state" widget="statusbar" statusbar_visible="draft,confirmed,approved"/>
+
+                </header>
+                   <sheet>
+
+
+                    <!--div class="oe_button_box" name="button_box">
+                    <button type="object"
+                        name="action_view_transactions"
+                        class="oe_stat_button"
+                        icon="fa-briefcase"
+                        >
+                        <field name="transactions_count" widget="statinfo" string="Total Amount"/>
+                    </button>
+                  </div-->
+                           <group >
+
+                             <field name="contract_no"  />
+                             <field name="date"  />
+                           </group>
+                           <group >
+                           <group >
+                             <field name="school"  />
+                             <field name="start_date"  />
+                             <field name="num_of_students"  />
+                             <field name="contract_type"  />
+                             <field name="calculation_method"  />
+                             <field name="attachment_id"  />
+                           </group>
+                           <group >
+                             <field name="canteen"  />
+                             <field name="end_date"  />
+		             <field name="num_of_months"  />
+                             <field name="student_rental_price"  />
+                             <field name="education_ratio"  />  
+                           </group>
+                           </group>
+
+
+                <notebook colspan="4">
+                    <page string="Accounts" name="accounts">
+		       <group >
+		       <group >
+                             <field name="monthly_rent"  />
+                             <field name="annual_rent"  />
+                             <field name="education_fund_ratio"  />
+                             <field name="tax"  />
+                             <field name="the_monthly_rent"  />
+                       </group>
+                       </group>
+                    </page>
+		</notebook>
+
+
+		   </sheet>
+               </form>
+            </field>
+        </record>
+
+
+        <record id="view_contract_tree" model="ir.ui.view">
+            <field name="name">e.contract.tree</field>
+            <field name="model">contract.contract</field>
+            <field name="arch" type="xml">
+                <tree string="contract">
+				 <field name="school"  />
+                             <field name="num_of_students"  />
+                             <field name="canteen"  />
+		             <field name="num_of_months"  />
+		             
+               </tree>
+            </field>
+        </record>
+
+        <record id="action_contract_form" model="ir.actions.act_window">
+            <field name="name">contract</field>
+            <field name="res_model">contract.contract</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <menuitem id="menu_root_contract"  parent="e_wallet_root_menu" name="Contracts" sequence="6"  />
+        <menuitem id="menu_contract"  parent="menu_root_contract" name="Contract" sequence="1" action="action_contract_form" />
+        
+      
+
+</odoo>
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="acquirer_form_hyperpay" model="ir.ui.view">
+            <field name="name">acquirer.form.hyperpay</field>
+            <field name="model">payment.acquirer</field>
+            <field name="inherit_id" ref="payment.acquirer_form"/>
+            <field name="arch" type="xml">
+                <xpath expr='//group[@name="acquirer"]' position='after'>
+                    <group attrs="{'invisible': [('provider', '!=', 'hyperpay')]}">
+                        <field name="hyperpay_merchant_id"/>
+                        <field name="hyperpay_authorization"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

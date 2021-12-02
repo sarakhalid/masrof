@@ -1,0 +1,61 @@
+<!-- <?xml version="1.0" encoding="utf-8"?> -->
+<odoo>
+     <record id="discount_offer_view_form" model="ir.ui.view">
+        <field name="name">discount.offer.form</field>
+        <field name="model">discount.offer</field>
+        <field name="arch" type="xml">
+            <form string="Discount Offer">
+                <header>
+                    <button name="run" states="draft" string="Run" type="object" class="oe_highlight"/>
+                     <field name="state" widget='statusbar'/>
+                </header>
+                <sheet>
+                    <group>
+                            <field name="name"/>
+                    </group>
+                    <group>
+
+                         <group>
+                            <field name="product_id" options="{'no_quick_create': True, 'no_create_edit' : True}"  attrs="{'readonly':[('state','!=','draft')]}"/>
+                             <field name="pricelist_id" options="{'no_quick_create': True, 'no_create_edit' : True}"  attrs="{'readonly':[('state','!=','draft')]}"/>
+                             <field name="typeoffer"  attrs="{'readonly':[('state','!=','draft')]}"/>
+                             <field name="min_quantity"  attrs="{'readonly':[('state','!=','draft')]}"/>
+                        </group>
+                         <group>
+                            <field name="percent_price" attrs="{'invisible': [('typeoffer','!=','percentage')],'required':[('typeoffer','=','percentage')],'readonly':[('state','!=','draft')]}"/>
+                             <field name="fixed_price" attrs="{'invisible': [('typeoffer','=','percentage')],'required':[('typeoffer','!=','percentage')],'readonly':[('state','!=','draft')]}"/>
+                             <field name="priceAfteroffer"/>
+                        </group>
+                         <group>
+                            <field name="date_start" attrs="{'readonly':[('state','!=','draft')]}"/>
+                             <field name="date_end"  attrs="{'readonly':[('state','!=','draft')]}"/>
+                        </group>
+
+                    </group>
+                </sheet>
+            </form>
+        </field>
+     </record>
+    <record id="discount_offer_view_tree" model="ir.ui.view">
+        <field name="name">discount.offer.form</field>
+        <field name="model">discount.offer</field>
+        <field name="arch" type="xml">
+            <tree string="Discount Offer">
+                  <field name="name"/>
+                  <field name="product_id"/>
+                  <field name="typeoffer"/>
+                <field name="date_start"/>
+                <field name="date_end"/>
+            </tree>
+        </field>
+     </record>
+     <record id="discount_offer_view_action" model="ir.actions.act_window">
+        <field name="name">Discount Offer</field>
+        <field name="res_model">discount.offer</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="discount_offer_view_tree"/>
+    </record>
+
+
+
+</odoo>

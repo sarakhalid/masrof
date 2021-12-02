@@ -1,0 +1,16 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_e_wallet,e_wallet,model_e_wallet,group_e_wallet,1,1,1,1
+access_wallet_transactions,wallet_transactions,model_wallet_transactions,group_e_wallet,1,1,1,1
+access_class_room,class_room,model_class_room,group_e_wallet,1,1,1,1
+access_school_type,school_type,model_school_type,group_e_wallet,1,1,1,1
+access_wallet_line,wallet_line,model_wallet_line,group_e_wallet,1,1,1,1
+access_wallet_feeding,wallet_feeding,model_wallet_feeding,group_e_wallet,1,1,1,1
+access_add_student,add_student,model_add_student,group_e_wallet,1,1,1,1
+access_remove_student,remove_student,model_remove_student,group_e_wallet,1,1,1,1
+access_education_administration,education_administration,model_education_administration,group_e_wallet,1,1,1,1
+access_office_office,office_office,model_office_office,group_e_wallet,1,1,1,1
+access_students_need,students_need,model_students_need,group_e_wallet,1,1,1,1
+access_need_line,need_line,model_need_line,group_e_wallet,1,1,1,1
+access_student_calendar,student_calendar,model_school_calendar,group_e_wallet,1,1,1,1
+access_school_semester,school_semester,model_school_semester,group_e_wallet,1,1,1,1
+access_contract_contract,contract_contract,model_contract_contract,group_e_wallet,1,1,1,1

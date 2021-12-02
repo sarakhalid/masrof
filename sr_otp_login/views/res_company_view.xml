@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+		<record id="view_company_form_inherit_otp" model="ir.ui.view">
+            <field name="name">res.company.form.default</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+            	<xpath expr="//page" position="after">
+					<page string="OTP Information">
+					
+						<group>
+							<field name="use_otp_login"/>
+		            		<field name="otp_message" attrs="{'required':[('use_otp_login','=',True)],'invisible':[('use_otp_login','!=',True)]}"/>
+		            		<field name="otp_message_url" attrs="{'required':[('use_otp_login','=',True)],'invisible':[('use_otp_login','!=',True)]}"/>
+		            		<field name="phone_key" attrs="{'required':[('use_otp_login','=',True)],'invisible':[('use_otp_login','!=',True)]}"/>
+		            		<field name="message_key" attrs="{'required':[('use_otp_login','=',True)],'invisible':[('use_otp_login','!=',True)]}"/>
+            	
+						</group>
+					
+					</page>            	
+            	</xpath>
+            
+            </field>
+       </record>
+</odoo>

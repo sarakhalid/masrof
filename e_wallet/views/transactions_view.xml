@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+
+        <record id="view_wallet_transactions_form" model="ir.ui.view">
+            <field name="name">wallet.transactions.form</field>
+            <field name="model">wallet.transactions</field>
+            <field name="arch" type="xml">
+                <form string="Transactions">
+                               <header>
+
+                    <button name="action_confirm" id="action_confirm"
+                        string="Credit" class="btn-primary" type="object"
+                        attrs="{'invisible': [('state', '=', 'done')]}"/>
+                    
+                    <field name="state" widget="statusbar" statusbar_visible="draft,done"/>
+                </header>
+                <sheet>
+
+                    <group>
+                        <group>
+                    		<field name="transaction_id"/>
+                    		<field name="transaction_date"/>
+                        </group>
+                        <group>
+                    		<field name="wallet"/>
+                        </group>
+                    </group>
+
+                    <group>
+                        <group>
+		                    <field name="partner_id"/>
+		                    <field name="transaction_type"/>
+
+                        </group>
+                        <group>
+                         
+
+                            <field name="amount"/>
+		                    <field name="currency_id"/>
+                        </group>
+                    </group>
+
+
+    
+
+
+                    <group>
+
+		                    <field name="amount_total"/>                            
+                        </group>
+
+                    <group>
+                        <group>
+                    		<field name="journal_id"/>
+                    		<field name="pos_order"/>
+                        </group>
+                        <group>
+                    		<field name="account_id"/>
+                    		<field name="responsable"/>
+
+
+                        </group>
+                    </group>
+
+
+                </sheet>
+              </form>
+            </field>
+        </record>
+
+
+        <record id="view_wallet_transactions_tree" model="ir.ui.view">
+            <field name="name">wallet.transactions.tree</field>
+            <field name="model">wallet.transactions</field>
+            <field name="arch" type="xml">
+                <tree string="Transactions">
+                              <field name="transaction_id"/>
+                    		<field name="wallet"/>
+		                    <field name="partner_id"/>
+                    		<field name="transaction_date"/>
+                            <field name="amount"/>
+                
+
+               </tree>
+            </field>
+        </record>
+
+        <record id="action_wallet_transactions_form" model="ir.actions.act_window">
+            <field name="name">Transactions</field>
+            <field name="res_model">wallet.transactions</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_wallet_transactions_form" parent="menu_e_wallet" name="Transactions" sequence="1" action="action_wallet_transactions_form" />
+
+
+      
+
+</odoo>
+

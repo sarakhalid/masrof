@@ -1,0 +1,10 @@
+Version 13.0.0.1:
+        - Access rights improve
+        
+Version 13.0.0.2:
+		- whenever database is created with Spanish(CL) translation, country chile, the while installing the module the encode issue is generating.
+		- remove product and template tree and kanban view replaced , give xpath and added brand field in tree view and kanban view.
+		- remove commentted code.    
+
+Version 13.0.0.3 : (15/07/20)
+		- Under Inventory > Product Brands > under created brands add image of added 	products.

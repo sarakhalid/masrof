@@ -1,0 +1,1035 @@
+<!-- <?xml version="1.0" encoding="utf-8"?> -->
+<odoo>
+     <record id="zip_code_view_form" model="ir.ui.view">
+        <field name="name">zip.code.form</field>
+        <field name="model">zip.code</field>
+        <field name="arch" type="xml">
+            <form string="zip.code">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                         <group>
+                            <field name="zip"/>
+                        </group>
+                         <group>
+                            <field name="zip_category"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+     </record>
+    <record id="zip_code_view_tree" model="ir.ui.view">
+        <field name="name">zip.code.tree</field>
+        <field name="model">zip.code</field>
+        <field name="arch" type="xml">
+            <tree string="zip.code">
+                  <field name="name"/>
+                  <field name="zip"/>
+                  <field name="zip_category"/>
+            </tree>
+        </field>
+     </record>
+     <record id="zip_code_action" model="ir.actions.act_window">
+        <field name="name">zip code</field>
+        <field name="res_model">zip.code</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="zip_code_view_tree"/>
+    </record>
+     <record id="start_end_delivery_schedule_view_form" model="ir.ui.view">
+        <field name="name">delivery.schedule.form</field>
+        <field name="model">start.end.delivery.schedule</field>
+        <field name="arch" type="xml">
+            <form string="start end delivery time" create="false">
+                <sheet>
+                    <group>
+                        <group> <field name="start_time" widget="float_time"/></group>
+                         <group><field name="end_time" widget="float_time"/></group>
+                    </group>
+                </sheet>
+
+
+            </form>
+        </field>
+     </record>
+
+
+     <record id="start_end_delivery_schedule_view_tree" model="ir.ui.view">
+        <field name="name">delivery.schedule.tree</field>
+        <field name="model">start.end.delivery.schedule</field>
+        <field name="arch" type="xml">
+            <tree string="delivery schedule" create="false">
+                 <field name="start_time" widget="float_time"/>
+                 <field name="end_time" widget="float_time"/>
+            </tree>
+        </field>
+     </record>
+     <record id="start_end_delivery_schedule_action" model="ir.actions.act_window">
+        <field name="name">delivery.schedule</field>
+        <field name="res_model">start.end.delivery.schedule</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="start_end_delivery_schedule_view_tree"/>
+    </record>
+
+
+
+
+     <record id="delivery_schedule_view_form" model="ir.ui.view">
+        <field name="name">delivery.schedule.form</field>
+        <field name="model">delivery.schedule</field>
+        <field name="arch" type="xml">
+            <form string="delivery time" >
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                    <group>
+
+                        <group> <field name="start_time" widget="float_time"/></group>
+                         <group><field name="end_time" widget="float_time"/></group>
+                    </group>
+                    <notebook>
+                        <page name="Hide On">
+                            <group>
+                            <group>
+                                <field name="hide_on_friday"/>
+                                <field name="hide_on_saturday"/>
+                                <field name="hide_on_sunday"/>
+                                <field name="hide_on_monday"/>
+                            </group>
+                             <group>
+                                 <field name="hide_on_tuesday"/>
+                                 <field name="hide_on_wednesday"/>
+                                 <field name="hide_on_thursday"/>
+                             </group>
+                            </group>
+
+                        </page>
+                    </notebook>
+
+                </sheet>
+
+
+            </form>
+        </field>
+     </record>
+
+
+     <record id="delivery_schedule_view_tree" model="ir.ui.view">
+        <field name="name">delivery.schedule.tree</field>
+        <field name="model">delivery.schedule</field>
+        <field name="arch" type="xml">
+            <tree string="delivery schedule" >
+                 <field name="name"/>
+                 <field name="start_time" widget="float_time"/>
+                 <field name="end_time" widget="float_time"/>
+            </tree>
+        </field>
+     </record>
+     <record id="delivery_schedule_action" model="ir.actions.act_window">
+        <field name="name">delivery.schedule</field>
+        <field name="res_model">delivery.schedule</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="delivery_schedule_view_tree"/>
+    </record>
+
+
+
+    <record id="fcm_registered_devices_view_form" model="ir.ui.view">
+        <field name="name">fcm_registered_devices.form</field>
+        <field name="model">fcm.registered.devices</field>
+        <field name="arch" type="xml">
+            <form string="Registered Devices">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                            <field name="active" widget="boolean_button" options='{"terminology": "archive"}'/>
+                        </button>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="customer_id"/>
+                            <field name="device_id"/>
+                        </group>
+                         <group>
+                            <field name="platformType"/>
+                            <field name="version"/>
+                        </group>
+
+                        <group>
+                            <field name="create_date"/>
+                            <field name="write_date"/>
+                        </group>
+                        <field name="token"/>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="fcm_registered_devices_view_tree" model="ir.ui.view">
+        <field name="name">fcm_registered_devices.tree</field>
+        <field name="model">fcm.registered.devices</field>
+        <field name="arch" type="xml">
+            <tree string="Registered Devices">
+                <field name="customer_id"/>
+                <field name="device_id"/>
+                <field name="platformType"/>
+                <field name="version"/>
+                <field name="create_date"/>
+                <field name="write_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="fcm_registered_devices_action" model="ir.actions.act_window">
+        <field name="name">FCM Registered Devices</field>
+        <field name="res_model">fcm.registered.devices</field>
+        <field name="view_mode">tree,form</field>
+        <!-- <field name="view_type">form</field> -->
+        <field name="view_id" ref="fcm_registered_devices_view_tree"/>
+    </record>
+
+        <record id="fcm_registered_topics_view_tree" model="ir.ui.view">
+        <field name="name">fcm_registered_topics.tree</field>
+        <field name="model">fcm.registered.topics</field>
+        <field name="arch" type="xml">
+            <tree string="All FCM Topics" editable="top">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="fcm_registered_topics_action" model="ir.actions.act_window">
+        <field name="name">FCM Registered Topics</field>
+        <field name="res_model">fcm.registered.topics</field>
+        <field name="view_mode">tree</field>
+        <!-- <field name="view_type">form</field> -->
+        <field name="view_id" ref="fcm_registered_topics_view_tree"/>
+    </record>
+
+    <record id="mobikul_push_notification_view_form" model="ir.ui.view">
+        <field name="name">mobikul.push.notification.form</field>
+        <field name="model">mobikul.push.notification</field>
+        <field name="arch" type="xml">
+            <form string="Push Notification">
+                <header>
+                    <button name="action_confirm" states="draft" type="object" string="Confirm" class="oe_highlight"/>
+                    <button name="action_draft" states="cancel,hold" type="object" string="Set to Draft"/>
+                    <button name="action_hold" states="confirm" type="object" string="Set to Hold"/>
+                    <button name="action_confirm" states="hold" type="object" string="Release Hold" class="oe_highlight"/>
+                    <button name="action_cancel" states="draft,hold" type="object" string="Cancel"/>
+                    <button name="push_now" states="confirm" type="object" string="Push now" class="oe_highlight"/>
+                    <button name="duplicate_me" states="done" type="object" string="Duplicate" />
+                    <button name="push_now" states="error" type="object" string="Retry" class="oe_highlight"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,confirm,done"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                            <field name="active" widget="boolean_button" options='{"terminology": "archive"}'/>
+                        </button>
+                    </div>
+                    <field name="image" widget="image" class="oe_avatar"/>
+                    <div class="oe_title">
+                        <div class="oe_edit_only">
+                            <label for="name" string="Name"/>
+                        </div>
+                        <h1>
+                            <field name="name" default_focus="1" placeholder="Record name"/>
+                        </h1>
+                    </div>
+                    <br/>
+                    <br/>
+                    <separator string="Result" colspan="4" attrs="{'invisible': [('state', 'not in', ['done','error'])]}"/>
+                            <field name="summary" colspan="4" attrs="{'invisible': [('state', 'not in', ['done','error'])]}"/>
+                    <notebook>
+                        <page string="Information">
+                        <separator string="Content to be displayed in Push Notification" colspan="4"/>
+                            <field name="notification_title" colspan="4" placeholder="Title"/>
+                            <field name="notification_body" colspan="4" placeholder="Body"/>
+                        <separator string="Action to be triggered on click/touch" colspan="4"/>
+                            <group>
+                                <group>
+                                    <field name="banner_action"/>
+                                </group>
+                                <group>
+                                    <field name="product_id" attrs="{'invisible': [('banner_action', 'in', ['category','none',False,'custom'])], 'required': [('banner_action', '=', 'product')]}"/>
+                                    <field name="category_id" attrs="{'invisible': [('banner_action', 'in', ['product','none',False,'custom'])], 'required': [('banner_action', '=', 'category')]}"/>
+                                    <field name="product_ids" attrs="{'invisible': [('banner_action', 'in', ['product','none',False,'category'])], 'required': [('banner_action', '=', 'custom')]}" widget="many2many_tags"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Advanced">
+                            <separator string="Notification Type" colspan="4"/>
+                            <group>
+                                <group>
+                                    <field name="notification_type"/>
+                                </group>
+                                <group>
+                                    <field name="topic_id" attrs="{'invisible': [('notification_type', 'in', ['token-auto','token-manual'])], 'required': [('notification_type', '=', 'topic')]}" widget="selection"/>
+                                    <field name="device_ids" attrs="{'invisible': [('notification_type', 'in', ['topic','token-auto'])], 'required': [('notification_type', '=', 'token-manual')]}" widget="many2many_tags" quick_create="false"/>
+                                </group>
+                            </group>
+                            <separator string="Others" colspan="4"/>
+                            <group>
+                                <group>
+                                    <field name="activation_date" invisible="1"/>
+                                    <field name="notification_color"/>
+                                    <field name="notification_tag"/>
+                                </group>
+                                <group>
+                                    <field name="total_views" invisible="1"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="mobikul_push_notification_view_tree" model="ir.ui.view">
+        <field name="name">mobikul.push.notification.tree</field>
+        <field name="model">mobikul.push.notification</field>
+        <field name="arch" type="xml">
+            <tree string="Push Notifications" >
+                <field name="name"/>
+                <field name="banner_action"/>
+                <field name="activation_date" invisible="1"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="mobikul_push_notification_filter_view" model="ir.ui.view">
+        <field name="name">mobikul_push_notification.search.mobikul</field>
+        <field name="model">mobikul.push.notification</field>
+        <field name="arch" type="xml">
+            <search string="Mobikul Push Notification">
+                <field name="name" string="Push Notification" filter_domain="[('name','ilike',self)]"/>
+                <separator/>
+                <filter string="Archived" name="inactive" domain="[('active','=',False)]"/>
+            </search>
+        </field>
+    </record>
+
+
+        <!-- mobikul.push.notification : actions -->
+    <record id="mobikul_push_notification_action" model="ir.actions.act_window">
+        <field name="name">Mobikul Push Notifications</field>
+        <field name="res_model">mobikul.push.notification</field>
+        <field name="view_mode">tree,form</field>
+        <!-- <field name="view_type">form</field> -->
+        <field name="view_id" ref="mobikul_push_notification_view_tree"/>
+        <field name="search_view_id" ref="mobikul_push_notification_filter_view"/>
+        <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+            Click to add a new Push Notification for your Mobikul App.
+          </p>
+        </field>
+    </record>
+
+        <record id="mobikul_push_notification_template_view_form" model="ir.ui.view">
+        <field name="name">mobikul.push.notification.template.form</field>
+        <field name="model">mobikul.push.notification.template</field>
+        <field name="arch" type="xml">
+            <form string="Push Notification Template">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                            <field name="active" widget="boolean_button" options='{"terminology": "archive"}'/>
+                        </button>
+                    </div>
+                    <field name="image" widget="image" class="oe_avatar"/>
+                    <div class="oe_title">
+                        <div class="oe_edit_only">
+                            <label for="name" string="Name"/>
+                        </div>
+                        <h1>
+                            <field name="name" default_focus="1" placeholder="Record name"/>
+                        </h1>
+                    </div>
+                    <notebook>
+                        <page string="Information">
+                        <separator string="Notification will be triggered automatically when" colspan="4"/>
+                            <group>
+                                <field name="condition" required="1"/>
+                            </group>
+                        <separator string="Content to be displayed in Push Notification" colspan="4"/>
+                            <field name="notification_title" colspan="4" placeholder="Title"/>
+                            <field name="notification_body" colspan="4" placeholder="Body"/>
+                        <separator string="Action to be triggered on click/touch" colspan="4"/>
+                            <group>
+                                <group>
+                                    <field name="banner_action"/>
+                                </group>
+                                <group>
+                                    <field name="product_id" attrs="{'invisible': [('banner_action', 'in', ['category','none',False,'custom'])], 'required': [('banner_action', '=', 'product')]}"/>
+                                    <field name="category_id" attrs="{'invisible': [('banner_action', 'in', ['product','none',False,'custom'])], 'required': [('banner_action', '=', 'category')]}"/>
+                                    <field name="product_ids" attrs="{'invisible': [('banner_action', 'in', ['product','none',False,'category'])], 'required': [('banner_action', '=', 'custom')]}" widget="many2many_tags"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Advanced">
+                            <group>
+                                <group>
+                                    <field name="notification_color"/>
+                                    <field name="notification_tag"/>
+                                </group>
+                                <group>
+                                    <field name="total_views" invisible="1"/>
+                                </group>
+                                <group>
+                                    <field name="device_id" widget="selection"/>
+
+                                </group>
+                                 <button name="dry_run" type="object" string="Dry run on" class="oe_highlight" style="width: 83px;position: relative;top: 8px;"/>
+                            </group>
+
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="mobikul_push_notification_template_view_tree" model="ir.ui.view">
+        <field name="name">mobikul.push.notification.template.tree</field>
+        <field name="model">mobikul.push.notification.template</field>
+        <field name="arch" type="xml">
+            <tree string="Push Notification Templates">
+                <field name="name"/>
+                <field name="banner_action"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="mobikul_push_notification_templates_action" model="ir.actions.act_window">
+        <field name="name">Push Notifications Templates</field>
+        <field name="res_model">mobikul.push.notification.template</field>
+        <field name="view_mode">tree,form</field>
+        <!-- <field name="view_type">form</field> -->
+        <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+            Click to add a new Push Notification Templates for your Mobikul App.
+          </p>
+        </field>
+    </record>
+
+	    <!-- mobikul.banners: views -->
+	<record id="mobikul_banners_view_form" model="ir.ui.view">
+        <field name="name">mobikul.banners.form</field>
+        <field name="model">mobikul.banners</field>
+        <field name="arch" type="xml">
+            <form string="Banner">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                            <field name="active" widget="boolean_button" options='{"terminology": "archive"}'/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <div class="oe_edit_only">
+                            <label for="name" string="Title"/>
+                        </div>
+                        <h1>
+                            <field name="name" default_focus="1" placeholder="Name"/>
+                        </h1>
+                    </div>
+                    <notebook>
+                        <page string="Information">
+                            <group>
+                            	<group>
+                                	<field name="banner_action"/>
+                                </group>
+                                <group>
+									<field name="product_id" attrs="{'invisible': [('banner_action', 'in', ['category','none',False,'custom'])], 'required': [('banner_action', '=', 'product')]}"/>
+                                    <field name="category_id" attrs="{'invisible': [('banner_action', 'in', ['product','none',False,'custom'])], 'required': [('banner_action', '=', 'category')]}"/>
+                                </group>
+                            </group>
+                            <group string="Custom Collection" attrs="{'invisible': [('banner_action', 'in', ['product','none',False,'category'])]}">
+                                    <field name="product_ids" attrs="{'invisible': [('banner_action', 'in', ['product','none',False,'category'])], 'required': [('banner_action', '=', 'custom')]}" nolabel="1">
+                                        <tree>
+                                          <field name="name"/>
+                                          <field name="mobikul_categ_ids"/>
+                                       </tree>
+                                    </field>
+                            </group>
+                            <separator string="Description" colspan="4"/>
+                            <field name="description" colspan="4" placeholder="Description for Banner for Internal use only."/>
+                        </page>
+                        <page string="Advanced">
+                        	<div>
+                                <label for="name" string="Banner`s Image Url (Optional)"/>
+                                <field name="url"/>
+                            </div>
+                        	<group>
+                            	<group>
+                            		<field name="date_published"/>
+                            		<field name="date_expired" invisible="1"/>
+                                </group>
+                                <group>
+                                	<field name="sequence"/>
+                                    <field name="total_views" invisible="1"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div>
+                    <div class="oe_edit_only" attrs="{'invisible': [('image', '=', False)]}">
+                        <h1>Change Banner Image</h1>
+                    </div>
+                    <div class="oe_edit_only" attrs="{'invisible': [('image', '!=', False)]}">
+                        <h1>Upload Banner Image</h1>
+                    </div>
+                    <field name="image" widget="image" colspan="4"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+	<record id="mobikul_banners_view_tree" model="ir.ui.view">
+        <field name="name">mobikul.banners.tree</field>
+        <field name="model">mobikul.banners</field>
+        <field name="arch" type="xml">
+            <tree string="Banner Images">
+            	<field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="banner_action"/>
+                <field name="date_published"/>
+                <field name="date_expired" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="mobikul_banners_filter_view" model="ir.ui.view">
+        <field name="name">mobikul_banners.search.mobikul</field>
+        <field name="model">mobikul.banners</field>
+        <field name="arch" type="xml">
+            <search string="Mobikul Banner">
+                <field name="name" string="Banner" filter_domain="[('name','ilike',self)]"/>
+                <separator/>
+                <filter string="Archived" name="inactive" domain="[('active','=',False)]"/>
+            </search>
+        </field>
+    </record>
+
+    	<!-- mobikul.banner.images : actions -->
+    <record id="mobikul_banners_action" model="ir.actions.act_window">
+        <field name="name">Mobikul Banners</field>
+        <field name="res_model">mobikul.banners</field>
+        <field name="view_mode">tree,form</field>
+        <!-- <field name="view_type">form</field> -->
+        <field name="view_id" ref="mobikul_banners_view_tree"/>
+        <field name="search_view_id" ref="mobikul_banners_filter_view"/>
+        <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+            Click to add a new Banner for your Mobikul App.
+          </p>
+        </field>
+    </record>
+
+    <record id="mobikul_category_form_view" model="ir.ui.view">
+        <field name="name">mobikul.category.form</field>
+        <field name="model">mobikul.category</field>
+        <field name="arch" type="xml">
+            <form class="oe_form_configuration">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button"
+                            name="%(mobikul_product_template_action)d"
+                            icon="fa-th-list"
+                            type="action"
+                            context="{'search_default_mobikul_categ_ids': active_id}">
+                            <div class="o_form_field o_stat_info">
+                                <span class="o_stat_text"> Products</span>
+                            </div>
+                        </button>
+                        <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                            <field name="active" widget="boolean_button" options='{"terminology": "archive"}'/>
+                        </button>
+                    </div>
+                    <field name="icon" widget="image" class="oe_avatar"/>
+                    <div class="oe_title">
+                        <div class="oe_edit_only">
+                            <label for="name" string="Name"/>
+                        </div>
+                        <h1>
+                            <field name="name" default_focus="1" placeholder="Name"/>
+                        </h1>
+                    </div>
+                    <group name="charac" col="4" string="Category Type">
+                        <field name="parent_id"/>
+                        <field name="type" widget="radio"/>
+                         <field name="sequence"/>
+                    </group>
+<!--                     <group string="Upload Banner/Icon for this Category">
+                        <field name="banner" widget="image" colspan="6"/>
+                        <field name="icon" widget="image" colspan="6"/>
+                    </group> -->
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="mobikul_category_view_tree" model="ir.ui.view">
+        <field name="name">mobikul.category.tree</field>
+        <field name="model">mobikul.category</field>
+        <field name="arch" type="xml">
+            <tree string="Mobikul Category">
+                 <field name="sequence" />
+                <field name="complete_name"/>
+                <!--<field name="name"/>-->
+            </tree>
+        </field>
+    </record>
+
+    <record id="mobikul_category_view_tree2" model="ir.ui.view">
+        <field name="name">mobikul.category.tree2</field>
+        <field name="model">mobikul.category</field>
+        <field name="arch" type="xml">
+            <tree string="Mobikul Category">
+                <field name="sequence" />
+                <field name="complete_name" />
+                <field name="name" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="mobikul_category_filter_view" model="ir.ui.view">
+        <field name="name">mobikul.category.search.mobikul</field>
+        <field name="model">mobikul.category</field>
+        <field name="arch" type="xml">
+            <search string="Mobikul Category">
+                <field name="name" string="Category" filter_domain="[('name','ilike',self)]"/>
+                <separator/>
+                <filter string="Featured" name="is_featured" domain="[('type','=','featured')]"/>
+                <filter string="Archived" name="inactive" domain="[('active','=',False)]"/>
+            </search>
+        </field>
+    </record>
+
+            <!-- mobikul.category : actions -->
+    <record id="mobikul_category_action" model="ir.actions.act_window">
+        <field name="name">Mobikul Category</field>
+        <field name="res_model">mobikul.category</field>
+        <field name="view_mode">tree,form</field>
+        <!-- <field name="view_type">form</field> -->
+        <field name="view_id" ref="mobikul_category_view_tree"/>
+        <field name="search_view_id" ref="mobikul_category_filter_view"/>
+        <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+            Click to add a new Category for your Mobikul App.
+          </p>
+        </field>
+    </record>
+
+                <!-- Featured Category : actions -->
+    <record id="mobikul_featured_category_action" model="ir.actions.act_window">
+        <field name="name">Mobikul Featured Category</field>
+        <field name="res_model">mobikul.category</field>
+        <field name="view_mode">tree,form</field>
+        <!-- <field name="view_type">form</field> -->
+        <field name="view_id" ref="mobikul_category_view_tree2"/>
+        <field name="context">{'search_default_is_featured': 1, 'default_type': 'featured'}</field>
+        <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+            Click to add a new Featured Category for your Mobikul App.
+          </p>
+        </field>
+    </record>
+
+    <record id="mobikul_mobikul_view_form" model="ir.ui.view">
+        <field name="name">mobikul.form</field>
+        <field name="model">mobikul</field>
+        <field name="arch" type="xml">
+            <form string="Mobikul-App Configuration">
+                <sheet>
+                    <div class="oe_title">
+                        <div class="oe_edit_only">
+                            <label for="name" string="Title"/>
+                        </div>
+                        <h1>
+                            <field name="name" default_focus="1" placeholder="Name"/>
+                        </h1>
+                    </div>
+                <notebook>
+                    <page string="Credentials">
+                        <group string="Mobikul API Configuration">
+                            <field name="api_key"/>
+                        </group>
+                        <group string="Android Push Notification Credentials">
+                            <field name="fcm_api_key"/>
+                        </group>
+                    </page>
+                    <page string="Advanced">
+                        <group>
+                            <group string="Pricelist/Currency">
+                                <field name="pricelist_id" required="1"/>
+                                <field name="currency_id"/>
+                                <field name="available_in_stock"/>
+                                <field name="categories_all_name"/>
+                                <field name="ios_version"/>
+                                <field name="android_version"/>
+                                <field name="msg_version"/>
+
+                            </group>
+                            <group string="Language">
+                                <label for="language_ids"/>
+                                <div name="language_ids">
+                                    <div>
+                                        <div name="language_ids" class="oe_inline">
+                                            <field name="language_ids" widget="many2many_checkboxes"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <field name="default_lang" widget="selection" required="1"/>
+                                <field name="website_id" widget="selection" required="1"/>
+                                <field name="company_id" widget="selection" required="1"/>
+                            </group>
+                            <group string="Mobikul Countries">
+                                <field name="country_ids" widget="many2many_tags"/>
+                            </group>
+                            <group string="Orders">
+                                <field name="salesperson_id"/>
+                                <field name="salesteam_id"/>
+                                <field name="order_mail_template"/>
+                            </group>
+                            <group string="Mobikul Extra Features">
+                                <field name="product_limit"/>
+                                <field name="color_scheme" string="Choose Combination"/>
+                             </group>
+                        </group>
+                    </page>
+                    <page string="Extra Configuration">
+                        <group string="On Signup Terms and Conditions">
+                          <field name="enable_term_and_condition"/>
+                          <field name="signup_terms_and_condition" attrs="{'invisible': [('enable_term_and_condition', '=', False)]}" />
+                        </group>
+                        <group string="On Payment Terms and Conditions">
+                          <field name="payment_short_terms" />
+                          <field name="payment_long_terms" />
+                        </group>
+                    </page>
+                    <page string="Privacy Policy">
+                        <group>
+                            <field name="privacy_policy"/>
+                        </group>
+                    </page>
+                    <page string="About Us">
+                        <group>
+                            <field name="about_us"/>
+                        </group>
+                    </page>
+                </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="mobikul_mobikul_view_tree" model="ir.ui.view">
+        <field name="name">mobikul.tree</field>
+        <field name="model">mobikul</field>
+        <field name="arch" type="xml">
+            <tree string="Mobikul-App Configuration">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+            <!-- mobikul.category : actions -->
+    <record id="mobikul_mobikul_action" model="ir.actions.act_window">
+        <field name="name">Mobikul-App Configuration</field>
+        <field name="res_model">mobikul</field>
+        <field name="view_mode">tree,form</field>
+        <!-- <field name="view_type">form</field> -->
+        <field name="view_id" ref="mobikul_mobikul_view_tree"/>
+    </record>
+
+
+
+    <record id="mobikul_mobikul_terms_view_form" model="ir.ui.view">
+        <field name="name">mobikul. terms form</field>
+        <field name="model">mobikul.terms</field>
+        <field name="arch" type="xml">
+            <form string="Terms Configuration">
+                <sheet>
+                    <div class="oe_title">
+                        <div class="oe_edit_only">
+                            <label for="name" string="Title"/>
+                        </div>
+                        <h1>
+                            <field name="name" default_focus="1" placeholder="Name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="whatsapp_phone"/>
+                    </group>
+                <notebook>
+
+                    <page string="Term Configuration">
+                        <group string="On Signup Terms and Conditions">
+                          <field name="enable_term_and_condition"/>
+                          <field name="signup_terms_and_condition" attrs="{'invisible': [('enable_term_and_condition', '=', False)]}" />
+                        </group>
+                        <group string="On Payment Terms and Conditions">
+                          <field name="payment_short_terms" />
+                          <field name="payment_long_terms" />
+                        </group>
+                    </page>
+                    <page string="Privacy Policy">
+                        <group>
+                            <field name="privacy_policy"/>
+                        </group>
+                    </page>
+                    <page string="About Us">
+                        <group>
+                            <field name="about_us"/>
+                        </group>
+                    </page>
+                </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+
+      <record id="mobikul_mobikul_terms_view_tree" model="ir.ui.view">
+        <field name="name">mobikul Terms.tree</field>
+        <field name="model">mobikul.terms</field>
+        <field name="arch" type="xml">
+            <tree string="Mobikul-App Terms">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="mobikul_mobikul_terms_action" model="ir.actions.act_window">
+        <field name="name">Mobikul-App mobikul.terms</field>
+        <field name="res_model">mobikul.terms</field>
+        <field name="view_mode">tree,form</field>
+        <!-- <field name="view_type">form</field> -->
+        <field name="view_id" ref="mobikul_mobikul_terms_view_tree"/>
+    </record>
+
+
+
+    <record id="mobikul_product_slider_form_view" model="ir.ui.view">
+        <field name="name">mobikul_product_slider.form</field>
+        <field name="model">mobikul.product.slider</field>
+        <field name="arch" type="xml">
+            <form class="oe_form_configuration">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" name="action_view_products"
+                        type="object" icon="fa-th-list" >
+                        <field string="Products" name="product_count" widget="statinfo" />
+                    </button>
+                        <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                            <field name="active" widget="boolean_button" options='{"terminology": "archive"}'/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <div class="oe_edit_only">
+                            <label for="name" string="Name"/>
+                        </div>
+                        <h1>
+                            <field name="name" default_focus="1" placeholder="Name"/>
+                        </h1>
+                    </div>
+                    <group string="Product Selection">
+                        <group>
+                            <field name="product_selection"/>
+                            <field name="product_based_on" attrs="{'invisible': [('product_selection', '=', 'manual')],'required': [('product_selection', '=', 'automatic')]}"/>
+                        </group>
+                        <group>
+                            <field name="mcategory_id" attrs="{'invisible': ['|', ('product_selection', '=','manual'),('product_based_on', 'not in', ['mCategory'])],'required': ['&amp;', ('product_selection', '=', 'automatic'),('product_based_on', '=', 'mCategory')]}"/>
+                            <field name="wcategory_id" attrs="{'invisible': ['|', ('product_selection', '=','manual'),('product_based_on', 'not in', ['wCategory'])],'required': ['&amp;', ('product_selection', '=', 'automatic'),('product_based_on', '=', 'wCategory')]}"/>
+                            <field name="icategory_id" attrs="{'invisible': ['|', ('product_selection', '=','manual'),('product_based_on', 'not in', ['iCategory'])],'required': ['&amp;', ('product_selection', '=', 'automatic'),('product_based_on', '=', 'iCategory')]}"/>
+                            <field name="product_ids" string="Products" widget="many2many_tags" attrs="{'invisible': [('product_selection', '=', 'automatic')],'required': [('product_selection', '=', 'manual')]}"/>
+                        </group>
+                    </group>
+                    <group string="General Settings">
+                        <group>
+                            <field name="sequence"/>
+                            <field name="slider_mode"/>
+                            <field name="product_img_position" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="item_limit"/>
+                            <field name="item_display_limit" readonly="1"/>
+                            <field name="total_views" invisible="1"/>
+                        </group>
+                    </group>
+<!--                     <group string="Background/Banner Image for your Slider">
+                        <group>
+                            <field name="display_banner" string="Enable ?"/>
+                        </group>
+                        <group>
+                            <field name="banner" attrs="{'invisible': [('display_banner', '=', False)]}"/>
+                            <field name="url" attrs="{'invisible': [('display_banner', '=', False)]}"/>
+                        </group>
+                    </group> -->
+                    <separator string="Description" colspan="4"/>
+                    <field name="description" colspan="4" placeholder="For Internal purpose Only"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="mobikul_product_slider_view_tree" model="ir.ui.view">
+        <field name="name">mobikul_product_slider.tree</field>
+        <field name="model">mobikul.product.slider</field>
+        <field name="arch" type="xml">
+            <tree string="Mobikul Product Slider">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="slider_mode"/>
+                <field name="total_views" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="mobikul_product_slider_filter_view" model="ir.ui.view">
+        <field name="name">mobikul_product_slider_search_mobikul</field>
+        <field name="model">mobikul.product.slider</field>
+        <field name="arch" type="xml">
+            <search string="Mobikul Product Slider">
+                <field name="name" string="Slider" filter_domain="[('name','ilike',self)]"/>
+                <separator/>
+                <filter string="Archived" name="inactive" domain="[('active','=',False)]"/>
+                <group expand="0" string="Group By">
+                        <filter string="Slider Mode" name="slider_mode" context="{'group_by':'slider_mode'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+            <!-- mobikul.category : actions -->
+    <record id="mobikul_product_slider_action" model="ir.actions.act_window">
+        <field name="name">Product Slider</field>
+        <field name="res_model">mobikul.product.slider</field>
+        <field name="view_mode">tree,form</field>
+        <!-- <field name="view_type">form</field> -->
+        <field name="view_id" ref="mobikul.mobikul_product_slider_view_tree"/>
+        <field name="search_view_id" ref="mobikul.mobikul_product_slider_filter_view"/>
+        <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+            Click to add a new Product Slider for your Mobikul App.
+          </p>
+        </field>
+    </record>
+
+
+    <!-- mobikul.notification.messages tree view -->
+    <record id="mobikul_notification_massages_view_tree" model="ir.ui.view">
+        <field name="name">mobikul_notification_massages.tree</field>
+        <field name="model">mobikul.notification.messages</field>
+        <field name="arch" type="xml">
+            <tree string="Notification Messages">
+                <field name="name"/>
+                <field name="is_read"/>
+                <field name="customer_id"/>
+                <field name="create_date"/>
+            </tree>
+        </field>
+    </record>
+
+<!-- mobikul.notification.messages FORM -->
+    <record id="mobikul_notification_massages_view_form" model="ir.ui.view">
+        <field name="name">mobikul_notification_massages.form</field>
+        <field name="model">mobikul.notification.messages</field>
+        <field name="arch" type="xml">
+            <form string="Notification Messages">
+               <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                            <field name="active" widget="boolean_button" options='{"terminology": "archive"}'/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <!-- <div class="oe_edit_only">
+                            <label for="name" string="Name"/>
+                        </div> -->
+                        <h1>
+                            <field name="name" default_focus="1" placeholder="Record name"/>
+                        </h1>
+                    </div>
+                    <br/>
+                    <br/>
+
+                    <notebook>
+                        <page string="Information">
+                        <separator string="Content to be displayed in Notification Message" colspan="4"/>
+                            <field name="title" colspan="4" placeholder="Title"/>
+                            <separator/>
+                            <field name="subtitle" colspan="4" placeholder="Subtitle"/>
+                            <field name="body" colspan="4" placeholder="Body"/>
+                            <group>
+                                <group>
+                                    <field name="icon" widget="image" class="oe_avatar"/>
+                                </group>
+                                <group>
+                                    <field name="datatype"/>
+                                    <field name="is_read" />
+                                    <field name="customer_id"/>
+                                    <field name="period" />
+                                </group>
+
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div>
+                    <div class="oe_edit_only" attrs="{'invisible': [('banner', '=', False)]}">
+                        <h1>Change Banner Image</h1>
+                    </div>
+                    <div class="oe_edit_only" attrs="{'invisible': [('banner', '!=', False)]}">
+                        <h1>Upload Banner Image</h1>
+                    </div>
+                    <field name="banner" widget="image" colspan="4"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="mobikul_notification_massages_filter_view" model="ir.ui.view">
+        <field name="name">Mobikul Notification Messages Search</field>
+        <field name="model">mobikul.notification.messages</field>
+        <field name="arch" type="xml">
+            <search string="Mobikul Notification Messages">
+                <group expand="0" string="Group By">
+                        <filter string="Customer" name="customer" context="{'group_by':'customer_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- mobikul.notification.messages action -->
+    <record id="mobikul_notification_massages_templates_action" model="ir.actions.act_window">
+        <field name="name">Mobikul Notification Messages Action</field>
+        <field name="res_model">mobikul.notification.messages</field>
+        <field name="view_mode">tree,form</field>
+        <!-- <field name="view_type">form</field> -->
+        <field name="view_id" ref="mobikul_notification_massages_view_tree"/>
+        <field name="context">{'search_default_group_customer_id': 1}</field>
+
+        <field name="search_view_id" ref="mobikul_notification_massages_filter_view"/>
+        <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+            Click to add a new Notification Messages for your Mobikul App.
+          </p>
+        </field>
+    </record>
+
+
+</odoo>

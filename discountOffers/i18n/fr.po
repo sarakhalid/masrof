@@ -1,0 +1,2356 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* mobikul
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-18 10:27+0000\n"
+"PO-Revision-Date: 2018-04-18 10:27+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:770
+#, python-format
+msgid " was removed from your Shopping Bag."
+msgstr " was removed from your Shopping Bag."
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_product_slider_product_count
+msgid "# Products"
+msgstr "# Products"
+
+#. module: mobikul
+#: code:addons/mobikul/models/mobikul.py:1123
+#, python-format
+msgid "%s(copy)"
+msgstr "%s(copy)"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_app_config_settings
+msgid "(A paid feature)"
+msgstr "(A paid feature)"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_sync_cat_form
+msgid "<b>Sync category with Website category</b>"
+msgstr "<b>Sync category with Website category</b>"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_product_template_form_view
+msgid "<span class=\"o_stat_text o_value text-success\" attrs=\"{'invisible': [('is_mobikul_available', '=', False)]}\">Published</span>\n"
+"                        <span class=\"o_stat_text o_value text-danger\" attrs=\"{'invisible': [('is_mobikul_available', '=', True)]}\">Unpublished</span>\n"
+"                        <span class=\"o_stat_text\">On App</span>"
+msgstr "<span class=\"o_stat_text o_value text-success\" attrs=\"{'invisible': [('is_mobikul_available', '=', False)]}\">Published</span>\n"
+"                        <span class=\"o_stat_text o_value text-danger\" attrs=\"{'invisible': [('is_mobikul_available', '=', True)]}\">Unpublished</span>\n"
+"                        <span class=\"o_stat_text\">On App</span>"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_category_form_view
+msgid "<span class=\"o_stat_text\"> Products</span>"
+msgstr "<span class=\"o_stat_text\"> Products</span>"
+
+#. module: mobikul
+#: model:ir.model.fields,help:mobikul.field_mobikul_category_type
+msgid "A Featured category is a category that can be used ..."
+msgstr "A Featured category is a category that can be used ..."
+
+#. module: mobikul
+#: model:ir.model.fields,help:mobikul.field_mobikul_config_settings_module_email_verification
+#: model:ir.model.fields,help:mobikul.field_mobikul_email_verify
+msgid "A verification email will send to the user after signup to cross-check user`s identity."
+msgstr "A verification email will send to the user after signup to cross-check user`s identity."
+
+#. module: mobikul
+#: code:addons/mobikul/models/mobikul.py:177
+#, python-format
+msgid "API Key is invalid !!!"
+msgstr "API Key is invalid french !!!"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_api_key
+msgid "API Secret key"
+msgstr "API Secret key french"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1619
+#, python-format
+msgid "According to your purchase your review limit is over."
+msgstr "According to your purchase your review limit is over."
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:988
+#: code:addons/mobikul/controllers/main.py:1098
+#: code:addons/mobikul/controllers/main.py:1422
+#, python-format
+msgid "Account not found !!!"
+msgstr "Account not found !!!"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_banner_action
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_template_banner_action
+msgid "Action"
+msgstr "Action"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_banners_banner_action
+msgid "Action to be triggered"
+msgstr "Action to be triggered"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_push_notification_template_view_form
+#: model:ir.ui.view,arch_db:mobikul.mobikul_push_notification_view_form
+msgid "Action to be triggered on click/touch"
+msgstr "Action to be triggered on click/touch"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_activation_date
+msgid "Activation Date"
+msgstr "Activation Date"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_fcm_registered_devices_active
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_banners_active
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_category_active
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_notification_messages_active
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_product_slider_active
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_active
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_template_active
+msgid "Active"
+msgstr "Active"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:966
+#: code:addons/mobikul/controllers/main.py:1072
+#, python-format
+msgid "Add some products in order to proceed."
+msgstr "Add some products in order to proceed."
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1299
+#, python-format
+msgid "Added to Wishlist"
+msgstr "Added to Wishlist"
+
+#. module: mobikul
+#: model:ir.model.fields,help:mobikul.field_product_product_mobikul_status
+#: model:ir.model.fields,help:mobikul.field_product_template_mobikul_status
+msgid "Adds an availability status on the mobikul product page."
+msgstr "Adds an availability status on the mobikul product page."
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_banners_view_form
+#: model:ir.ui.view,arch_db:mobikul.mobikul_mobikul_view_form
+#: model:ir.ui.view,arch_db:mobikul.mobikul_push_notification_template_view_form
+#: model:ir.ui.view,arch_db:mobikul.mobikul_push_notification_view_form
+msgid "Advanced"
+msgstr "Advanced"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.fcm_registered_topics_view_tree
+msgid "All FCM Topics"
+msgstr "All FCM Topics"
+
+#. module: mobikul
+#: model:ir.model,name:mobikul.model_fcm_registered_devices
+msgid "All Registered Devices on FCM for Push Notifications."
+msgstr "All Registered Devices on FCM for Push Notifications."
+
+#. module: mobikul
+#: model:ir.model,name:mobikul.model_fcm_registered_topics
+msgid "All Registered Topics for Push Notifications."
+msgstr "All Registered Topics for Push Notifications."
+
+#. module: mobikul
+#: model:res.groups,comment:mobikul.group_mobikul_user
+msgid "All access except Mobikul Configuration."
+msgstr "All access except Mobikul Configuration."
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_config_settings_mobikul_allow_guest
+msgid "Allow Guests to view products on App."
+msgstr "Allow Guests to view products on App."
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_app_config_settings
+msgid "Allow Marketplace"
+msgstr "Allow Marketplace"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_config_settings_module_odoo_marketplace
+msgid "Allow Odoo Marketplace on App."
+msgstr "Allow Odoo Marketplace on App."
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_config_settings_module_wk_review
+msgid "Allow Product Review feature on App."
+msgstr "Allow Product Review feature on App."
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_app_config_settings
+msgid "Allow Website Review"
+msgstr "Allow Website Review"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_app_config_settings
+msgid "Allow Website Wishlist"
+msgstr "Allow Website Wishlist"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_config_settings_module_website_wishlist
+msgid "Allow Wishlist feature on App."
+msgstr "Allow Wishlist feature on App."
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_config_settings_module_auth_oauth
+msgid "Allow social login (Gmail,Facebook,etc)"
+msgstr "Allow social login (Gmail,Facebook,etc)"
+
+#. module: mobikul
+#: model:ir.model.fields,help:mobikul.field_product_product_is_mobikul_available
+#: model:ir.model.fields,help:mobikul.field_product_template_is_mobikul_available
+msgid "Allow the end user to choose this price list"
+msgstr "Allow the end user to choose this price list"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:248
+#, python-format
+msgid "An email has been sent to your email address. Please verify it."
+msgstr "An email has been sent to your email address. Please verify it."
+
+#. module: mobikul
+#: code:addons/mobikul/models/mobikul.py:471
+#, python-format
+msgid "An email has been sent with credentials to reset your password"
+msgstr "An email has been sent with credentials to reset your password"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_mobikul_view_form
+msgid "Android Push Notification Credentials"
+msgstr "Android Push Notification Credentials"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_config_settings_app_name
+msgid "App Name"
+msgstr "App Name"
+
+#. module: mobikul
+#: model:ir.ui.menu,name:mobikul.menu_mobikul_orders
+msgid "App Orders"
+msgstr "App Orders"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_app_config_settings
+msgid "App access"
+msgstr "App access"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_app_config_settings
+msgid "Apply"
+msgstr "Apply"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_banners_filter_view
+#: model:ir.ui.view,arch_db:mobikul.mobikul_category_filter_view
+#: model:ir.ui.view,arch_db:mobikul.mobikul_product_slider_filter_view
+#: model:ir.ui.view,arch_db:mobikul.mobikul_push_notification_filter_view
+msgid "Archived"
+msgstr "Archived"
+
+#. module: mobikul
+#: selection:mobikul.product.slider,product_selection:0
+msgid "Automatic"
+msgstr "Automatic"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_product_slider_bk_color
+msgid "Background Color"
+msgstr "Background Color"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_category_banner
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_notification_messages_banner
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_product_slider_banner
+#: model:ir.ui.view,arch_db:mobikul.mobikul_banners_filter_view
+#: model:ir.ui.view,arch_db:mobikul.mobikul_banners_view_form
+msgid "Banner"
+msgstr "Banner"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_res_partner_banner_image
+#: model:ir.model.fields,field_description:mobikul.field_res_users_banner_image
+msgid "Banner Image"
+msgstr "Banner Image"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_banners_view_tree
+msgid "Banner Images"
+msgstr "Banner Images"
+
+#. module: mobikul
+#: model:mobikul.banners,name:mobikul.mobikul_banner_image_1
+msgid "Banner1"
+msgstr "Banner1"
+
+#. module: mobikul
+#: model:mobikul.banners,name:mobikul.mobikul_banner_image_2
+msgid "Banner2"
+msgstr "Banner2"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_banners_view_form
+msgid "Banner`s Image Url (Optional)"
+msgstr "Banner`s Image Url (Optional)"
+
+#. module: mobikul
+#: model:ir.ui.menu,name:mobikul.mobilkul_banners
+msgid "Banners"
+msgstr "Banners"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_product_slider_product_based_on
+msgid "Based on"
+msgstr "Based on"
+
+#. module: mobikul
+#: selection:mobikul,color_scheme:0
+msgid "Blue Orange"
+msgstr "Blue Orange"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_notification_messages_body
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_notification_body
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_template_notification_body
+#: model:ir.ui.view,arch_db:mobikul.mobikul_notification_massages_view_form
+#: model:ir.ui.view,arch_db:mobikul.mobikul_push_notification_template_view_form
+#: model:ir.ui.view,arch_db:mobikul.mobikul_push_notification_view_form
+msgid "Body"
+msgstr "Body"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_app_config_settings
+#: model:ir.ui.view,arch_db:mobikul.mobikul_push_notification_view_form
+msgid "Cancel"
+msgstr "Cancel"
+
+#. module: mobikul
+#: selection:mobikul.push.notification,state:0
+msgid "Cancelled"
+msgstr "Cancelled"
+
+#. module: mobikul
+#: model:ir.actions.act_window,name:mobikul.mobikul_abandonned_orders_action
+#: model:ir.ui.menu,name:mobikul.mobikul_orders_abandonned_orders
+msgid "Cancelled Orders"
+msgstr "Cancelled Orders"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_sale_order_cart_count
+msgid "Cart Quantity"
+msgstr "Cart Quantity"
+
+#. module: mobikul
+#: model:ir.ui.menu,name:mobikul.menu_mobikul_catalog
+msgid "Catalogs"
+msgstr "Catalogs"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_category_filter_view
+msgid "Category"
+msgstr "Category"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_category_type
+#: model:ir.ui.view,arch_db:mobikul.mobikul_category_form_view
+msgid "Category Type"
+msgstr "Category Type"
+
+#. module: mobikul
+#: selection:mobikul.product.slider,product_img_position:0
+msgid "Center"
+msgstr "Center"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_banners_view_form
+#: model:ir.ui.view,arch_db:mobikul.mobikul_notification_massages_view_form
+msgid "Change Banner Image"
+msgstr "Change Banner Image"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_category_child_id
+msgid "Children Categories"
+msgstr "Children Categories"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_banners_category_id
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_category_id
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_template_category_id
+msgid "Choose Category"
+msgstr "Choose Category"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_mobikul_view_form
+msgid "Choose Combination"
+msgstr "Choose Combination"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_device_ids
+msgid "Choose Devices/Customers"
+msgstr "Choose Devices/Customers"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_banners_product_id
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_product_id
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_template_product_id
+msgid "Choose Product"
+msgstr "Choose Product"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_banners_product_ids
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_product_slider_product_ids
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_product_ids
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_template_product_ids
+msgid "Choose Products"
+msgstr "Choose Products"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_topic_id
+msgid "Choose Topic"
+msgstr "Choose Topic"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:564
+#, python-format
+msgid "City"
+msgstr "City"
+
+#. module: mobikul
+#: model:ir.actions.act_window,help:mobikul.mobikul_banners_action
+msgid "Click to add a new Banner for your Mobikul App."
+msgstr "Click to add a new Banner for your Mobikul App."
+
+#. module: mobikul
+#: model:ir.actions.act_window,help:mobikul.mobikul_category_action
+msgid "Click to add a new Category for your Mobikul App."
+msgstr "Click to add a new Category for your Mobikul App."
+
+#. module: mobikul
+#: model:ir.actions.act_window,help:mobikul.mobikul_featured_category_action
+msgid "Click to add a new Featured Category for your Mobikul App."
+msgstr "Click to add a new Featured Category for your Mobikul App."
+
+#. module: mobikul
+#: model:ir.actions.act_window,help:mobikul.mobikul_notification_massages_templates_action
+msgid "Click to add a new Notification Messages for your Mobikul App."
+msgstr "Click to add a new Notification Messages for your Mobikul App."
+
+#. module: mobikul
+#: model:ir.actions.act_window,help:mobikul.mobikul_product_slider_action
+msgid "Click to add a new Product Slider for your Mobikul App."
+msgstr "Click to add a new Product Slider for your Mobikul App."
+
+#. module: mobikul
+#: model:ir.actions.act_window,help:mobikul.mobikul_push_notification_templates_action
+msgid "Click to add a new Push Notification Templates for your Mobikul App."
+msgstr "Click to add a new Push Notification Templates for your Mobikul App."
+
+#. module: mobikul
+#: model:ir.actions.act_window,help:mobikul.mobikul_push_notification_action
+msgid "Click to add a new Push Notification for your Mobikul App."
+msgstr "Click to add a new Push Notification for your Mobikul App."
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_notification_color
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_template_notification_color
+msgid "Color"
+msgstr "Color"
+
+#. module: mobikul
+#: model:ir.model.fields,help:mobikul.field_mobikul_color_scheme
+msgid "Color Options for your Mobikul App."
+msgstr "Color Options for your Mobikul App."
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_color_scheme
+msgid "Color Scheme"
+msgstr "Color Scheme"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_category_complete_name
+msgid "Complete Name"
+msgstr "Complete Name"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_condition
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_template_condition
+msgid "Condition"
+msgstr "Condition"
+
+#. module: mobikul
+#: model:ir.ui.menu,name:mobikul.menu_mobikul_config
+#: model:ir.ui.view,arch_db:mobikul.mobikul_app_config_settings
+msgid "Configuration"
+msgstr "Configuration"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_app_config_settings
+msgid "Configure Mobikul-App"
+msgstr "Configure Mobikul-App"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_push_notification_view_form
+#: selection:mobikul.push.notification,state:0
+msgid "Confirm"
+msgstr "Confirm"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_order_mail_template
+msgid "Confirmation Email"
+msgstr "Confirmation Email"
+
+#. module: mobikul
+#: model:mobikul.push.notification.template,notification_title:mobikul.mobikul_push_notification_1
+msgid "Congrats...you have successfully created your account."
+msgstr "Congrats...you have successfully created your account."
+
+#. module: mobikul
+#: code:addons/mobikul/models/mobikul.py:405
+#, python-format
+msgid "Congratulation!!! your review has been submitted successfully, it will publish with in 24 hours."
+msgstr "Congratulation!!! your review has been submitted successfully, it will publish with in 24 hours."
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_notification_massages_view_form
+msgid "Content to be displayed in Notification Message"
+msgstr "Content to be displayed in Notification Message"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_push_notification_template_view_form
+#: model:ir.ui.view,arch_db:mobikul.mobikul_push_notification_view_form
+msgid "Content to be displayed in Push Notification"
+msgstr "Content to be displayed in Push Notification"
+
+#. module: mobikul
+#: code:addons/mobikul/models/mobikul.py:617
+#, python-format
+msgid "Could not create a new account.:"
+msgstr "Could not create a new account.:"
+
+#. module: mobikul
+#: code:addons/mobikul/models/mobikul.py:613
+#, python-format
+msgid "Could not create a new account: "
+msgstr "Could not create a new account: "
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:566
+#, python-format
+msgid "Country"
+msgstr "Country"
+
+#. module: mobikul
+#: code:addons/mobikul/models/mobikul.py:608
+#, python-format
+msgid "Created Successfully."
+msgstr "Created Successfully."
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_fcm_registered_devices_create_uid
+#: model:ir.model.fields,field_description:mobikul.field_fcm_registered_topics_create_uid
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_banners_create_uid
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_category_create_uid
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_config_settings_create_uid
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_create_uid
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_notification_messages_create_uid
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_product_slider_create_uid
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_create_uid
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_template_create_uid
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_sync_category_create_uid
+msgid "Created by"
+msgstr "Created by"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_fcm_registered_devices_create_date
+#: model:ir.model.fields,field_description:mobikul.field_fcm_registered_topics_create_date
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_banners_create_date
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_category_create_date
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_config_settings_create_date
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_create_date
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_notification_messages_create_date
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_product_slider_create_date
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_create_date
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_template_create_date
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_sync_category_create_date
+msgid "Created on"
+msgstr "Created on"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_mobikul_view_form
+msgid "Credentials"
+msgstr "Credentials"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_banners_view_form
+msgid "Custom Collection"
+msgstr "Custom Collection"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_fcm_registered_devices_customer_id
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_notification_messages_customer_id
+#: model:ir.ui.view,arch_db:mobikul.mobikul_notification_massages_filter_view
+msgid "Customer"
+msgstr "Customer"
+
+#. module: mobikul
+#: selection:mobikul.push.notification,condition:0
+#: selection:mobikul.push.notification.template,condition:0
+msgid "Customer`s SignUp"
+msgstr "Customer`s SignUp"
+
+#. module: mobikul
+#: model:ir.ui.menu,name:mobikul.menu_mobikul_dash
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_notification_messages_datatype
+msgid "Data Type"
+msgstr "Data Type"
+
+#. module: mobikul
+#: code:addons/mobikul/models/mobikul.py:313
+#, python-format
+msgid "Data is not in Dictionary format !!!"
+msgstr "Data is not in Dictionary format !!!"
+
+#. module: mobikul
+#: model:mobikul.product.slider,name:mobikul.mobikul_product_slider_2
+msgid "Deal of the day"
+msgstr "Deal of the day"
+
+#. module: mobikul
+#: selection:mobikul,color_scheme:0
+msgid "Deep Purple-Pink"
+msgstr "Deep Purple-Pink"
+
+#. module: mobikul
+#: selection:mobikul,color_scheme:0
+#: selection:mobikul.notification.messages,datatype:0
+msgid "Default"
+msgstr "Default"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_config_settings_currency_id
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_currency_id
+#: model:ir.ui.view,arch_db:mobikul.mobikul_app_config_settings
+msgid "Default Currency"
+msgstr "Default Currency"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_config_settings_default_lang
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_default_lang
+#: model:ir.ui.view,arch_db:mobikul.mobikul_app_config_settings
+msgid "Default Language"
+msgstr "Default Language"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_config_settings_pricelist_id
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_pricelist_id
+#: model:ir.ui.view,arch_db:mobikul.mobikul_app_config_settings
+msgid "Default Pricelist"
+msgstr "Default Pricelist"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_salesteam_id
+#: model:ir.ui.view,arch_db:mobikul.mobikul_app_config_settings
+msgid "Default Sales Team"
+msgstr "Default Sales Team"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_salesperson_id
+#: model:ir.ui.view,arch_db:mobikul.mobikul_app_config_settings
+msgid "Default Salesperson"
+msgstr "Default Salesperson"
+
+#. module: mobikul
+#: selection:mobikul.product.slider,slider_mode:0
+msgid "Default(Slide)"
+msgstr "Default(Slide)"
+
+#. module: mobikul
+#: model:ir.model.fields,help:mobikul.field_mobikul_banners_banner_action
+#: model:ir.model.fields,help:mobikul.field_mobikul_push_notification_banner_action
+#: model:ir.model.fields,help:mobikul.field_mobikul_push_notification_template_banner_action
+msgid "Define what action will be triggerred when click/touch on the banner."
+msgstr "Define what action will be triggerred when click/touch on the banner."
+
+#. module: mobikul
+#: model:ir.model.fields,help:mobikul.field_mobikul_product_slider_slider_mode
+msgid "Define which type of behaviour you want with your Slider."
+msgstr "Define which type of behaviour you want with your Slider."
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1183
+#, python-format
+msgid "Deleted Successfully"
+msgstr "Deleted Successfully"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_fcm_registered_devices_description
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_banners_description
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_product_slider_description
+#: model:ir.ui.view,arch_db:mobikul.mobikul_banners_view_form
+#: model:ir.ui.view,arch_db:mobikul.mobikul_product_slider_form_view
+msgid "Description"
+msgstr "Description"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_banners_view_form
+msgid "Description for Banner for Internal use only."
+msgstr "Description for Banner for Internal use only."
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_fcm_registered_devices_device_id
+msgid "Device Id"
+msgstr "Device Id"
+
+#. module: mobikul
+#: model:mobikul.product.slider,name:mobikul.mobikul_product_slider_1
+msgid "Discount for You"
+msgstr "Discount for You"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_product_slider_display_banner
+msgid "Display Banner"
+msgstr "Display Banner"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_fcm_registered_devices_display_name
+#: model:ir.model.fields,field_description:mobikul.field_fcm_registered_topics_display_name
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_banners_display_name
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_category_display_name
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_config_settings_display_name
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_display_name
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_notification_messages_display_name
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_product_slider_display_name
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_display_name
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_template_display_name
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_sync_category_display_name
+msgid "Display Name"
+msgstr "Display Name"
+
+#. module: mobikul
+#: selection:product.template,mobikul_status:0
+msgid "Display Nothing"
+msgstr "Display Nothing"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_product_slider_item_display_limit
+msgid "Display no. of Products in a slider(per row)"
+msgstr "Display no. of Products in a slider(per row)"
+
+#. module: mobikul
+#: model:ir.model.fields,help:mobikul.field_mobikul_banners_sequence
+#: model:ir.model.fields,help:mobikul.field_mobikul_category_sequence
+#: model:ir.model.fields,help:mobikul.field_mobikul_product_slider_sequence
+msgid "Display order"
+msgstr "Display order"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_sync_cat_form
+msgid "Do it Now.."
+msgstr "Do it Now.."
+
+#. module: mobikul
+#: selection:mobikul.banners,banner_action:0
+#: selection:mobikul.push.notification,banner_action:0
+#: selection:mobikul.push.notification.template,banner_action:0
+msgid "Do nothing"
+msgstr "Do nothing"
+
+#. module: mobikul
+#: selection:mobikul.push.notification,state:0
+msgid "Done"
+msgstr "Done"
+
+#. module: mobikul
+#: selection:mobikul.push.notification,state:0
+msgid "Draft"
+msgstr "Draft"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_push_notification_template_view_form
+msgid "Dry run on"
+msgstr "Dry run on"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_push_notification_view_form
+msgid "Duplicate"
+msgstr "Duplicate"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1621
+#, python-format
+msgid "Eligible for write a review"
+msgstr "Eligible for write a review"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:560
+#, python-format
+msgid "Email"
+msgstr "Email"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1447
+#, python-format
+msgid "Email Verification Module not install !!!"
+msgstr "Email Verification Module not install !!!"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1444
+#, python-format
+msgid "Email already verified."
+msgstr "Email already verified."
+
+#. module: mobikul
+#: model:ir.model.fields,help:mobikul.field_mobikul_order_mail_template
+msgid "Email sent to customer at the end of the checkout process"
+msgstr "Email sent to customer at the end of the checkout process"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_config_settings_mobikul_signup
+msgid "Enable customer sign up"
+msgstr "Enable customer sign up"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_config_settings_mobikul_reset_password
+msgid "Enable password reset"
+msgstr "Enable password reset"
+
+#. module: mobikul
+#: selection:mobikul.push.notification,state:0
+msgid "Error"
+msgstr "Error"
+
+#. module: mobikul
+#: code:addons/mobikul/models/mobikul.py:921
+#, python-format
+msgid "Error ! You cannot create recursive categories."
+msgstr "Error ! You cannot create recursive categories."
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:544
+#, python-format
+msgid "Error: You can`t delete Billing Address."
+msgstr "Error: You can`t delete Billing Address."
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:317
+#, python-format
+msgid "Excellent"
+msgstr "Excellent french"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_banners_date_expired
+msgid "Expiration Date"
+msgstr "Expiration Date"
+
+#. module: mobikul
+#: model:ir.ui.menu,name:mobikul.menu_mobikul_extras
+msgid "Extra Added Features"
+msgstr "Extra Added Features"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_fcm_api_key
+msgid "FCM Api key"
+msgstr "FCM Api key"
+
+#. module: mobikul
+#: model:ir.ui.menu,name:mobikul.mobikul_reg_devices_fcm
+msgid "FCM Reg. Devices"
+msgstr "FCM Reg. Devices"
+
+#. module: mobikul
+#: model:ir.actions.act_window,name:mobikul.fcm_registered_devices_action
+msgid "FCM Registered Devices"
+msgstr "FCM Registered Devices"
+
+#. module: mobikul
+#: model:ir.actions.act_window,name:mobikul.fcm_registered_topics_action
+msgid "FCM Registered Topics"
+msgstr "FCM Registered Topics"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_fcm_registered_devices_token
+msgid "FCM Registration ID"
+msgstr "FCM Registration ID"
+
+#. module: mobikul
+#: model:ir.ui.menu,name:mobikul.mobikul_reg_topics_fcm
+msgid "FCM Topics"
+msgstr "FCM Topics"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_config_settings_mobikul_facebook_signin
+msgid "Facebook SignIn"
+msgstr "Facebook SignIn"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_category_filter_view
+msgid "Featured"
+msgstr "Featured"
+
+#. module: mobikul
+#: model:ir.ui.menu,name:mobikul.mobilkul_fcategory
+#: selection:mobikul.category,type:0
+msgid "Featured Category"
+msgstr "Featured Category"
+
+#. module: mobikul
+#: model:mobikul.push.notification.template,notification_body:mobikul.mobikul_push_notification_1
+msgid "Feel free to contact us in case of any doubts."
+msgstr "Feel free to contact us in case of any doubts."
+
+#. module: mobikul
+#: selection:mobikul.product.slider,slider_mode:0
+msgid "Fixed"
+msgstr "Fixed"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_product_slider_form_view
+msgid "For Internal purpose Only"
+msgstr "For Internal purpose Only"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_orders_filter_view
+msgid "From Mobikul-App"
+msgstr "From Mobikul-App"
+
+#. module: mobikul
+#: model:res.groups,comment:mobikul.group_mobikul_manager
+msgid "Full Access"
+msgstr "Full Access"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_product_slider_form_view
+msgid "General Settings"
+msgstr "General Settings"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_config_settings_mobikul_gmail_signin
+msgid "Gmail SignIn"
+msgstr "Gmail SignIn"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:315
+#, python-format
+msgid "Good"
+msgstr "Good france"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_notification_massages_filter_view
+#: model:ir.ui.view,arch_db:mobikul.mobikul_product_slider_filter_view
+msgid "Group By"
+msgstr "Group By"
+
+#. module: mobikul
+#: model:ir.model,name:mobikul.model_ir_http
+msgid "HTTP routing"
+msgstr "HTTP routing"
+
+#. module: mobikul
+#: selection:mobikul.push.notification,state:0
+msgid "Hold"
+msgstr "Hold"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_fcm_registered_devices_id
+#: model:ir.model.fields,field_description:mobikul.field_fcm_registered_topics_id
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_banners_id
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_category_id
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_config_settings_id
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_id
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_notification_messages_id
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_product_slider_id
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_id
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_template_id
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_sync_category_id
+msgid "ID"
+msgstr "ID"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_category_icon
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_notification_messages_icon
+msgid "Icon"
+msgstr "Icon"
+
+#. module: mobikul
+#: model:ir.model.fields,help:mobikul.field_mobikul_config_settings_default_lang
+#: model:ir.model.fields,help:mobikul.field_mobikul_default_lang
+msgid "If the selected language is loaded in the mobikul, all documents related to this contact will be printed in this language. If not, it will be English."
+msgstr "If the selected language is loaded in the mobikul, all documents related to this contact will be printed in this language. If not, it will be English."
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_banners_image
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_image
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_template_image
+msgid "Image"
+msgstr "Image"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_banners_url
+msgid "Image URL"
+msgstr "Image URL"
+
+#. module: mobikul
+#: selection:product.template,mobikul_status:0
+msgid "In-Stock"
+msgstr "In-Stock"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_banners_view_form
+#: model:ir.ui.view,arch_db:mobikul.mobikul_notification_massages_view_form
+#: model:ir.ui.view,arch_db:mobikul.mobikul_push_notification_template_view_form
+#: model:ir.ui.view,arch_db:mobikul.mobikul_push_notification_view_form
+msgid "Information"
+msgstr "Information"
+
+#. module: mobikul
+#: code:addons/mobikul/models/mobikul.py:317
+#: code:addons/mobikul/models/mobikul.py:331
+#, python-format
+msgid "Insufficient data to authenticate !!!"
+msgstr "Insufficient data to authenticate !!!"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_product_slider_icategory_id
+#: selection:mobikul.product.slider,product_based_on:0
+msgid "Internal Category"
+msgstr "Internal Category"
+
+#. module: mobikul
+#: code:addons/mobikul/models/mobikul.py:479
+#, python-format
+msgid "Invalid Username/Email."
+msgstr "Invalid Username/Email."
+
+#. module: mobikul
+#: code:addons/mobikul/models/mobikul.py:339
+#, python-format
+msgid "Invalid email address."
+msgstr "Invalid email address."
+
+#. module: mobikul
+#: code:addons/mobikul/models/mobikul.py:167
+#, python-format
+msgid "Invalid/Missing Api Key !!!"
+msgstr "Invalid/Missing Api Key !!!"
+
+#. module: mobikul
+#: model:ir.actions.act_window,name:mobikul.mobikul_action_invoices
+#: model:ir.ui.menu,name:mobikul.mobikul_orders_invoices
+msgid "Invoices"
+msgstr "Invoices"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_notification_messages_is_read
+msgid "Is Read"
+msgstr "Is Read"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1326
+#, python-format
+msgid "Item moved to Bag"
+msgstr "Item moved to Bag"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1344
+#, python-format
+msgid "Item moved to Wishlist"
+msgstr "Item moved to Wishlist"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1233
+#: code:addons/mobikul/controllers/main.py:1262
+#, python-format
+msgid "Item removed"
+msgstr "Item removed"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_app_config_settings
+#: model:ir.ui.view,arch_db:mobikul.mobikul_mobikul_view_form
+msgid "Language"
+msgstr "Language"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_language_ids
+msgid "Languages"
+msgstr "Languages"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_fcm_registered_devices___last_update
+#: model:ir.model.fields,field_description:mobikul.field_fcm_registered_topics___last_update
+#: model:ir.model.fields,field_description:mobikul.field_mobikul___last_update
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_banners___last_update
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_category___last_update
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_config_settings___last_update
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_notification_messages___last_update
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_product_slider___last_update
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification___last_update
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_template___last_update
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_sync_category___last_update
+msgid "Last Modified on"
+msgstr "Last Modified on"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_res_partner_last_mobikul_so_id
+#: model:ir.model.fields,field_description:mobikul.field_res_users_last_mobikul_so_id
+msgid "Last Order from Mobikul App"
+msgstr "Last Order from Mobikul App"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_fcm_registered_devices_write_uid
+#: model:ir.model.fields,field_description:mobikul.field_fcm_registered_topics_write_uid
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_banners_write_uid
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_category_write_uid
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_config_settings_write_uid
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_notification_messages_write_uid
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_product_slider_write_uid
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_template_write_uid
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_write_uid
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_sync_category_write_uid
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_write_uid
+msgid "Last Updated by"
+msgstr "Last Updated by"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_fcm_registered_devices_write_date
+#: model:ir.model.fields,field_description:mobikul.field_fcm_registered_topics_write_date
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_banners_write_date
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_category_write_date
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_config_settings_write_date
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_notification_messages_write_date
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_product_slider_write_date
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_template_write_date
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_write_date
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_sync_category_write_date
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_write_date
+msgid "Last Updated on"
+msgstr "Last Updated on"
+
+#. module: mobikul
+#: selection:mobikul.product.slider,product_img_position:0
+msgid "Left"
+msgstr "Left"
+
+#. module: mobikul
+#: selection:mobikul,color_scheme:0
+msgid "Light Blue-Red"
+msgstr "Light Blue-Red"
+
+#. module: mobikul
+#: selection:mobikul,color_scheme:0
+msgid "Light Green"
+msgstr "Light Green"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_config_settings_product_limit
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_product_limit
+#: model:ir.ui.view,arch_db:mobikul.mobikul_app_config_settings
+msgid "Limit Products per page"
+msgstr "Limit Products per page"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_product_slider_url
+msgid "Link URL"
+msgstr "Link URL"
+
+#. module: mobikul
+#: code:addons/mobikul/models/mobikul.py:343
+#: code:addons/mobikul/models/mobikul.py:363
+#, python-format
+msgid "Login Failed."
+msgstr "Login Failed."
+
+#. module: mobikul
+#: code:addons/mobikul/models/mobikul.py:195
+#, python-format
+msgid "Login Failed:"
+msgstr "Login Failed:"
+
+#. module: mobikul
+#: code:addons/mobikul/models/mobikul.py:592
+#, python-format
+msgid "Login Successfully."
+msgstr "Login Successfully. frnech"
+
+#. module: mobikul
+#: code:addons/mobikul/models/mobikul.py:181
+#: code:addons/mobikul/models/mobikul.py:352
+#, python-format
+msgid "Login successfully."
+msgstr "Login successfully. frnech"
+
+#. module: mobikul
+#: code:addons/mobikul/models/mobikul.py:476
+#, python-format
+msgid "Mail Server is under maintenance."
+msgstr "Mail Server is under maintenance."
+
+#. module: mobikul
+#: model:ir.model.fields,help:mobikul.field_payment_acquirer_is_mobikul_available
+msgid "Make this payment acquirer available on App"
+msgstr "Make this payment acquirer available on App"
+
+#. module: mobikul
+#: model:res.groups,name:mobikul.group_mobikul_manager
+msgid "Manager"
+msgstr "Manager"
+
+#. module: mobikul
+#: selection:mobikul.product.slider,product_selection:0
+msgid "Manual"
+msgstr "Manual"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1503
+#: code:addons/mobikul/controllers/main.py:1592
+#: code:addons/mobikul/controllers/main.py:1685
+#, python-format
+msgid "Marketplace is not Active !!!"
+msgstr "Marketplace is not Active !!!"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1590
+#, python-format
+msgid "Marketplace page !!!"
+msgstr "Marketplace page !!!"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_product_slider_item_limit
+msgid "Maximum no. of products in a slider"
+msgstr "Maximum no. of products in a slider"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_notification_messages_name
+msgid "Message Name"
+msgstr "Message Name"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1188
+#, python-format
+msgid "Message not Found"
+msgstr "Message not Found"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_payment_acquirer_mobikul_pre_msg
+msgid "Message to Display"
+msgstr "Message to Display"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_crm_team_mobikul_ids
+#: model:ir.ui.menu,name:mobikul.menu_mobikul_title
+#: model:ir.ui.view,arch_db:mobikul.mobikul_acquirer_form
+#: model:ir.ui.view,arch_db:mobikul.mobikul_product_template_form_view
+#: model:ir.ui.view,arch_db:mobikul.mobikul_view_partner_form
+msgid "Mobikul"
+msgstr "Mobikul"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_mobikul_view_form
+msgid "Mobikul API Configuration"
+msgstr "Mobikul API Configuration"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_config_settings_mobikul_app
+msgid "Mobikul APP"
+msgstr "Mobikul APP"
+
+#. module: mobikul
+#: model:ir.module.category,name:mobikul.module_mobikul
+msgid "Mobikul App"
+msgstr "Mobikul App"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_name
+msgid "Mobikul App Title"
+msgstr "Mobikul App Title"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_banners_filter_view
+msgid "Mobikul Banner"
+msgstr "Mobikul Banner"
+
+#. module: mobikul
+#: model:ir.model,name:mobikul.model_mobikul_banners
+msgid "Mobikul Banner Class"
+msgstr "Mobikul Banner Class"
+
+#. module: mobikul
+#: model:ir.actions.act_window,name:mobikul.mobikul_banners_action
+msgid "Mobikul Banners"
+msgstr "Mobikul Banners"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_product_template_form_view
+msgid "Mobikul Categories"
+msgstr "Mobikul Categories"
+
+#. module: mobikul
+#: model:ir.actions.act_window,name:mobikul.mobikul_category_action
+#: model:ir.model,name:mobikul.model_mobikul_category
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_product_slider_mcategory_id
+#: model:ir.model.fields,field_description:mobikul.field_product_public_category_mobikul_cat_id
+#: model:ir.ui.menu,name:mobikul.mobikul_config_category
+#: model:ir.ui.view,arch_db:mobikul.mobikul_category_filter_view
+#: model:ir.ui.view,arch_db:mobikul.mobikul_category_view_tree
+#: model:ir.ui.view,arch_db:mobikul.mobikul_category_view_tree2
+#: selection:mobikul.product.slider,product_based_on:0
+msgid "Mobikul Category"
+msgstr "Mobikul Category"
+
+#. module: mobikul
+#: code:addons/mobikul/models/mobikul.py:174
+#, python-format
+msgid "Mobikul Configuration not found !!!"
+msgstr "Mobikul Configuration not found !!!"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_app_config_settings
+#: model:ir.ui.view,arch_db:mobikul.mobikul_mobikul_view_form
+msgid "Mobikul Extra Features"
+msgstr "Mobikul Extra Features"
+
+#. module: mobikul
+#: model:ir.actions.act_window,name:mobikul.mobikul_featured_category_action
+msgid "Mobikul Featured Category"
+msgstr "Mobikul Featured Category"
+
+#. module: mobikul
+#: model:ir.model,name:mobikul.model_mobikul
+msgid "Mobikul Model"
+msgstr "Mobikul Model"
+
+#. module: mobikul
+#: model:ir.model,name:mobikul.model_mobikul_notification_messages
+#: model:ir.ui.view,arch_db:mobikul.mobikul_notification_massages_filter_view
+msgid "Mobikul Notification Messages"
+msgstr "Mobikul Notification Messages"
+
+#. module: mobikul
+#: model:ir.actions.act_window,name:mobikul.mobikul_notification_massages_templates_action
+msgid "Mobikul Notification Messages Action"
+msgstr "Mobikul Notification Messages Action"
+
+#. module: mobikul
+#: model:ir.actions.act_window,name:mobikul.mobikul_orders_action
+msgid "Mobikul Orders"
+msgstr "Mobikul Orders"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_product_product_mobikul_categ_ids
+#: model:ir.model.fields,field_description:mobikul.field_product_template_mobikul_categ_ids
+msgid "Mobikul Product Category"
+msgstr "Mobikul Product Category"
+
+#. module: mobikul
+#: model:ir.model,name:mobikul.model_mobikul_product_slider
+#: model:ir.ui.view,arch_db:mobikul.mobikul_product_slider_filter_view
+#: model:ir.ui.view,arch_db:mobikul.mobikul_product_slider_view_tree
+msgid "Mobikul Product Slider"
+msgstr "Mobikul Product Slider"
+
+#. module: mobikul
+#: model:ir.model,name:mobikul.model_mobikul_push_notification
+#: model:ir.ui.view,arch_db:mobikul.mobikul_push_notification_filter_view
+msgid "Mobikul Push Notification"
+msgstr "Mobikul Push Notification"
+
+#. module: mobikul
+#: model:ir.model,name:mobikul.model_mobikul_push_notification_template
+msgid "Mobikul Push Notification Templates"
+msgstr "Mobikul Push Notification Templates"
+
+#. module: mobikul
+#: model:ir.actions.act_window,name:mobikul.mobikul_push_notification_action
+msgid "Mobikul Push Notifications"
+msgstr "Mobikul Push Notifications"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_payment_acquirer_mobikul_reference_code
+msgid "Mobikul Reference Code"
+msgstr "Mobikul Reference Code"
+
+#. module: mobikul
+#: model:crm.team,name:mobikul.salesteam_mobikul_sales
+msgid "Mobikul Sales"
+msgstr "Mobikul Sales"
+
+#. module: mobikul
+#: model:ir.actions.act_window,name:mobikul.mobikul_config_setting_action
+msgid "Mobikul Settings"
+msgstr "Mobikul Settings"
+
+#. module: mobikul
+#: model:ir.actions.act_window,name:mobikul.mobikul_sync_cat_action
+msgid "Mobikul Sync Category"
+msgstr "Mobikul Sync Category"
+
+#. module: mobikul
+#: model:ir.model.fields,help:mobikul.field_crm_team_mobikul_ids
+msgid "Mobikul is using these sales team."
+msgstr "Mobikul is using these sales team."
+
+#. module: mobikul
+#: model:ir.actions.act_window,name:mobikul.mobikul_mobikul_action
+#: model:ir.ui.view,arch_db:mobikul.mobikul_mobikul_view_form
+#: model:ir.ui.view,arch_db:mobikul.mobikul_mobikul_view_tree
+msgid "Mobikul-App Configuration"
+msgstr "Mobikul-App Configuration"
+
+#. module: mobikul
+#: model:ir.module.category,description:mobikul.module_mobikul
+msgid "Mobikul-App Group"
+msgstr "Mobikul-App Group"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_fcm_registered_devices_name
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_category_name
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_name
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_template_name
+#: model:ir.ui.view,arch_db:mobikul.mobikul_banners_view_form
+#: model:ir.ui.view,arch_db:mobikul.mobikul_category_form_view
+#: model:ir.ui.view,arch_db:mobikul.mobikul_mobikul_view_form
+#: model:ir.ui.view,arch_db:mobikul.mobikul_notification_massages_view_form
+#: model:ir.ui.view,arch_db:mobikul.mobikul_product_slider_form_view
+#: model:ir.ui.view,arch_db:mobikul.mobikul_push_notification_template_view_form
+#: model:ir.ui.view,arch_db:mobikul.mobikul_push_notification_view_form
+msgid "Name"
+msgstr "Name"
+
+#. module: mobikul
+#: selection:mobikul.sync.category,sync_type:0
+msgid "Name and Parent Category"
+msgstr "Name and Parent Category"
+
+#. module: mobikul
+#: selection:mobikul.sync.category,sync_type:0
+msgid "Name and Sequence"
+msgstr "Name and Sequence"
+
+#. module: mobikul
+#: selection:mobikul.sync.category,sync_type:0
+msgid "Name, Parent Category and Sequence"
+msgstr "Name, Parent Category and Sequence"
+
+#. module: mobikul
+#: model:mobikul.product.slider,name:mobikul.mobikul_product_slider_3
+msgid "New "
+msgstr "New "
+
+#. module: mobikul
+#: selection:mobikul.product.slider,product_based_on:0
+msgid "Newly created"
+msgstr "Newly created"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1070
+#, python-format
+msgid "No Payment Method found."
+msgstr "No Payment Method found."
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:990
+#, python-format
+msgid "No Payment methods found with given id."
+msgstr "No Payment methods found with given id."
+
+#. module: mobikul
+#: code:addons/mobikul/models/mobikul.py:473
+#: code:addons/mobikul/models/mobikul.py:615
+#, python-format
+msgid "No login provided."
+msgstr "No login provided."
+
+#. module: mobikul
+#: selection:mobikul.category,type:0
+msgid "Normal"
+msgstr "Normal"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1238
+#: code:addons/mobikul/controllers/main.py:1267
+#, python-format
+msgid "Not Found"
+msgstr "Not Found"
+
+#. module: mobikul
+#: model:ir.ui.menu,name:mobikul.menu_mobilkul_notification_messages
+#: model:ir.ui.view,arch_db:mobikul.mobikul_notification_massages_view_form
+#: model:ir.ui.view,arch_db:mobikul.mobikul_notification_massages_view_tree
+msgid "Notification Messages"
+msgstr "Notification Messages"
+
+#. module: mobikul
+#: model:ir.model.fields,help:mobikul.field_mobikul_notification_messages_datatype
+msgid "Notification Messages Data Type for your Mobikul App."
+msgstr "Notification Messages Data Type for your Mobikul App."
+
+#. module: mobikul
+#: model:ir.ui.menu,name:mobikul.mobilkul_push_notification_templates
+msgid "Notification Templates"
+msgstr "Notification Templates"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_push_notification_view_form
+msgid "Notification Type"
+msgstr "Notification Type"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_push_notification_template_view_form
+msgid "Notification will be triggered automatically when"
+msgstr "Notification will be triggered automatically when"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:314
+#, python-format
+msgid "Ok"
+msgstr "Ok"
+
+#. module: mobikul
+#: model:ir.ui.menu,name:mobikul.mobilkul_push_notification_one_time
+msgid "One-Time Notifications"
+msgstr "One-Time Notifications"
+
+#. module: mobikul
+#: selection:mobikul.sync.category,sync_type:0
+msgid "Only Name"
+msgstr "Only Name"
+
+#. module: mobikul
+#: selection:mobikul.banners,banner_action:0
+#: selection:mobikul.push.notification,banner_action:0
+#: selection:mobikul.push.notification.template,banner_action:0
+msgid "Open Category Page"
+msgstr "Open Category Page"
+
+#. module: mobikul
+#: selection:mobikul.banners,banner_action:0
+#: selection:mobikul.push.notification,banner_action:0
+#: selection:mobikul.push.notification.template,banner_action:0
+msgid "Open Custom Collection Page"
+msgstr "Open Custom Collection Page"
+
+#. module: mobikul
+#: selection:mobikul.banners,banner_action:0
+#: selection:mobikul.push.notification,banner_action:0
+#: selection:mobikul.push.notification.template,banner_action:0
+msgid "Open Product Page"
+msgstr "Open Product Page"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_app_config_settings
+#: selection:mobikul.notification.messages,datatype:0
+msgid "Order"
+msgstr "Order"
+
+#. module: mobikul
+#: selection:mobikul.push.notification,condition:0
+#: selection:mobikul.push.notification.template,condition:0
+msgid "Order Placed"
+msgstr "Order Placed"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1348
+#, python-format
+msgid "Order not found"
+msgstr "Order not found"
+
+#. module: mobikul
+#: model:mobikul.push.notification.template,name:mobikul.mobikul_push_notification_2
+msgid "OrderNotify"
+msgstr "OrderNotify"
+
+#. module: mobikul
+#: model:ir.ui.menu,name:mobikul.mobikul_orders_orders
+#: model:ir.ui.view,arch_db:mobikul.mobikul_mobikul_view_form
+msgid "Orders"
+msgstr "Orders"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_app_config_settings
+msgid "Other Addons"
+msgstr "Other Addons"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_push_notification_view_form
+msgid "Others"
+msgstr "Others"
+
+#. module: mobikul
+#: selection:product.template,mobikul_status:0
+msgid "Out-of-Stock"
+msgstr "Out-of-Stock"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_category_parent_id
+msgid "Parent Category"
+msgstr "Parent Category"
+
+#. module: mobikul
+#: model:ir.model,name:mobikul.model_res_partner
+msgid "Partner"
+msgstr "Partner"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1657
+#, python-format
+msgid "Pass the params properly for create review!!!"
+msgstr "Pass the params properly for create review!!!"
+
+#. module: mobikul
+#: model:ir.model,name:mobikul.model_payment_acquirer
+msgid "Payment Acquirer"
+msgstr "Payment Acquirer"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:898
+#, python-format
+msgid "Payment Mode not Available."
+msgstr "Payment Mode not Available."
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_notification_messages_period
+msgid "Period"
+msgstr "Period"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:561
+#, python-format
+msgid "Phone"
+msgstr "Phone"
+
+#. module: mobikul
+#: code:addons/mobikul/models/mobikul.py:980
+#, python-format
+msgid "Please select the Sync Type."
+msgstr "Please select the Sync Type."
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1092
+#: code:addons/mobikul/controllers/main.py:1243
+#: code:addons/mobikul/controllers/main.py:1272
+#: code:addons/mobikul/controllers/main.py:1304
+#: code:addons/mobikul/controllers/main.py:1328
+#: code:addons/mobikul/controllers/main.py:1346
+#: code:addons/mobikul/controllers/main.py:1420
+#: code:addons/mobikul/controllers/main.py:1472
+#: code:addons/mobikul/controllers/main.py:1478
+#, python-format
+msgid "Please try again later"
+msgstr "Please try again later"
+
+#. module: mobikul
+#: code:addons/mobikul/models/mobikul.py:857
+#, python-format
+msgid "Please upload Banner`s Image or enter Image URL"
+msgstr "Please upload Banner`s Image or enter Image URL"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:313
+#, python-format
+msgid "Poor"
+msgstr "Poor france"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_app_config_settings
+#: model:ir.ui.view,arch_db:mobikul.mobikul_mobikul_view_form
+msgid "Pricelist/Currency"
+msgstr "Pricelist/Currency"
+
+#. module: mobikul
+#: model:ir.model,name:mobikul.model_product_product
+msgid "Product"
+msgstr "Product"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_product_product_mobikul_status
+#: model:ir.model.fields,field_description:mobikul.field_product_template_mobikul_status
+msgid "Product Availability"
+msgstr "Product Availability"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_product_slider_product_img_position
+msgid "Product Image Position"
+msgstr "Product Image Position"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_product_slider_form_view
+msgid "Product Selection"
+msgstr "Product Selection"
+
+#. module: mobikul
+#: model:ir.actions.act_window,name:mobikul.mobikul_product_slider_action
+msgid "Product Slider"
+msgstr "Product Slider"
+
+#. module: mobikul
+#: model:ir.ui.menu,name:mobikul.mobikul_pslider
+msgid "Product Sliders"
+msgstr "Product Sliders"
+
+#. module: mobikul
+#: model:ir.model,name:mobikul.model_product_template
+msgid "Product Template"
+msgstr "Product Template"
+
+#. module: mobikul
+#: model:ir.actions.act_window,name:mobikul.mobikul_product_template_action
+#: model:ir.ui.menu,name:mobikul.mobikul_catalog_products
+#: model:ir.ui.view,arch_db:mobikul.mobikul_product_slider_form_view
+msgid "Products"
+msgstr "Products"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_banners_date_published
+msgid "Publish Date"
+msgstr "Publish Date"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_product_product_is_mobikul_available
+#: model:ir.model.fields,field_description:mobikul.field_product_template_is_mobikul_available
+#: model:ir.ui.view,arch_db:mobikul.mobikul_product_template_filter_view
+msgid "Published on App"
+msgstr "Published on App"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_push_notification_filter_view
+#: model:ir.ui.view,arch_db:mobikul.mobikul_push_notification_view_form
+msgid "Push Notification"
+msgstr "Push Notification"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_push_notification_template_view_form
+msgid "Push Notification Template"
+msgstr "Push Notification Template"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_push_notification_template_view_tree
+msgid "Push Notification Templates"
+msgstr "Push Notification Templates"
+
+#. module: mobikul
+#: model:ir.ui.menu,name:mobikul.mobilkul_push_notifications
+#: model:ir.ui.view,arch_db:mobikul.mobikul_push_notification_view_tree
+msgid "Push Notifications"
+msgstr "Push Notifications"
+
+#. module: mobikul
+#: model:ir.actions.act_window,name:mobikul.mobikul_push_notification_templates_action
+msgid "Push Notifications Templates"
+msgstr "Push Notifications Templates"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_push_notification_view_form
+msgid "Push now"
+msgstr "Push now"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_notification_massages_view_form
+#: model:ir.ui.view,arch_db:mobikul.mobikul_push_notification_template_view_form
+#: model:ir.ui.view,arch_db:mobikul.mobikul_push_notification_view_form
+msgid "Record name"
+msgstr "Record name"
+
+#. module: mobikul
+#: selection:mobikul,color_scheme:0
+msgid "Red-Green"
+msgstr "Red-Green"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_res_partner_token_ids
+#: model:ir.model.fields,field_description:mobikul.field_res_users_token_ids
+#: model:ir.ui.view,arch_db:mobikul.fcm_registered_devices_view_form
+#: model:ir.ui.view,arch_db:mobikul.fcm_registered_devices_view_tree
+msgid "Registered Devices"
+msgstr "Registered Devices"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_push_notification_view_form
+msgid "Release Hold"
+msgstr "Release Hold"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1130
+#, python-format
+msgid "Request completed !"
+msgstr "Request completed !"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_push_notification_view_form
+msgid "Result"
+msgstr "Result"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_push_notification_view_form
+msgid "Retry"
+msgstr "Retry"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1390
+#: code:addons/mobikul/controllers/main.py:1424
+#, python-format
+msgid "Review Module not install !!!"
+msgstr "Review Module not install !!!"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1655
+#, python-format
+msgid "Review create successfully for seller id"
+msgstr "Review create successfully for seller id"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1480
+#, python-format
+msgid "Review not found !!!"
+msgstr "Review not found !!!"
+
+#. module: mobikul
+#: selection:mobikul.product.slider,product_img_position:0
+msgid "Right"
+msgstr "Right"
+
+#. module: mobikul
+#: model:ir.model,name:mobikul.model_sale_order
+msgid "Sales Order"
+msgstr "Sales Order"
+
+#. module: mobikul
+#: model:ir.model,name:mobikul.model_crm_team
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_config_settings_salesteam_id
+msgid "Sales Team"
+msgstr "Sales Team"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_config_settings_salesperson_id
+msgid "Salesperson"
+msgstr "Salesperson"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_device_id
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_template_device_id
+msgid "Select Device"
+msgstr "Select Device"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_sync_cat_form
+msgid "Select an Operation you want to do:-"
+msgstr "Select an Operation you want to do:-"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_product_slider_product_selection
+msgid "Selection Criteria"
+msgstr "Selection Criteria"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1499
+#: code:addons/mobikul/controllers/main.py:1641
+#, python-format
+msgid "Seller Found !!!"
+msgstr "Seller Found !!!"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1501
+#, python-format
+msgid "Seller Not Found !!!"
+msgstr "Seller Not Found !!!"
+
+#. module: mobikul
+#: code:addons/mobikul/models/mobikul.py:551
+#, python-format
+msgid "Seller created successfully"
+msgstr "Seller created successfully"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1661
+#, python-format
+msgid "Seller not Found."
+msgstr "Seller not Found."
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1868
+#: code:addons/mobikul/models/mobikul.py:532
+#: code:addons/mobikul/models/mobikul.py:555
+#, python-format
+msgid "Seller profile 'url_handler' is not unique or absent."
+msgstr "Seller profile 'url_handler' is not unique or absent."
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1786
+#, python-format
+msgid "Seller query is posted Successfully"
+msgstr "Seller query is posted Successfully"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_banners_sequence
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_category_sequence
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_product_slider_sequence
+msgid "Sequence"
+msgstr "Sequence"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_push_notification_view_form
+msgid "Set to Draft"
+msgstr "Set to Draft"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_push_notification_view_form
+msgid "Set to Hold"
+msgstr "Set to Hold"
+
+#. module: mobikul
+#: model:ir.ui.menu,name:mobikul.mobikul_config_settings
+msgid "Settings"
+msgstr "Settings"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_product_slider_filter_view
+msgid "Slider"
+msgstr "Slider"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_product_slider_slider_mode
+#: model:ir.ui.view,arch_db:mobikul.mobikul_product_slider_filter_view
+msgid "Slider Mode"
+msgstr "Slider Mode"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_product_slider_name
+msgid "Slider Title"
+msgstr "Slider Title"
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_app_config_settings
+msgid "Social Login"
+msgstr "Social Login"
+
+#. module: mobikul
+#: code:addons/mobikul/models/mobikul.py:327
+#, python-format
+msgid "Social-Login Failed."
+msgstr "Social-Login Failed."
+
+#. module: mobikul
+#: code:addons/mobikul/models/mobikul.py:324
+#, python-format
+msgid "Social-Login: No such record found."
+msgstr "Social-Login: No such record found."
+
+#. module: mobikul
+#: code:addons/mobikul/models/mobikul.py:553
+#, python-format
+msgid "Something went wrong please try again."
+msgstr "Something went wrong please try again."
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:567
+#, python-format
+msgid "State"
+msgstr "State"
+
+#. module: mobikul
+#: model:ir.model.fields,help:mobikul.field_mobikul_banners_url
+msgid "Static URL of Banner Image, used when banner`s image is not present."
+msgstr "Static URL of Banner Image, used when banner`s image is not present."
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_state
+msgid "Status"
+msgstr "Status"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1584
+#, python-format
+msgid "Still Selling Offline? Start Selling Online."
+msgstr "Still Selling Offline? Start Selling Online."
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:562
+#, python-format
+msgid "Street"
+msgstr "Street"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:563
+#, python-format
+msgid "Street2"
+msgstr "Street2"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_notification_messages_subtitle
+#: model:ir.ui.view,arch_db:mobikul.mobikul_notification_massages_view_form
+msgid "Subtitle"
+msgstr "Subtitle"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_summary
+msgid "Summary"
+msgstr "Summary"
+
+#. module: mobikul
+#: model:ir.actions.server,name:mobikul.sync_cat_server_action
+#: model:ir.ui.view,arch_db:mobikul.mobikul_sync_cat_form
+msgid "Sync Category"
+msgstr "Sync Category"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_sync_category_sync_type
+msgid "Sync Type"
+msgstr "Sync Type"
+
+#. module: mobikul
+#: model:ir.model.fields,help:mobikul.field_mobikul_sync_category_sync_type
+msgid "Sync mobikul category on the basis of Selection"
+msgstr "Sync mobikul category on the basis of Selection"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_notification_tag
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_template_notification_tag
+msgid "Tag"
+msgstr "Tag"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_config_settings_mobikul_signup_template_user_id
+msgid "Template user for new users created through App"
+msgstr "Template user for new users created through App"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1470
+#: code:addons/mobikul/controllers/main.py:1476
+#, python-format
+msgid "Thank you for your feedback."
+msgstr "Thank you for your feedback."
+
+#. module: mobikul
+#: model:mobikul.push.notification.template,notification_title:mobikul.mobikul_push_notification_2
+msgid "Thank you for your purchase !"
+msgstr "Thank you for your purchase !"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1416
+#, python-format
+msgid "Thanks for your review."
+msgstr "Thanks for your review."
+
+#. module: mobikul
+#: code:addons/mobikul/models/mobikul.py:539
+#, python-format
+msgid "There is some problem in creating account. Please try again later."
+msgstr "There is some problem in creating account. Please try again later."
+
+#. module: mobikul
+#: model:ir.model.fields,help:mobikul.field_mobikul_config_settings_mobikul_reset_password
+msgid "This allows users to trigger a password reset from App"
+msgstr "This allows users to trigger a password reset from App"
+
+#. module: mobikul
+#: code:addons/mobikul/models/mobikul.py:599
+#, python-format
+msgid "This mail is already registered with us. "
+msgstr "This mail is already registered with us. "
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_banners_name
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_notification_messages_title
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_notification_title
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_template_notification_title
+#: model:ir.ui.view,arch_db:mobikul.mobikul_banners_view_form
+#: model:ir.ui.view,arch_db:mobikul.mobikul_mobikul_view_form
+#: model:ir.ui.view,arch_db:mobikul.mobikul_notification_massages_view_form
+#: model:ir.ui.view,arch_db:mobikul.mobikul_push_notification_template_view_form
+#: model:ir.ui.view,arch_db:mobikul.mobikul_push_notification_view_form
+msgid "Title"
+msgstr "Title"
+
+#. module: mobikul
+#: selection:mobikul.push.notification,notification_type:0
+msgid "Token-Based(All Reg. Devices)"
+msgstr "Token-Based(All Reg. Devices)"
+
+#. module: mobikul
+#: selection:mobikul.push.notification,notification_type:0
+msgid "Token-Based(Selected Devices)"
+msgstr "Token-Based(Selected Devices)"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_fcm_registered_topics_name
+msgid "Topic Name"
+msgstr "Topic Name"
+
+#. module: mobikul
+#: selection:mobikul.push.notification,notification_type:0
+msgid "Topic-Based"
+msgstr "Topic-Based"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_banners_total_views
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_product_slider_total_views
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_template_total_views
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_total_views
+msgid "Total # Views"
+msgstr "Total # Views"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_config_settings_mobikul_twitter_signin
+msgid "Twitter SignIn"
+msgstr "Twitter SignIn"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_push_notification_notification_type
+msgid "Type"
+msgstr "Type"
+
+#. module: mobikul
+#: model:ir.model.fields,help:mobikul.field_payment_acquirer_mobikul_reference_code
+msgid "Unique Code in order to integrate it with Mobikul App."
+msgstr "Unique Code in order to integrate it with Mobikul App."
+
+#. module: mobikul
+#: code:addons/mobikul/models/mobikul.py:165
+#: code:addons/mobikul/models/mobikul.py:310
+#, python-format
+msgid "Unknown Error !!!"
+msgstr "Unknown Error !!!"
+
+#. module: mobikul
+#: model:ir.actions.act_window,name:mobikul.mobikul_unpaid_orders_action
+msgid "Unpaid Mobikul Orders"
+msgstr "Unpaid Mobikul Orders"
+
+#. module: mobikul
+#: model:ir.ui.menu,name:mobikul.mobikul_orders_unpaid_orders
+msgid "Unpaid Orders"
+msgstr "Unpaid Orders"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1186
+#, python-format
+msgid "Updated Successfully"
+msgstr "Updated Successfully"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1085
+#, python-format
+msgid "Updated Successfully."
+msgstr "Updated Successfully."
+
+#. module: mobikul
+#: model:ir.ui.view,arch_db:mobikul.mobikul_banners_view_form
+#: model:ir.ui.view,arch_db:mobikul.mobikul_notification_massages_view_form
+msgid "Upload Banner Image"
+msgstr "Upload Banner Image"
+
+#. module: mobikul
+#: model:ir.model.fields,help:mobikul.field_mobikul_config_settings_module_odoo_marketplace
+msgid "Use external Addon to add Multi Vendor Marketplace in website"
+msgstr "Use external Addon to add Multi Vendor Marketplace in website"
+
+#. module: mobikul
+#: model:ir.model.fields,help:mobikul.field_mobikul_config_settings_module_wk_review
+msgid "Use external Addon to add review feature in website"
+msgstr "Use external Addon to add review feature in website"
+
+#. module: mobikul
+#: model:ir.model.fields,help:mobikul.field_mobikul_config_settings_module_website_wishlist
+msgid "Use external Addon to add wishlist feature in website"
+msgstr "Use external Addon to add wishlist feature in website"
+
+#. module: mobikul
+#: model:ir.model.fields,help:mobikul.field_mobikul_config_settings_module_auth_oauth
+msgid "Use external authentication providers (OAuth)"
+msgstr "Use external authentication providers (OAuth)"
+
+#. module: mobikul
+#: model:ir.model.fields,help:mobikul.field_mobikul_config_settings_product_limit
+#: model:ir.model.fields,help:mobikul.field_mobikul_product_limit
+msgid "Used in Pagination"
+msgstr "Used in Pagination"
+
+#. module: mobikul
+#: model:ir.model.fields,help:mobikul.field_mobikul_product_slider_url
+msgid "Used when someone click on banner/view-all button."
+msgstr "Used when someone click on banner/view-all button."
+
+#. module: mobikul
+#: model:res.groups,name:mobikul.group_mobikul_user
+msgid "User"
+msgstr "User"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1441
+#, python-format
+msgid "Verification email sent successfully."
+msgstr "Verification email sent successfully."
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_config_settings_module_email_verification
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_email_verify
+msgid "Verify Email on signUp"
+msgstr "Verify Email on signUp"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:316
+#, python-format
+msgid "Very Good"
+msgstr "Very Good france"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_payment_acquirer_is_mobikul_available
+msgid "Visible in Portal / Website"
+msgstr "Visible in Portal / Website"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_category_website_cat_id
+msgid "Webiste Category"
+msgstr "Webiste Category"
+
+#. module: mobikul
+#: model:ir.model.fields,field_description:mobikul.field_mobikul_product_slider_wcategory_id
+#: selection:mobikul.product.slider,product_based_on:0
+msgid "Website Category"
+msgstr "Website Category"
+
+#. module: mobikul
+#: model:ir.model,name:mobikul.model_product_public_category
+msgid "Website Product Category"
+msgstr "Website Product Category"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1219
+#: code:addons/mobikul/controllers/main.py:1247
+#: code:addons/mobikul/controllers/main.py:1276
+#: code:addons/mobikul/controllers/main.py:1287
+#: code:addons/mobikul/controllers/main.py:1330
+#: code:addons/mobikul/controllers/main.py:1350
+#, python-format
+msgid "Wishlist is not Active !!!"
+msgstr "Wishlist is not Active !!!"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1659
+#, python-format
+msgid "Wrong Request"
+msgstr "Wrong Request"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:984
+#, python-format
+msgid "You can't place your order, please verify your account"
+msgstr "You can't place your order, please verify your account"
+
+#. module: mobikul
+#: code:addons/mobikul/models/mobikul.py:825
+#, python-format
+msgid "You cannot remove/deactivate this Configuration."
+msgstr "You cannot remove/deactivate this Configuration."
+
+#. module: mobikul
+#: model:ir.actions.act_window,help:mobikul.mobikul_abandonned_orders_action
+msgid "You don't have any cancelled order from the Mobikul App."
+msgstr "You don't have any cancelled order from the Mobikul App."
+
+#. module: mobikul
+#: model:ir.actions.act_window,help:mobikul.mobikul_orders_action
+msgid "You don't have any confirmed order from the Mobikul App."
+msgstr "You don't have any confirmed order from the Mobikul App."
+
+#. module: mobikul
+#: model:ir.actions.act_window,help:mobikul.mobikul_unpaid_orders_action
+msgid "You don't have any unpaid order from the Mobikul App."
+msgstr "You don't have any unpaid order from the Mobikul App."
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1617
+#, python-format
+msgid "You have to purchase a product of this seller first."
+msgstr "You have to purchase a product of this seller first."
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1483
+#, python-format
+msgid "You need to login first !"
+msgstr "You need to login first !"
+
+#. module: mobikul
+#: model:mobikul.push.notification.template,notification_body:mobikul.mobikul_push_notification_2
+msgid "Your Order has been placed, successfully."
+msgstr "Your Order has been placed, successfully."
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:794
+#, python-format
+msgid "Your Shopping Bag has been set to Empty."
+msgstr "Your Shopping Bag has been set to Empty."
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:800
+#, python-format
+msgid "Your Shopping Bag is already empty."
+msgstr "Your Shopping Bag is already empty."
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:753
+#: code:addons/mobikul/controllers/main.py:755
+#, python-format
+msgid "Your Shopping Bag is empty."
+msgstr "Your Shopping Bag is empty."
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:559
+#, python-format
+msgid "Your name"
+msgstr "Your name"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:565
+#, python-format
+msgid "Zip / Postal Code"
+msgstr "Zip / Postal Code"
+
+#. module: mobikul
+#: model:ir.model,name:mobikul.model_mobikul_config_settings
+msgid "mobikul.config.settings"
+msgstr "mobikul.config.settings"
+
+#. module: mobikul
+#: model:ir.model,name:mobikul.model_mobikul_sync_category
+msgid "mobikul.sync.category"
+msgstr "mobikul.sync.category"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1683
+#, python-format
+msgid "seller review vote create successfully !!!"
+msgstr "seller review vote create successfully !!!"
+
+#. module: mobikul
+#: code:addons/mobikul/controllers/main.py:1680
+#, python-format
+msgid "seller review vote update successfully !!!"
+msgstr "seller review vote update successfully !!!"
+
+#. module: mobikul
+#: model:mobikul.push.notification.template,name:mobikul.mobikul_push_notification_1
+msgid "signupNotify"
+msgstr "signupNotify"
+
+#. module: mobikul
+#: model:ir.model.fields,help:mobikul.field_payment_acquirer_mobikul_pre_msg
+msgid "this field is depricated from mobikul"
+msgstr "this field is depricated from mobikul"

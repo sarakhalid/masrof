@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+
+        <record id="view_e_wallet_form" model="ir.ui.view">
+            <field name="name">e.wallet.form</field>
+            <field name="model">e.wallet</field>
+            <field name="arch" type="xml">
+                <form string="E-Wallet">
+                <header>
+
+
+                </header>
+                   <sheet>
+                    <div class="oe_button_box" name="button_box">
+                    <button type="object"
+                        name="action_view_transactions"
+                        class="oe_stat_button"
+                        icon="fa-briefcase"
+                        >
+                        <field name="transactions_count" widget="statinfo" string="Total Amount"/>
+                    </button>
+                  </div>
+
+                           <group >
+                           <group >
+                             <field name="wallet_no"  />
+                             <field name="responsable"  />
+		             <!--field name="total_amount"  /-->
+                           </group>
+                           <group >
+                             <field name="restriction"  />
+		             <field name="restriction_type" attrs="{'invisible': [('restriction', '=', False)]}" />
+                            
+                           </group>
+                           </group>
+
+
+                <notebook colspan="4">
+                    <page string="Stusents" name="Stusents">
+			<field name="line_ids" colspan="4" nolabel="1">
+                            <tree string="Stusents" editable="bottom">
+
+                                    <field name="student"/>
+                                    <field name="limit"/>
+                                    <field name="amount"/>
+                                
+                            </tree>
+			</field>
+
+                    </page>
+		</notebook>
+		   </sheet>
+               </form>
+            </field>
+        </record>
+
+
+        <record id="view_e_wallet_tree" model="ir.ui.view">
+            <field name="name">e.wallet.tree</field>
+            <field name="model">e.wallet</field>
+            <field name="arch" type="xml">
+                <tree string="E-Wallet">
+                             <field name="wallet_no"  />
+                             <field name="responsable"  />
+                        <field name="transactions_count"/>
+		             
+               </tree>
+            </field>
+        </record>
+
+        <record id="action_e_wallet_form" model="ir.actions.act_window">
+            <field name="name">E-Wallet</field>
+            <field name="res_model">e.wallet</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="e_wallet_root_menu"  name="Masrof"  />
+        <menuitem id="menu_e_wallet"  parent="e_wallet_root_menu" name="E-Wallet" sequence="1"  />
+        <menuitem id="menu_e_wallet_operations"  parent="e_wallet_root_menu" name="Operations on the wallet" sequence="2"  />
+        <menuitem id="wallet_transaction_menu" parent="e_wallet_root_menu" name="Education"  sequence="6" />
+        <menuitem id="menu_e_wallet_form" parent="menu_e_wallet" name="E-Wallet" sequence="1" action="action_e_wallet_form" />
+
+
+      
+
+</odoo>
+

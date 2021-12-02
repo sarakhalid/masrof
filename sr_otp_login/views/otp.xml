@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+		<template id="sr_otp_login.fields" inherit_id="auth_signup.fields">
+			
+			<xpath expr="//div[hasclass('field-login')]" position="before">
+                	<div class="form-group field-phone">
+		                <label for="phone">Phone number</label>
+		                <input type="text" name="phone" t-att-value="phone" id="phone" class="form-control form-control-sm" autofocus="autofocus"
+		                     required="required" t-att-readonly="'readonly' if only_passwords else None"/>
+		            </div>
+            </xpath>
+		
+		</template>
+		
+		
+	    <template id="verify_otp" name="OTP Sign up login">
+            <t t-call="web.login_layout">
+                <form class="oe_signup_form loginbox" role="form" method="post" t-if="not message">
+                  <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                  <label>OTP</label><br/>
+                  <div class="form-group field-name ot_var" >
+		                
+		                <input type="text" name="otp_one" minlength="1" maxlength="1" 
+		                t-att-value="otp" id="otp_o" 
+		                class="form-control form-control-sm otp_one" required="required"/>
+		                <input type="text" name="otp_two" minlength="1" maxlength="1" 
+		                t-att-value="otp" id="otp_t" 
+		                class="form-control form-control-sm otp_two" required="required"/>
+		                <input type="text" name="otp_three"  minlength="1" maxlength="1" 
+		                t-att-value="otp" id="otp_th" 
+		                class="form-control form-control-sm otp_three" required="required"/>
+		                <input type="text" name="otp_four" minlength="1" maxlength="1" 
+		                t-att-value="otp" id="otp_f"
+		                class="form-control form-control-sm otp_four" required="required"/>
+		            </div>
+		            
+		            <div class="form-group field-name" style="display:none;">
+		                <label>OTP Original</label>
+		                <input type="text" name="otp_original" t-att-value="otp_original" id="otp_original" 
+		                class="form-control form-control-sm"/>
+		            </div>
+		            
+		            <div class="form-group field-name" style="display:none;">
+		                <label>User</label>
+		                <input type="text" name="user" t-att-value="user" id="user" 
+		                class="form-control form-control-sm" />
+		            </div>
+		            
+		            <button type="submit" class="btn btn-primary btn-block">Verify</button>
+		            <span class="login_or_class">or</span>
+                	<a class="btn request_otp_login" t-attf-href="/web/login">Login</a>
+		            
+		            <p class="alert alert-danger" t-if="error" role="alert">
+                        <t t-esc="error"/>
+                    </p>
+                </form>
+            </t>
+        </template>
+        
+        
+        
+        <template id="request_otp" name="OTP Sign up login">
+            <t t-call="web.login_layout">
+                <form class="oe_signup_form loginbox" role="form" method="post" t-if="not message">
+                  <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                  <div class="form-group field-name" >
+		                <label>Mobile</label>
+		                <div class="input-group"><span class="input-group-addon">+966</span>
+		                <input type="text" name="mobile" t-att-value="mobile" id="mobile" 
+		                pattern="[1-9]{1}[0-9]{9}" minlength="10"
+		                class="form-control form-control-sm" required="required"/>
+		            </div></div>
+		            
+		            <button type="submit" class="btn btn-primary btn-block">submit</button>
+		            <span class="login_or_class">or</span>
+                	<a class="btn request_otp_login" t-attf-href="/web/login">Login</a>
+            
+		            <p class="alert alert-danger" t-if="error" role="alert">
+                        <t t-esc="error"/>
+                    </p>
+                </form>
+            </t>
+        </template>
+
+		
+
+        <template id="sr_otp_login.otp_login" inherit_id="auth_signup.login" name="OTP Verification">
+        	<xpath expr="//a[@t-if='signup_enabled']" position="replace">
+           	</xpath>
+            <xpath expr="//button[@type='submit']" position="after">
+            		<span t-if="signup_otp" class="login_or_class">or</span>
+                	<a t-if="signup_otp" class="btn request_otp_login" t-attf-href="/web/request_otp?{{ keep_query() }}">Request OTP</a>
+					<a t-if="signup_enabled" t-attf-href="/web/signup?{{ keep_query() }}" class="btn btn-link pull-right">Don't have an account?</a>
+            </xpath>
+            <xpath expr="//a[@t-if='reset_password_enabled']" position="replace">
+               <a t-if="reset_password_enabled" t-attf-href="/web/reset_password?{{ keep_query() }}" class="btn btn-link pull-right">Forgot Password</a>
+           	</xpath>
+           	
+           	
+           	
+        </template>
+        
+        <template id="login_web_inherit" inherit_id="web.login">
+        
+        	<xpath expr="//t/form/div" position="before">
+        		<img class="img img-responsive margin-0-auto logo-login" src="/logo.png" alt="Logo of Seeroo" title="Seeroo"></img>
+        	</xpath>
+        	<xpath expr="//t/form" position="attributes">
+        		<attribute name="class">oe_login_form loginbox</attribute>
+        	</xpath>
+        	<xpath expr="//input[@id='login']" position="attributes">
+        		<attribute name="placeholder">Email</attribute>
+        	</xpath>
+        	<xpath expr="//input[@id='password']" position="attributes">
+        		<attribute name="placeholder">Password</attribute>
+        	</xpath>
+        	
+        	<xpath expr="//label[@for='password']" position="replace">
+        	
+        			<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="key" role="img" xmlns="" viewBox="0 0 512 512" class="svg-inline--fa fa-key fa-w-16 fa-9x"><path fill="currentColor" d="M512 176.001C512 273.203 433.202 352 336 352c-11.22 0-22.19-1.062-32.827-3.069l-24.012 27.014A23.999 23.999 0 0 1 261.223 384H224v40c0 13.255-10.745 24-24 24h-40v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24v-78.059c0-6.365 2.529-12.47 7.029-16.971l161.802-161.802C163.108 213.814 160 195.271 160 176 160 78.798 238.797.001 335.999 0 433.488-.001 512 78.511 512 176.001zM336 128c0 26.51 21.49 48 48 48s48-21.49 48-48-21.49-48-48-48-48 21.49-48 48z" class=""></path></svg>
+        	</xpath>
+        	<xpath expr="//label[@for='login']" position="replace">
+        	
+        		<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" role="img" xmlns="" viewBox="0 0 448 512" class="svg-inline--fa fa-user fa-w-14 fa-9x"><path fill="currentColor" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z" class=""></path></svg>
+        	</xpath>
+        </template>
+        
+        
+        
+        <template id="home_assets_frontend_otpview" name="Home Frontend Assets"
+              inherit_id="website.assets_frontend">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" type="text/less"
+                  href="/sr_otp_login/static/src/css/otp.css"/>
+        </xpath>
+    </template>
+        
+</odoo>

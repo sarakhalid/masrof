@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<!-- Menu items hierachy -->
+	<menuitem id="menu_mobikul_title" name="Mobikul" web_icon="mobikul,static/description/icon.png" sequence="99" groups="mobikul.group_mobikul_user,mobikul.group_mobikul_manager"/>
+
+	<menuitem id="menu_mobikul_dash" name="Dashboard" parent="menu_mobikul_title" sequence="0" groups="mobikul.group_mobikul_user,mobikul.group_mobikul_manager"/>
+	<menuitem id="menu_mobikul_orders" name="App Orders" parent="menu_mobikul_title" sequence="1" groups="mobikul.group_mobikul_user,mobikul.group_mobikul_manager"/>
+	<menuitem id="menu_mobikul_catalog" name="Catalogs" parent="menu_mobikul_title" sequence="2" groups="mobikul.group_mobikul_user,mobikul.group_mobikul_manager"/>
+	<menuitem id="menu_mobikul_extras" name="Extra Added Features" parent="menu_mobikul_title" sequence="3" groups= "mobikul.group_mobikul_user,mobikul.group_mobikul_manager"/>
+	<menuitem id="menu_mobikul_config" name="Configuration" parent="menu_mobikul_title" sequence="4" groups="mobikul.group_mobikul_manager"/>
+
+    <menuitem id="mobilkul_banners" name="Banners" parent="menu_mobikul_extras" action="mobikul_banners_action" sequence="1"/>
+    <menuitem id="mobilkul_fcategory" name="Featured Category" parent="menu_mobikul_extras" action="mobikul_featured_category_action" sequence="2"/>
+    <menuitem id="mobikul_pslider" name="Product Sliders" parent="menu_mobikul_extras" action="mobikul_product_slider_action" sequence="3"/>
+    <menuitem id="mobilkul_push_notifications" name="Push Notifications" parent="menu_mobikul_extras" sequence="4"/>
+    <menuitem id="mobilkul_push_notification_one_time" name="One-Time Notifications" parent="mobilkul_push_notifications" action="mobikul_push_notification_action" sequence="1"/>
+    <menuitem id="mobilkul_push_notification_templates" name="Notification Templates" parent="mobilkul_push_notifications" action="mobikul_push_notification_templates_action" sequence="2"/>
+	<menuitem id="menu_mobilkul_notification_messages" name="Notification Messages" parent="mobilkul_push_notifications" action="mobikul_notification_massages_templates_action" sequence="3"/>
+
+    <!-- Orders sub-menus -->
+    <menuitem id="mobikul_orders_orders" name="Orders" parent="menu_mobikul_orders" action="mobikul_orders_action" sequence="1"/>
+    <menuitem id="mobikul_orders_unpaid_orders" name="Unpaid Orders" parent="menu_mobikul_orders" action="mobikul_unpaid_orders_action" sequence="2"/>
+    <menuitem id="mobikul_orders_abandonned_orders" name="Cancelled Orders" parent="menu_mobikul_orders" action="mobikul_abandonned_orders_action" sequence="3"/>
+    <!-- <menuitem id="mobikul_orders_invoices" name="Invoices" parent="menu_mobikul_orders" action="mobikul_action_invoices" sequence="4"/> -->
+
+     <!-- Catalog sub-menus -->
+    <menuitem id="mobikul_catalog_products" name="Products" parent="menu_mobikul_catalog" action="mobikul_product_template_action" sequence="1"/>
+    <menuitem id="mobikul_config_category" name="Mobikul Category" parent="menu_mobikul_catalog" action="mobikul_category_action" sequence="1"/>
+
+    <!-- Config sub-menus -->
+    <menuitem id="mobikul_config_settings" name="Settings" parent="menu_mobikul_config" action="action_mobikul_configuration" sequence="1"/>
+
+    <menuitem id="mobikul_reg_devices_fcm" name="FCM Reg. Devices" parent="menu_mobikul_config" action="fcm_registered_devices_action" sequence="2"/>
+    <menuitem id="mobikul_reg_topics_fcm" name="FCM Topics" parent="menu_mobikul_config" action="fcm_registered_topics_action" sequence="3"/>
+    <menuitem id="mobikul_zip_code_menu" name="ZIP Code" parent="menu_mobikul_config" action="zip_code_action" sequence="5"/>
+    <menuitem id="start_end_mobikul_delivery_schedule_menu" name="Star End Delivery Schedule Time" parent="menu_mobikul_config" action="start_end_delivery_schedule_action" sequence="6"/>
+    <menuitem id="mobikul_delivery_schedule_menu" name="Schedule Time" parent="menu_mobikul_config" action="delivery_schedule_action" sequence="7"/>
+    <menuitem id="menu_sale_order_schedule_dashboard" name="Sale Dashboard" parent="sale.sale_menu_root" action="sale_order_schedule_dashboard_action" sequence="0" />
+    <menuitem id="mobikul_mobikul_terms_action_menu" name="Terms" parent="menu_mobikul_config" action="mobikul_mobikul_terms_action" sequence="10"/>
+
+
+
+
+
+
+</odoo>

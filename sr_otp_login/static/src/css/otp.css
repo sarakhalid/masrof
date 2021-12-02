@@ -1,0 +1,151 @@
+form.oe_login_form, form.oe_signup_form {
+   padding: 30px;
+   -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+   box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+   width: 350px;
+   max-width: 100% !important;
+}
+form.oe_login_form button{display:block; width:100%}
+
+.login_or_class{display: block;    text-align: center;    padding: 10px 0;    font-size: 18px;    font-weight: 600;    text-transform: uppercase;}
+.request_otp_login{color: #fff;    background-color: #000000;    border-color: #000000;    display: block;}
+
+.o_signup_btn{display: block; width: 100%;}
+.ot_var{display: -webkit-inline-box; width: 20%;}
+.otp_one{margin-inline-end: 15px;border-color: black;}
+.otp_two{margin-inline-end: 15px; border-color: black;}
+.otp_three{margin-inline-end: 15px; border-color: black;}
+.otp_four{margin-inline-end: 15px; border-color: black;}
+
+.logo-login {
+    float: none;
+    margin: auto;
+    max-width: 200px;
+    background: #fff;
+    padding: 0px 40px;
+    border-radius: 40px;
+}
+
+ .loginbox .form-group {
+    margin-bottom: 15px;
+    margin-top: 25px;
+}
+ .loginbox     ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #fff;
+  opacity: 1; /* Firefox */
+}
+
+ .loginbox       :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #fff;   
+}
+
+ .loginbox   ::-ms-input-placeholder { /* Microsoft Edge */
+   color: #fff;   
+}
+.loginbox     .form-control::placeholder {   color: #fff;}
+.loginbox      .btn-link{
+   text-decoration: inherit;
+   background-color: transparent;
+   color: #fff;
+}
+.loginbox     input:focus, .loginbox      .form-control:focus {
+   background-color: transparent !important;}
+ .loginbox     .btn-primary {
+   color: #ffffff;
+   background-color: #FFC107;
+   border-color: transparent;
+   MAX-WIDTH: 175px;
+   FLOAT: NONE;
+   margin: auto;
+   position: relative;
+   clear: both;
+   border-radius: 30px;
+   font-weight: bold;
+   padding: 11px 20px;
+   text-transform: uppercase;
+   transition-duration: .3s;
+}
+.request_otp_login {
+   color: #fff;
+   background-color: #000000;
+   border-color: #000000;
+   display: block;
+   color: #ffffff;
+   background-color: #FFC107;
+   border-color: transparent;
+   MAX-WIDTH: 175px;
+   FLOAT: NONE;
+   margin: auto;
+   position: relative;
+   clear: both;
+   border-radius: 30px;
+   font-weight: bold;
+   padding: 11px 20px;
+   text-transform: uppercase;
+   transition-duration: .3s;
+}
+
+
+ .loginbox h4{
+   text-align: center;
+   color: #fff;
+   margin-bottom: 20px;
+   text-transform: uppercase;
+}
+.loginbox   {
+  background: linear-gradient(0deg, #ff5707, #FFC107);
+   border-radius: 10px;
+}
+.login_or_class {
+   
+    color: #fff;
+}
+ .loginbox     .form-control {
+   background-color: transparent !important;
+   display: block;
+   width: 100%;
+   border: none;
+   box-shadow: inherit;
+   height: 34px;
+   padding: 6px 20px;
+   font-size: 14px;
+   line-height: 1.42857143;
+   color: #fff;
+   background-color: #fff;
+   background-image: none;
+   border-bottom: 1px solid #f7f7f7;
+   border-radius: 4px;
+   /* -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); */
+   /* box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); */
+   /* -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; */
+   -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+   /* -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s; */
+   /* transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s; */
+   /* transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; */
+   /* transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s; */
+}
+.loginbox .btn-link{width: 100%;}
+.loginbox .btn-link:first-child {
+    text-decoration: inherit;
+    background-color: transparent;
+    color: #fff;
+    margin-top: -15px;
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: right;
+}
+#wrapwrap > main > div.oe_website_login_container{
+    background: url(https://img.freepik.com/free-vector/concept-supermarket-shop-illustration-with-buyers-characters-near-cash-register-people-with-shopping-cart_198278-225.jpg?size=626&ext=jpg) no-repeat;
+    background-position:left;
+}
+
+.loginbox svg {
+    width: 16px;
+    color: #fff;
+    position: absolute;
+    margin-top: 5px;
+}
+
+
+
+

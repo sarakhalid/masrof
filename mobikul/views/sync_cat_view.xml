@@ -1,0 +1,36 @@
+<odoo>
+
+    <record id="mobikul_sync_cat_form" model="ir.ui.view">
+            <field name="name">mobikul_cat_sync_form</field>
+            <field name="model">mobikul.sync.category</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Sync Category" version="7.0" create="false" edit="false">
+					<separator string="Select an Operation you want to do:-"/>
+                        <div>
+                                    <h2><b>Sync category with Website category</b></h2>
+                                    <group>
+                                        <field name="sync_type" />
+                                    </group>
+
+
+                        </div>
+
+
+                        <footer>
+                            <button name="sync_mobikul_cat_with_web_cat" string="  Do it Now..  " type="object"  class="oe_highlight oe_inline"/>
+                        </footer>
+				</form>
+            </field>
+        </record>
+
+
+
+		<record id="mobikul_sync_cat_action" model="ir.actions.act_window">
+            <field name="name">Mobikul Sync Category</field>
+            <field name="res_model">mobikul.sync.category</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+</odoo>

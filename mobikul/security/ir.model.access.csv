@@ -1,0 +1,31 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mobikul_banners_public,mobikul.mobikul_banners.public,model_mobikul_banners,,1,0,0,0
+access_mobikul_category_public,mobikul.mobikul_category.public,model_mobikul_category,,1,0,0,0
+access_res_partner_public,base.res_partner.public,base.model_res_partner,,1,0,0,0
+access_mobikul_push_notification_public,mobikul.mobikul_push_notification.public,model_mobikul_push_notification,,1,0,0,0
+access_mobikul_push_notification_template_public,mobikul.mobikul_push_notification_template.public,model_mobikul_push_notification_template,,1,0,0,0
+access_mobikul_notification_messages_template_public,mobikul.mobikul_notification_messages.public,model_mobikul_notification_messages,,1,0,0,0
+access_mobikul_sync_category,access_mobikul_sync_category,model_mobikul_sync_category,base.group_user,1,0,0,0
+,,,,,,,
+access_mobikul_category,Mobikul Category Access,model_mobikul_category,mobikul.group_mobikul_user,1,1,1,1
+access_mobikul_banners,Mobikul Banners Access,model_mobikul_banners,mobikul.group_mobikul_user,1,1,1,1
+access_mobikul_product_slider,Mobikul Product Slider Access,model_mobikul_product_slider,mobikul.group_mobikul_user,1,1,1,1
+access_mobikul_push_notification,Mobikul Push Notification Access,model_mobikul_push_notification,mobikul.group_mobikul_user,1,1,1,1
+access_mobikul_notification_messages,Mobikul Notification Messages Access,model_mobikul_notification_messages,mobikul.group_mobikul_user,1,0,0,0
+,,,,,,,
+access_mobikul_push_notification_template,Mobikul Push Notification Template Access,model_mobikul_push_notification_template,mobikul.group_mobikul_user,1,0,0,0
+,,,,,,,
+access_manager_mobikul_mobikul,Mobikul Access,model_mobikul,mobikul.group_mobikul_manager,1,1,1,1
+access_manager_mobikul_push_notification,Mobikul Push Notification Access,model_mobikul_push_notification,mobikul.group_mobikul_manager,1,1,1,1
+access_manager_mobikul_push_notification_template,Mobikul Push Notification Template Access,model_mobikul_push_notification_template,mobikul.group_mobikul_manager,1,1,1,1
+access_manager_mobikul_notification_messages,Mobikul Push Notification Messages Access,model_mobikul_notification_messages,mobikul.group_mobikul_manager,1,1,1,1
+access_manager_mobikul_fcm_registered_topics,Mobikul fcm_registered_topics Access,model_fcm_registered_topics,mobikul.group_mobikul_manager,1,1,1,1
+access_manager_mobikul_fcm_registered_devices,Mobikul fcm_registered_devices Access,model_fcm_registered_devices,mobikul.group_mobikul_manager,1,1,1,1
+access_ingenious_model_zip_code_manager,ingenious_model_zip_code,model_zip_code,mobikul.group_mobikul_manager,1,1,1,1
+access_ingenious_model_zip_category_manager,ingenious_model_zip_category,model_zip_category,mobikul.group_mobikul_user,1,1,1,1
+access_ingenious_model_zip_area_manager,ingenious_model_zip_area,model_zip_area,mobikul.group_mobikul_user,1,1,1,1
+access_ingenious_model_start_end_delivery_schedule_user,ingenious_start_end_delivery_schedule,model_start_end_delivery_schedule,mobikul.group_mobikul_user,1,1,1,1
+access_ingenious_model_delivery_schedule_user,ingenious_delivery_schedule,model_delivery_schedule,mobikul.group_mobikul_user,1,1,1,1
+access_ingenious_model_sale_order_schedule_dashboard_user,ingenious_delivery_schedule,model_sale_order_schedule_dashboard,mobikul.group_mobikul_user,1,1,1,1
+access_manager_mobikul_terms,Mobikul  terms Access,model_mobikul_terms,mobikul.group_mobikul_manager,1,1,1,1
+access_manager_mobikul_model_pickup_location_parking,Mobikul  pickup location parking Access,model_pickup_location_parking,mobikul.group_mobikul_manager,1,1,1,1

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mobikul_view_product_brand_form" model="ir.ui.view">
+        <field name="name">product.brand.form.mobikul</field>
+        <field name="model">product.brand</field>
+        <field name="inherit_id" ref="bi_product_brand.product_brand_form_view"/>
+        <field name="arch" type="xml">
+          <xpath expr="//field[@name='name']" position="after">
+              <field name="is_available"/>
+          </xpath>
+
+        </field>
+    </record>
+    <record id="mobikul_view_partner_form" model="ir.ui.view">
+        <field name="name">res.partner.form.mobikul</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page name='mobikul' string="Mobikul">
+                    <group name="mobikul">
+                        <field name="last_mobikul_so_id"/>
+                        <field name="banner_image"/>
+                        <field name="platformType"/>
+                        <field name="countSales"/>
+                        <field name="fixed_otp"/>
+                    </group>
+                    <!--group string="Registered Devices">
+                        <field name="token_ids" nolabel="1"/>
+                    </group-->
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+
+	<record id="mobikul_product_template_filter_view" model="ir.ui.view">
+        <field name="name">product.template.search.mobikul</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_search_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='categ_id']" position="after">
+                <field name="mobikul_categ_ids" domain="[('mobikul_categ_ids', 'child_of', self)]"/>
+            </xpath>
+            <xpath expr="//filter[@name='consumable']" position="after">
+                <separator/>
+                <filter string="Published on App" name="mobikul_published" domain="[('is_mobikul_available', '=', True)]"/>
+                <filter string="Brand" name="brand_id" context="{'group_by':'brand_id'}"/>
+            </xpath>
+        </field>
+    </record>
+	<record model="ir.ui.view" id="mobikul_product_template_form_view">
+        <field name="name">product.template.product.mobikul.form</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+
+            <group name="email_template_and_project"  position="before">
+                <group name="mobikul" string="Mobikul" >
+                    <field name="mobikul_categ_ids" widget="many2many_tags" string="Mobikul Categories"/>
+                    <field name="mobikul_status" widget="selection" invisible="1"/>
+                    <field name="is_mobikul_available" />
+
+                    <field name="is_promotion"/>
+                    <field name="uom_QTY"/>
+                    <field name="is_mobikul_available2" attr="{'invisible':[('sh_is_bundle','=',True)]}" />
+                    <field name="is_mobikul_available3" attr="{'invisible':[('sh_is_bundle','=',False)]}" />
+                    <field name="qty_available_bundle"/>
+                </group>
+            </group>
+           <div name="button_box" position="inside">
+                <button class="oe_stat_button" name="mobikul_publish_button"
+                    type="object" icon="fa-globe">
+                    <div class="o_stat_info published o_form_field">
+                        <span class="o_stat_text o_value text-success" attrs="{'invisible': [('is_mobikul_available', '=', False)]}">Published</span>
+                        <span class="o_stat_text o_value text-danger" attrs="{'invisible': [('is_mobikul_available', '=', True)]}">Unpublished</span>
+                        <span class="o_stat_text">On App</span>
+                    </div>
+                </button>
+            </div>
+        </field>
+    </record>
+    <record id="mobikul_product_template_action" model="ir.actions.act_window">
+        <field name="name">Products</field>
+        <field name="res_model">product.template</field>
+        <!-- <field name="view_type">form</field> -->
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="context">{'search_default_mobikul_published': 1}</field>
+    </record>
+    <record model="ir.ui.view" id="mobikul_view_delivery_carrier_form_view">
+        <field name="name">delivery.carrier.mobikul.form</field>
+        <field name="model">delivery.carrier</field>
+        <field name="inherit_id" ref="delivery.view_delivery_carrier_form"/>
+        <field name="arch" type="xml">
+             <xpath expr="//field[@name='product_id']" position="after">
+                    <field name="pickup"/>
+                    <field name="delivery_hour"/>
+                    <field name="minimum_order_amout"/>
+                    <field name="shift_empty"/>
+             </xpath>
+        </field>
+    </record>
+    <record id="mobikul_stock_warehouse_view" model="ir.ui.view">
+        <field name="name">stock.warehouse.mobikul</field>
+        <field name="model">stock.warehouse</field>
+        <field name="inherit_id" ref="stock.view_warehouse"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='partner_id']" position="after">
+                  <field name="is_pickup_available"/>
+
+              </xpath>
+            <xpath expr="//form/sheet" position="inside">
+                 <notebook>
+                      <page string="Parking">
+                          <field name="parking" mode="tree">
+                              <tree editable="1">
+                                  <field name="name"/>
+                                  <field name="state"/>
+                                  <field name="partner_id" readonly="1"/>
+                                  <field name="sale_order" readonly="1"/>
+                              </tree>
+
+
+                          </field>
+                      </page>
+                  </notebook>
+
+            </xpath>
+        </field>
+    </record>
+
+
+
+</odoo>

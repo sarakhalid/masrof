@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <template id="hyperpay_form">
+            <input t-if='reference' type="hidden" name="reference" t-att-value="reference"/>
+            <input t-if='txId' id='hyperpay_tx' type="hidden" name="txId" t-att-value="txId"/>
+            <script>
+              var script = document.createElement("script");
+              script.type = "text/javascript";
+              script.src = "/payment_hyperpay/static/src/js/payment_hyperpay.js";
+              document.getElementsByTagName("head")[0].appendChild(script);
+            </script>
+        </template>
+    </data>
+</odoo>

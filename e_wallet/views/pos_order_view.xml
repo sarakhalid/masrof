@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_inhirt_pos_payment_method_view_form" model="ir.ui.view">
+            <field name="name">view.inhirt.pos.payment.method.view.form</field>
+            <field name="model">pos.payment.method</field>
+            <field name="inherit_id" ref="point_of_sale.pos_payment_method_view_form"/>
+            <field name="arch" type="xml">
+
+		<xpath expr="//field[@name='split_transactions']" position="after">
+                    <field name="is_wallet" />
+		</xpath>
+
+            </field>
+    </record>
+
+   
+
+        <menuitem id="wallet_canteens_menu" parent="e_wallet_root_menu" name="Canteens"  sequence="5" />
+        <menuitem id="wallet_canteens_form_menu" parent="wallet_canteens_menu" name="Canteens" sequence="1" action="point_of_sale.action_pos_config_pos" />
+
+    <record id="view_inhirt_pos_config_view_form" model="ir.ui.view">
+            <field name="name">view.inhirt.pos.confi.view.form</field>
+            <field name="model">pos.config</field>
+            <field name="inherit_id" ref="point_of_sale.pos_config_view_form"/>
+            <field name="arch" type="xml">
+
+		<xpath expr="//field[@name='company_id']" position="after">
+                     <group>
+                    <field name="owner" />
+                    </group>
+		</xpath>
+
+            </field>
+    </record>
+
+</odoo>

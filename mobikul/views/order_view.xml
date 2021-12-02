@@ -1,0 +1,410 @@
+<!-- <?xml version="1.0" encoding="utf-8"?> -->
+<odoo>
+    <record id="sale_order_schedule_dashboard_kanban_view" model="ir.ui.view">
+            <field name="name">sale.order.schedule.dashboardview</field>
+            <field name="model">sale.order.schedule.dashboard</field>
+            <field name="arch" type="xml">
+                <kanban class="oe_background_grey o_kanban_dashboard o_salesteam_kanban o_project_kanban " create="0">
+                    <field name="color"/>
+                    <field name="name"/>
+                    <field name="sale_count_schedule1"/>
+                    <field name="processing_count_schedule1"/>
+                    <field name="verification_count_schedule1"/>
+                    <field name="ready_count_schedule1"/>
+                    <field name="transit_count_schedule1"/>
+                    <field name="delivery_count_schedule1"/>
+                     <field name="done_count_schedule1"/>
+                     <field name="total_count_schedule1"/>
+
+
+                    <field name="sale_count_schedule2"/>
+                    <field name="processing_count_schedule2"/>
+                    <field name="verification_count_schedule2"/>
+                    <field name="ready_count_schedule2"/>
+                    <field name="transit_count_schedule2"/>
+                    <field name="delivery_count_schedule2"/>
+                      <field name="done_count_schedule2"/>
+                     <field name="total_count_schedule2"/>
+
+                    <field name="sale_count_schedule3"/>
+                    <field name="processing_count_schedule3"/>
+                    <field name="verification_count_schedule3"/>
+                    <field name="ready_count_schedule3"/>
+                    <field name="transit_count_schedule3"/>
+                    <field name="delivery_count_schedule3"/>
+                     <field name="done_count_schedule3"/>
+                     <field name="total_count_schedule3"/>
+                    <field name="delivery_schedule1"/>
+                     <field name="delivery_schedule2"/>
+                     <field name="delivery_schedule3"/>
+                    <templates>
+                         <t t-name="kanban-box">
+                             <div t-attf-class="#{kanban_color(record.color.raw_value)} ">
+                                 <div class="o_project_kanban_main" >
+                                    <div class="o_kanban_card_content o_visible">
+                                        <div class="o_kanban_primary_left" >
+                                            <div class="">
+                                                <center>
+                                                    <span>
+                                                        <t t-field="record.name.value"/>
+                                                    </span>
+                                                </center>
+                                            </div>
+                                            <div>
+                                                <center>
+                                                    <button class="btn btn-primary" type="object" name="to_confirmed3" >
+                                                          <span class="o_value" style="overflow:visible !important">
+                                                                <h5>
+                                                                 <t t-esc="record.sale_count_schedule3.value"/>
+                                                                </h5>
+                                                            </span>
+                                                          <span class="o_label" style="overflow:visible !important">  <h5>Confirm</h5></span>
+                                                    </button>
+                                                    <button class="btn btn-primary" type="object" name="to_processing3" >
+                                                          <span class="o_value" style="overflow:visible !important">
+                                                                <h5>
+                                                                 <t t-esc="record.processing_count_schedule3.value"/>
+                                                                </h5>
+                                                            </span>
+                                                          <span class="o_label" style="overflow:visible !important">  <h5>In Process</h5></span>
+                                                    </button>
+                                                    <button class="btn btn-primary" type="object" name="to_verification3" >
+                                                          <span class="o_value" style="overflow:visible !important">
+                                                                <h5>
+                                                                 <t t-esc="record.verification_count_schedule3.value"/>
+                                                                </h5>
+                                                            </span>
+                                                          <span class="o_label" style="overflow:visible !important">  <h5>verification</h5></span>
+                                                    </button>
+                                                    <button class="btn btn-primary" type="object" name="to_ready3" >
+                                                          <span class="o_value" style="overflow:visible !important">
+                                                                <h5>
+                                                                 <t t-esc="record.ready_count_schedule3.value"/>
+                                                                </h5>
+                                                            </span>
+                                                          <span class="o_label" style="overflow:visible !important">  <h5>ready</h5></span>
+                                                    </button>
+                                                    <button class="btn btn-primary" type="object" name="to_transit3" >
+                                                          <span class="o_value" style="overflow:visible !important">
+                                                                <h5>
+                                                                 <t t-esc="record.transit_count_schedule3.value"/>
+                                                                </h5>
+                                                            </span>
+                                                          <span class="o_label" style="overflow:visible !important">  <h5>transit</h5></span>
+                                                    </button>
+                                                    <button class="btn btn-primary" type="object" name="to_delivery3" >
+                                                          <span class="o_value" style="overflow:visible !important">
+                                                                <h5>
+                                                                 <t t-esc="record.delivery_count_schedule3.value"/>
+                                                                </h5>
+                                                            </span>
+                                                          <span class="o_label" style="overflow:visible !important">  <h5>delivery</h5></span>
+                                                    </button>
+                                                     <br></br>
+                                                    <field name="done_count_schedule3" widget="gauge" style="cursor:pointer;" options="{'max_field':'total_count_schedule3'}">
+                                                        EntryProgress
+                                                    </field>
+                                                    <br></br>
+
+                                                     <h3> <t t-esc="record.delivery_schedule3.value"/> </h3>
+                                                    <br></br>
+                                                    <h3>Previous orders dashboard </h3>
+
+                                                </center>
+                                            </div>
+                                </div>
+                            </div>
+                           </div>
+                            </div>
+
+                            <div t-attf-class="#{kanban_color(record.color.raw_value)} ">
+                                 <div class="o_project_kanban_main" >
+                                    <div class="o_kanban_card_content o_visible">
+                                        <div class="o_kanban_primary_left" >
+                                            <div class="">
+                                                <center>
+                                                    <span>
+                                                        <t t-field="record.name.value"/>
+                                                    </span>
+                                                </center>
+                                            </div>
+                                            <div>
+                                                <center>
+                                                    <button class="btn btn-primary" type="object" name="to_confirmed" >
+                                                          <span class="o_value" style="overflow:visible !important">
+                                                                <h5>
+                                                                 <t t-esc="record.sale_count_schedule1.value"/>
+                                                                </h5>
+                                                            </span>
+                                                          <span class="o_label" style="overflow:visible !important">  <h5>Confirm</h5></span>
+                                                    </button>
+                                                    <button class="btn btn-primary" type="object" name="to_processing" >
+                                                          <span class="o_value" style="overflow:visible !important">
+                                                                <h5>
+                                                                 <t t-esc="record.processing_count_schedule1.value"/>
+                                                                </h5>
+                                                            </span>
+                                                          <span class="o_label" style="overflow:visible !important">  <h5>In Process</h5></span>
+                                                    </button>
+                                                    <button class="btn btn-primary" type="object" name="to_verification" >
+                                                          <span class="o_value" style="overflow:visible !important">
+                                                                <h5>
+                                                                 <t t-esc="record.verification_count_schedule1.value"/>
+                                                                </h5>
+                                                            </span>
+                                                          <span class="o_label" style="overflow:visible !important">  <h5>verification</h5></span>
+                                                    </button>
+                                                    <button class="btn btn-primary" type="object" name="to_ready" >
+                                                          <span class="o_value" style="overflow:visible !important">
+                                                                <h5>
+                                                                 <t t-esc="record.ready_count_schedule1.value"/>
+                                                                </h5>
+                                                            </span>
+                                                          <span class="o_label" style="overflow:visible !important">  <h5>ready</h5></span>
+                                                    </button>
+                                                    <button class="btn btn-primary" type="object" name="to_transit" >
+                                                          <span class="o_value" style="overflow:visible !important">
+                                                                <h5>
+                                                                 <t t-esc="record.transit_count_schedule1.value"/>
+                                                                </h5>
+                                                            </span>
+                                                          <span class="o_label" style="overflow:visible !important">  <h5>transit</h5></span>
+                                                    </button>
+                                                    <button class="btn btn-primary" type="object" name="to_delivery" >
+                                                          <span class="o_value" style="overflow:visible !important">
+                                                                <h5>
+                                                                 <t t-esc="record.delivery_count_schedule1.value"/>
+                                                                </h5>
+                                                            </span>
+                                                          <span class="o_label" style="overflow:visible !important">  <h5>delivery</h5></span>
+                                                    </button>
+                                                    <br></br>
+                                                    <field name="done_count_schedule1" widget="gauge" style="cursor:pointer;" options="{'max_field':'total_count_schedule1'}">
+                                                        EntryProgress
+                                                    </field>
+                                                    <br></br>
+                                                     <h3> <t t-esc="record.delivery_schedule1.value"/> </h3>
+                                                    <h3>Current orders dashboard</h3>
+                                                </center>
+                                            </div>
+                                </div>
+                            </div>
+                           </div>
+                            </div>
+
+                             <div t-attf-class="#{kanban_color(record.color.raw_value)} ">
+                                 <div class="o_project_kanban_main" >
+                                    <div class="o_kanban_card_content o_visible">
+                                        <div class="o_kanban_primary_left" >
+                                            <div class="">
+                                                <center>
+                                                    <span>
+                                                        <t t-field="record.name.value"/>
+                                                    </span>
+                                                </center>
+                                            </div>
+                                            <div>
+                                                <center>
+                                                    <button class="btn btn-primary" type="object" name="to_confirmed2" >
+                                                          <span class="o_value" style="overflow:visible !important">
+                                                                <h5>
+                                                                 <t t-esc="record.sale_count_schedule2.value"/>
+                                                                </h5>
+                                                            </span>
+                                                          <span class="o_label" style="overflow:visible !important">  <h5>Confirm</h5></span>
+                                                    </button>
+                                                    <button class="btn btn-primary" type="object" name="to_processing2" >
+                                                          <span class="o_value" style="overflow:visible !important">
+                                                                <h5>
+                                                                 <t t-esc="record.processing_count_schedule2.value"/>
+                                                                </h5>
+                                                            </span>
+                                                          <span class="o_label" style="overflow:visible !important">  <h5>In Process</h5></span>
+                                                    </button>
+                                                    <button class="btn btn-primary" type="object" name="to_verification2" >
+                                                          <span class="o_value" style="overflow:visible !important">
+                                                                <h5>
+                                                                 <t t-esc="record.verification_count_schedule2.value"/>
+                                                                </h5>
+                                                            </span>
+                                                          <span class="o_label" style="overflow:visible !important">  <h5>verification</h5></span>
+                                                    </button>
+                                                    <button class="btn btn-primary" type="object" name="to_ready2" >
+                                                          <span class="o_value" style="overflow:visible !important">
+                                                                <h5>
+                                                                 <t t-esc="record.ready_count_schedule2.value"/>
+                                                                </h5>
+                                                            </span>
+                                                          <span class="o_label" style="overflow:visible !important">  <h5>ready</h5></span>
+                                                    </button>
+                                                    <button class="btn btn-primary" type="object" name="to_transit2" >
+                                                          <span class="o_value" style="overflow:visible !important">
+                                                                <h5>
+                                                                 <t t-esc="record.transit_count_schedule2.value"/>
+                                                                </h5>
+                                                            </span>
+                                                          <span class="o_label" style="overflow:visible !important">  <h5>transit</h5></span>
+                                                    </button>
+                                                    <button class="btn btn-primary" type="object" name="to_delivery2" >
+                                                          <span class="o_value" style="overflow:visible !important">
+                                                                <h5>
+                                                                 <t t-esc="record.delivery_count_schedule2.value"/>
+                                                                </h5>
+                                                            </span>
+                                                          <span class="o_label" style="overflow:visible !important">  <h5>delivery</h5></span>
+                                                    </button>
+                                                     <br></br>
+                                                    <field name="done_count_schedule2" widget="gauge" style="width:120px;height:90px;cursor:pointer;" options="{'max_field':'total_count_schedule2'}">
+                                                        EntryProgress
+                                                    </field>
+
+                                                    <br></br>
+                                                     <h3> <t t-esc="record.delivery_schedule2.value"/> </h3>
+                                                    <br></br>
+                                                    <h3>Incoming orders dashboard  </h3>
+
+
+                                                </center>
+                                            </div>
+                                </div>
+                            </div>
+                           </div>
+                            </div>
+                         </t>
+
+
+                    </templates>
+
+                </kanban>
+            </field>
+    </record>
+    <record id="sale_order_schedule_dashboard_action" model="ir.actions.act_window">
+            <field name="name">Sale Order Dashboard</field>
+            <field name="res_model">sale.order.schedule.dashboard</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">form</field>
+            <field name="context">{}</field>
+            <field name="view_mode">kanban</field>
+
+        </record>
+
+     <record id="mobikul_sale_order_transaction_tree" model="ir.ui.view">
+        <field name="name">mobikul.sale.order</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='company_id']" position="after">
+                <field name="zip_category" optional="show"/>
+                <field name="delivery_method" optional="show"/>
+                 <field name="payment_acquirer" optional="show"/>
+
+
+            </xpath>
+        </field>
+    </record>
+
+
+
+
+
+    <record id="mobikul_sale_order_transaction_form" model="ir.ui.view">
+        <field name="name">mobikul.sale.order</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+             <xpath expr="//field[@name='date_order']" position="after">
+                 <field name="shipping_time" readonly="1"/>
+                 <field name="delivery_schedule" readonly="1"/>
+                 <field name="delivery_boy" readonly="1"/>
+                 <field name="delivery_boy_phone" readonly="1"/>
+                 <field name="zip" invisible="1"/>
+                 <field name="customer_state" invisible="1"/>
+                  <field name="font" invisible="1"/>
+                  <field name="background" invisible="1"/>
+             </xpath>
+            <xpath expr="//field[@name='partner_shipping_id']" position="after">
+                <field name="zip_category" readonly="1"/>
+                <field name="delivery_method" readonly="1"/>
+                <field name="payment_acquirer" readonly="1"/>
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page name='Transaction' string="Transactions">
+                    <group name="trn">
+                        <field name="transaction_ids"/>
+
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="mobikul_acquirer_form" model="ir.ui.view">
+        <field name="name">mobikul.acquirer_form</field>
+        <field name="model">payment.acquirer</field>
+        <field name="inherit_id" ref="payment.acquirer_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page name='mobikul' string="Mobikul">
+                    <group name="mobikul">
+                        <field name="is_mobikul_available"/>
+                        <field name="mobikul_reference_code" attrs="{'invisible': [('is_mobikul_available', '=', False)], 'required': [('is_mobikul_available', '=', True)]}" password="True"/>
+                        <field name="mobikul_extra_key" attrs="{'invisible': [('is_mobikul_available', '=', False)]}"/>
+                        <!-- <field name="mobikul_pre_msg" attrs="{'invisible': [('is_mobikul_available', '=', False)]}"/> -->
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="mobikul_orders_filter_view" model="ir.ui.view">
+        <field name="name">sale.order.mobikul.search.view</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_sales_order_filter"/>
+        <field name="arch" type="xml">
+            <search>
+                <filter string="From Mobikul-App" name="from_mobikul" domain="[('team_id.mobikul_ids', '!=', False)]"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="mobikul_orders_action" model="ir.actions.act_window">
+        <field name="name">Mobikul Orders</field>
+        <field name="res_model">sale.order</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('state', 'in', ('sale', 'done'))]</field>
+        <field name="context">{'show_sale': True, 'search_default_from_mobikul': 1}</field>
+        <field name="search_view_id" ref="mobikul_orders_filter_view"/>
+        <field name="help">You don't have any confirmed order from the Mobikul App.</field>
+    </record>
+
+    <record id="mobikul_unpaid_orders_action" model="ir.actions.act_window">
+        <field name="name">Unpaid Mobikul Orders</field>
+        <field name="res_model">sale.order</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('state', '=', 'sent')]</field>
+        <field name="context">{'show_sale': True, 'search_default_from_mobikul': 1}</field>
+        <field name="search_view_id" ref="mobikul_orders_filter_view"/>
+        <field name="help">You don't have any unpaid order from the Mobikul App.</field>
+    </record>
+
+    <record id="mobikul_abandonned_orders_action" model="ir.actions.act_window">
+        <field name="name">Cancelled Orders</field>
+        <field name="res_model">sale.order</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('state', '=', 'cancel')]</field>
+        <field name="context">{'show_sale': True, 'search_default_from_mobikul': 1}</field>
+        <field name="search_view_id" ref="mobikul_orders_filter_view"/>
+        <field name="help">You don't have any cancelled order from the Mobikul App.</field>
+    </record>
+<!--
+    <record id="mobikul_action_invoices" model="ir.actions.act_window">
+        <field name="name">Invoices</field>
+        <field name="res_model">account.invoice</field>
+         <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('team_id.mobikul_ids', '!=', False)]</field>
+        <field name="view_id" ref="account.invoice_tree"/>
+        <field name="context">{'type':'out_invoice'}</field>
+        <field name="search_view_id" ref="account.view_account_invoice_filter"/>
+    </record> -->
+</odoo>

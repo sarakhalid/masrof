@@ -1,0 +1,188 @@
+using System;
+using System.IO;
+using System.Net;
+using System.Text;
+using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+
+namespace MwaedyNet.Controllers
+{
+    [Produces("application/json")]
+    [Route("api/Payment/[Action]")]
+    public class PaymentController : Controller
+    {
+        public IActionResult Index()
+        {
+            return View();
+        }
+        public IActionResult result(/string amount,string pay_brand/)//I set All DataStatic
+        {
+            Roots roots;
+            string responseData = "";
+            string data = "entityId=LiveID" +
+                "&amount=120.00" +
+                "&currency=EUR" +
+                "&paymentBrand=VISA" +
+                "&paymentType=DB" +
+                "&card.number=0000000000000000" +
+                "&card.holder=m m" +
+                "&card.expiryMonth=05" +
+                "&card.expiryYear=2034" +
+                "&card.cvv=123";
+            string url = "https://oppwa.com/v1/payments";
+            byte[] buffer = Encoding.ASCII.GetBytes(data);
+            HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(url);
+            request.Method = "POST";
+            request.Headers["Authorization"] = "Bearer Token==";
+            request.ContentType = "application/x-www-form-urlencoded";
+            Stream PostData = request.GetRequestStream();
+            PostData.Write(buffer, 0, buffer.Length);
+            PostData.Close();
+
+
+            try
+            {
+                using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+                {
+                    Stream dataStream = response.GetResponseStream();
+                    StreamReader reader = new StreamReader(dataStream);
+                    responseData = reader.ReadToEnd();
+                    roots = JsonConvert.DeserializeObject<Roots>(responseData);
+                    reader.Close();
+                    dataStream.Close();
+                    return Ok(roots);
+                }
+            }
+            catch (Exception e)
+            {
+                return Ok();
+            }
+
+
+
+        }
+
+
+
+
+
+
+
+
+        public string getKey()
+        {
+            string responseData;
+            string data = "entityId=Id";
+            string url = "https://test.oppwa.com/v1/checkouts/{id}/payment?" + data;
+            HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(url);
+            request.Method = "GET";
+            request.Headers["Authorization"] = "Bearer Token==";
+            using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+            {
+                Stream dataStream = response.GetResponseStream();
+                StreamReader reader = new StreamReader(dataStream);
+                var s = new JavaScriptSerializer();
+                responseData = s.Deserialize<Dictionary<string, dynamic>>(reader.ReadToEnd());
+                reader.Close();
+                dataStream.Close();
+            }
+            return responseData["id"];
+        }
+
+
+
+
+
+
+
+
+
+
+        public class Results
+        {
+            public string code { get; set; }
+            public string description { get; set; }
+        }
+
+        public class ResultDetails
+        {
+            public string RiskStatusCode { get; set; }
+            public string ResponseCode { get; set; }
+            public string RequestId { get; set; }
+            public string RiskResponseCode { get; set; }
+            public string action { get; set; }
+            public string OrderId { get; set; }
+        }
+
+        public class Card
+        {
+            public string bin { get; set; }
+            public string last4Digits { get; set; }
+            public string holder { get; set; }
+            public string expiryMonth { get; set; }
+            public string expiryYear { get; set; }
+        }
+
+        public class Risk
+        {
+            public string score { get; set; }
+        }
+
+        public class Roots
+        {
+            public string id { get; set; }
+            public string paymentType { get; set; }
+            public string paymentBrand { get; set; }
+            public string amount { get; set; }
+            public string currency { get; set; }
+            public string descriptor { get; set; }
+            public Results result { get; set; }
+            public ResultDetails resultDetails { get; set; }
+            public Card card { get; set; }
+            public Risk risk { get; set; }
+            public string buildNumber { get; set; }
+            public string timestamp { get; set; }
+            public string ndc { get; set; }
+        }
+
+
+
+
+
+
+
+
+    }
+}
+
+
+public IActionResult GetCheckOut(double amount)
+        {
+
+                string  responseData;
+                string data = "entityId=8a8294174d0595bb014d05d82e5b01d2" +
+                    "&amount="+amount +
+                    "&currency=EUR" +
+                    "&paymentType=DB";
+                string url = "https://test.oppwa.com/v1/checkouts";
+                byte[] buffer = Encoding.ASCII.GetBytes(data);
+                HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(url);
+                request.Method = "POST";
+                request.Headers["Authorization"] = "Bearer OGE4Mjk0MTc0ZDA1OTViYjAxNGQwNWQ4MjllNzAxZDF8OVRuSlBjMm45aA==";
+                request.ContentType = "application/x-www-form-urlencoded";
+                Stream PostData = request.GetRequestStream();
+                PostData.Write(buffer, 0, buffer.Length);
+                PostData.Close();
+                using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+                {
+                    Stream dataStream = response.GetResponseStream();
+                    StreamReader reader = new StreamReader(dataStream);
+                    var s = new JavaScriptSerializer();
+                    responseData = s.Deserialize<Dictionary<string, dynamic>>(reader.ReadToEnd());
+                    reader.Close();
+                    dataStream.Close();
+                }
+                return responseData["id"];
+
+
+        }

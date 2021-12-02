@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Sequences for e_wallet -->
+        <record id="seq_e_wallet" model="ir.sequence">
+            <field name="name">E-Wallet</field>
+            <field name="code">e.wallet</field>
+            <field name="prefix">EWA</field>
+            <field name="padding">4</field>
+        </record>
+
+
+        <!-- Sequences for wallet_transactions -->
+        <record id="seq_wallet_transactions" model="ir.sequence">
+            <field name="name">Transactions</field>
+            <field name="code">wallet.transactions</field>
+            <field name="prefix">TRA</field>
+            <field name="padding">4</field>
+        </record>
+
+
+        <!-- Sequences for contract -->
+        <record id="seq_contract" model="ir.sequence">
+            <field name="name">contract</field>
+            <field name="code">contract.contract</field>
+            <field name="prefix">CON</field>
+            <field name="padding">4</field>
+        </record>
+
+
+    </data>
+</odoo>

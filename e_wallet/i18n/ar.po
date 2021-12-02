@@ -1,0 +1,910 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* e_wallet
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-10 08:52+0000\n"
+"PO-Revision-Date: 2021-11-10 08:52+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_transactions__account_id
+msgid "Account Journal"
+msgstr "حساب اليومية"
+
+#. module: e_wallet
+#: model_terms:ir.ui.view,arch_db:e_wallet.view_add_student_form
+#: model_terms:ir.ui.view,arch_db:e_wallet.view_wallet_feeding_form
+msgid "Add"
+msgstr "اضافة"
+
+#. module: e_wallet
+#: model:ir.actions.act_window,name:e_wallet.action_add_student_form
+#: model:ir.ui.menu,name:e_wallet.menu_add_student_form
+#: model_terms:ir.ui.view,arch_db:e_wallet.view_add_student_form
+#: model_terms:ir.ui.view,arch_db:e_wallet.view_add_student_tree
+msgid "Add Student"
+msgstr "اضافة طالب"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_feeding__amount
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_transactions__amount
+msgid "Amount"
+msgstr "القيمة"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_line__amount
+msgid "Amount available"
+msgstr "القيمة المتوفرة"
+
+#. module: e_wallet
+#: model_terms:ir.ui.view,arch_db:e_wallet.view_users_form_inhertrr
+msgid "Bank Account Number"
+msgstr "رقم الحساب البكي"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_res_users__Bank_account_number
+msgid "Bank account number"
+msgstr "رقم الحساب البنكي"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_res_partner__birthday
+#: model:ir.model.fields,field_description:e_wallet.field_res_users__birthday
+msgid "Birth Day"
+msgstr "تاريخ الميلاد"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_res_partner__birthday2
+#: model:ir.model.fields,field_description:e_wallet.field_res_users__birthday2
+msgid "Birth Day2"
+msgstr "تاريخ الميلاد الهجري"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_res_company__building_type
+msgid "Building Type"
+msgstr "نوع المبنى"
+
+#. module: e_wallet
+#: model:ir.ui.menu,name:e_wallet.wallet_canteens_form_menu
+#: model:ir.ui.menu,name:e_wallet.wallet_canteens_menu
+msgid "Canteens"
+msgstr "المقاصف"
+
+#. module: e_wallet
+#: model:ir.ui.menu,name:e_wallet.menu_class_room_form
+msgid "Class Room"
+msgstr "الصفوف الدراسية"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_res_partner__class_room
+#: model:ir.model.fields,field_description:e_wallet.field_res_users__class_room
+msgid "Class room"
+msgstr "الصف"
+
+#. module: e_wallet
+#: model:ir.model,name:e_wallet.model_res_company
+msgid "Companies"
+msgstr "المقاصف"
+
+#. module: e_wallet
+#: model_terms:ir.ui.view,arch_db:e_wallet.view_students_need_form
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: e_wallet
+#: model:ir.model.fields.selection,name:e_wallet.selection__students_need__state__confirmed
+msgid "Confirmed"
+msgstr "مؤكد"
+
+#. module: e_wallet
+#: model:ir.model,name:e_wallet.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: e_wallet
+#: model_terms:ir.actions.act_window,help:e_wallet.res_partner_action_responsable
+#: model_terms:ir.actions.act_window,help:e_wallet.res_partner_action_student
+msgid "Create a new responsabl in your address book"
+msgstr ""
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_add_student__create_uid
+#: model:ir.model.fields,field_description:e_wallet.field_class_room__create_uid
+#: model:ir.model.fields,field_description:e_wallet.field_e_wallet__create_uid
+#: model:ir.model.fields,field_description:e_wallet.field_education_administration__create_uid
+#: model:ir.model.fields,field_description:e_wallet.field_need_line__create_uid
+#: model:ir.model.fields,field_description:e_wallet.field_office_office__create_uid
+#: model:ir.model.fields,field_description:e_wallet.field_remove_student__create_uid
+#: model:ir.model.fields,field_description:e_wallet.field_school_school__create_uid
+#: model:ir.model.fields,field_description:e_wallet.field_school_type__create_uid
+#: model:ir.model.fields,field_description:e_wallet.field_students_need__create_uid
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_feeding__create_uid
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_line__create_uid
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_transactions__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_add_student__create_date
+#: model:ir.model.fields,field_description:e_wallet.field_class_room__create_date
+#: model:ir.model.fields,field_description:e_wallet.field_e_wallet__create_date
+#: model:ir.model.fields,field_description:e_wallet.field_education_administration__create_date
+#: model:ir.model.fields,field_description:e_wallet.field_need_line__create_date
+#: model:ir.model.fields,field_description:e_wallet.field_office_office__create_date
+#: model:ir.model.fields,field_description:e_wallet.field_remove_student__create_date
+#: model:ir.model.fields,field_description:e_wallet.field_school_school__create_date
+#: model:ir.model.fields,field_description:e_wallet.field_school_type__create_date
+#: model:ir.model.fields,field_description:e_wallet.field_students_need__create_date
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_feeding__create_date
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_line__create_date
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_transactions__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: e_wallet
+#: model:ir.model.fields.selection,name:e_wallet.selection__wallet_transactions__transaction_type__credit
+#: model_terms:ir.ui.view,arch_db:e_wallet.view_wallet_transactions_form
+msgid "Credit"
+msgstr "دائن"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_transactions__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_students_need__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: e_wallet
+#: model:ir.model.fields.selection,name:e_wallet.selection__wallet_transactions__transaction_type__debit
+msgid "Debit"
+msgstr "مدين"
+
+#. module: e_wallet
+#: model:ir.model.fields.selection,name:e_wallet.selection__res_users__partner_type__education_manager
+msgid "Director of Education Department"
+msgstr "مدير ادارة التعليم"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_add_student__display_name
+#: model:ir.model.fields,field_description:e_wallet.field_class_room__display_name
+#: model:ir.model.fields,field_description:e_wallet.field_e_wallet__display_name
+#: model:ir.model.fields,field_description:e_wallet.field_education_administration__display_name
+#: model:ir.model.fields,field_description:e_wallet.field_need_line__display_name
+#: model:ir.model.fields,field_description:e_wallet.field_office_office__display_name
+#: model:ir.model.fields,field_description:e_wallet.field_pos_config__display_name
+#: model:ir.model.fields,field_description:e_wallet.field_pos_order__display_name
+#: model:ir.model.fields,field_description:e_wallet.field_pos_payment_method__display_name
+#: model:ir.model.fields,field_description:e_wallet.field_remove_student__display_name
+#: model:ir.model.fields,field_description:e_wallet.field_res_company__display_name
+#: model:ir.model.fields,field_description:e_wallet.field_res_partner__display_name
+#: model:ir.model.fields,field_description:e_wallet.field_res_users__display_name
+#: model:ir.model.fields,field_description:e_wallet.field_school_school__display_name
+#: model:ir.model.fields,field_description:e_wallet.field_school_type__display_name
+#: model:ir.model.fields,field_description:e_wallet.field_students_need__display_name
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_feeding__display_name
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_line__display_name
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_transactions__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: e_wallet
+#: model:ir.model.fields.selection,name:e_wallet.selection__add_student__state__done
+#: model:ir.model.fields.selection,name:e_wallet.selection__remove_student__state__done
+#: model:ir.model.fields.selection,name:e_wallet.selection__wallet_feeding__state__done
+#: model:ir.model.fields.selection,name:e_wallet.selection__wallet_transactions__state__done
+msgid "Done"
+msgstr "تم"
+
+#. module: e_wallet
+#: model:ir.model.fields.selection,name:e_wallet.selection__add_student__state__draft
+#: model:ir.model.fields.selection,name:e_wallet.selection__remove_student__state__draft
+#: model:ir.model.fields.selection,name:e_wallet.selection__students_need__state__draft
+#: model:ir.model.fields.selection,name:e_wallet.selection__wallet_feeding__state__draft
+#: model:ir.model.fields.selection,name:e_wallet.selection__wallet_transactions__state__draft
+msgid "Draft"
+msgstr "جديد"
+
+#. module: e_wallet
+#: model:ir.actions.act_window,name:e_wallet.action_e_wallet_form
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_transactions__wallet
+#: model:ir.ui.menu,name:e_wallet.menu_e_wallet
+#: model:ir.ui.menu,name:e_wallet.menu_e_wallet_form
+#: model:res.groups,name:e_wallet.group_e_wallet
+#: model_terms:ir.ui.view,arch_db:e_wallet.view_e_wallet_form
+#: model_terms:ir.ui.view,arch_db:e_wallet.view_e_wallet_tree
+msgid "E-Wallet"
+msgstr "المحفظة"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_e_wallet__wallet_no
+msgid "E-Wallet Number"
+msgstr "رقم المحفظة"
+
+#. module: e_wallet
+#: model:ir.ui.menu,name:e_wallet.wallet_transaction_menu
+msgid "Education"
+msgstr "التعليم"
+
+#. module: e_wallet
+#: model:ir.actions.act_window,name:e_wallet.action_education_administration_form
+#: model:ir.model.fields,field_description:e_wallet.field_res_company__education_id
+#: model:ir.model.fields,field_description:e_wallet.field_res_users__education_administration
+#: model:ir.ui.menu,name:e_wallet.menu_education_administration
+#: model_terms:ir.ui.view,arch_db:e_wallet.view_users_form_inhertrr
+msgid "Education Administration"
+msgstr "ادارة التعليم"
+
+#. module: e_wallet
+#: model_terms:ir.ui.view,arch_db:e_wallet.view_education_administration_form
+#: model_terms:ir.ui.view,arch_db:e_wallet.view_education_administration_tree
+msgid "Education Edministration"
+msgstr "ادارة التعليم"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_res_company__education_type
+msgid "Education Type"
+msgstr "نوع التعليم"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_res_company__school_type
+#: model:ir.model.fields,field_description:e_wallet.field_res_partner__school_type
+#: model:ir.model.fields,field_description:e_wallet.field_res_users__school_type
+msgid "Educational level"
+msgstr "المستوى التعليمي"
+
+#. module: e_wallet
+#: model_terms:ir.ui.view,arch_db:e_wallet.view_school_company_form
+msgid "Emplotees Data"
+msgstr "بيانات الموظفين"
+
+#. module: e_wallet
+#: model:ir.model.fields.selection,name:e_wallet.selection__res_company__period__evening
+msgid "Evening "
+msgstr "ليلي"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_res_partner__first_name
+#: model:ir.model.fields,field_description:e_wallet.field_res_users__first_name
+msgid "First Name"
+msgstr "الاسم الاول"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_res_partner__fourth_name
+#: model:ir.model.fields,field_description:e_wallet.field_res_users__fourth_name
+msgid "Fourth Name"
+msgstr "الاسم الاخير"
+
+#. module: e_wallet
+#: model:ir.model.fields.selection,name:e_wallet.selection__res_users__partner_type__fund_officer
+msgid "Fund Officer"
+msgstr "مسؤول الصندوق"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_res_company__fund_officer
+msgid "Fund officer"
+msgstr "مسؤول الصندوق"
+
+#. module: e_wallet
+#: model:ir.model.fields.selection,name:e_wallet.selection__res_company__building_type__governmental
+#: model:ir.model.fields.selection,name:e_wallet.selection__res_company__education_type__governmental
+msgid "Governmental"
+msgstr "حكومي"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_add_student__id
+#: model:ir.model.fields,field_description:e_wallet.field_class_room__id
+#: model:ir.model.fields,field_description:e_wallet.field_e_wallet__id
+#: model:ir.model.fields,field_description:e_wallet.field_education_administration__id
+#: model:ir.model.fields,field_description:e_wallet.field_need_line__id
+#: model:ir.model.fields,field_description:e_wallet.field_office_office__id
+#: model:ir.model.fields,field_description:e_wallet.field_pos_config__id
+#: model:ir.model.fields,field_description:e_wallet.field_pos_order__id
+#: model:ir.model.fields,field_description:e_wallet.field_pos_payment_method__id
+#: model:ir.model.fields,field_description:e_wallet.field_remove_student__id
+#: model:ir.model.fields,field_description:e_wallet.field_res_company__id
+#: model:ir.model.fields,field_description:e_wallet.field_res_partner__id
+#: model:ir.model.fields,field_description:e_wallet.field_res_users__id
+#: model:ir.model.fields,field_description:e_wallet.field_school_school__id
+#: model:ir.model.fields,field_description:e_wallet.field_school_type__id
+#: model:ir.model.fields,field_description:e_wallet.field_students_need__id
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_feeding__id
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_line__id
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_transactions__id
+msgid "ID"
+msgstr ""
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_res_partner__identification
+#: model:ir.model.fields,field_description:e_wallet.field_res_users__identification
+msgid "Identification Number"
+msgstr "رقم الهوية"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_pos_payment_method__is_wallet
+msgid "Is Wallet?"
+msgstr "محفظة؟"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_transactions__journal_id
+msgid "Journal"
+msgstr "يومية"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_add_student____last_update
+#: model:ir.model.fields,field_description:e_wallet.field_class_room____last_update
+#: model:ir.model.fields,field_description:e_wallet.field_e_wallet____last_update
+#: model:ir.model.fields,field_description:e_wallet.field_education_administration____last_update
+#: model:ir.model.fields,field_description:e_wallet.field_need_line____last_update
+#: model:ir.model.fields,field_description:e_wallet.field_office_office____last_update
+#: model:ir.model.fields,field_description:e_wallet.field_pos_config____last_update
+#: model:ir.model.fields,field_description:e_wallet.field_pos_order____last_update
+#: model:ir.model.fields,field_description:e_wallet.field_pos_payment_method____last_update
+#: model:ir.model.fields,field_description:e_wallet.field_remove_student____last_update
+#: model:ir.model.fields,field_description:e_wallet.field_res_company____last_update
+#: model:ir.model.fields,field_description:e_wallet.field_res_partner____last_update
+#: model:ir.model.fields,field_description:e_wallet.field_res_users____last_update
+#: model:ir.model.fields,field_description:e_wallet.field_school_school____last_update
+#: model:ir.model.fields,field_description:e_wallet.field_school_type____last_update
+#: model:ir.model.fields,field_description:e_wallet.field_students_need____last_update
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_feeding____last_update
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_line____last_update
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_transactions____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_add_student__write_uid
+#: model:ir.model.fields,field_description:e_wallet.field_class_room__write_uid
+#: model:ir.model.fields,field_description:e_wallet.field_e_wallet__write_uid
+#: model:ir.model.fields,field_description:e_wallet.field_education_administration__write_uid
+#: model:ir.model.fields,field_description:e_wallet.field_need_line__write_uid
+#: model:ir.model.fields,field_description:e_wallet.field_office_office__write_uid
+#: model:ir.model.fields,field_description:e_wallet.field_remove_student__write_uid
+#: model:ir.model.fields,field_description:e_wallet.field_school_school__write_uid
+#: model:ir.model.fields,field_description:e_wallet.field_school_type__write_uid
+#: model:ir.model.fields,field_description:e_wallet.field_students_need__write_uid
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_feeding__write_uid
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_line__write_uid
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_transactions__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_add_student__write_date
+#: model:ir.model.fields,field_description:e_wallet.field_class_room__write_date
+#: model:ir.model.fields,field_description:e_wallet.field_e_wallet__write_date
+#: model:ir.model.fields,field_description:e_wallet.field_education_administration__write_date
+#: model:ir.model.fields,field_description:e_wallet.field_need_line__write_date
+#: model:ir.model.fields,field_description:e_wallet.field_office_office__write_date
+#: model:ir.model.fields,field_description:e_wallet.field_remove_student__write_date
+#: model:ir.model.fields,field_description:e_wallet.field_school_school__write_date
+#: model:ir.model.fields,field_description:e_wallet.field_school_type__write_date
+#: model:ir.model.fields,field_description:e_wallet.field_students_need__write_date
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_feeding__write_date
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_line__write_date
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_transactions__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_school_type__limit
+msgid "Limit"
+msgstr "حد الصرف في اليوم"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_line__limit
+msgid "Limit in Day"
+msgstr "حد الصرف في اليوم"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_e_wallet__line_ids
+msgid "Lines"
+msgstr ""
+
+#. module: e_wallet
+#: model:ir.model.fields.selection,name:e_wallet.selection__res_company__education_type__local
+msgid "Local "
+msgstr "اهلي"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_education_administration__manager_id
+#: model:ir.model.fields,field_description:e_wallet.field_res_company__manager_id
+msgid "Manager"
+msgstr "المدير"
+
+#. module: e_wallet
+#: model:ir.ui.menu,name:e_wallet.e_wallet_root_menu
+msgid "Masrof"
+msgstr "مصروف"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_education_administration__ministerial_number
+#: model:ir.model.fields,field_description:e_wallet.field_res_company__ministerial_number
+msgid "Ministerial number"
+msgstr "الرقم الوزاري "
+
+#. module: e_wallet
+#: model:ir.model.fields.selection,name:e_wallet.selection__res_company__period__morning
+msgid "Morning"
+msgstr "صباحي"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_class_room__name
+#: model:ir.model.fields,field_description:e_wallet.field_education_administration__name
+#: model:ir.model.fields,field_description:e_wallet.field_need_line__name
+#: model:ir.model.fields,field_description:e_wallet.field_office_office__name
+#: model:ir.model.fields,field_description:e_wallet.field_school_type__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_need_line__need_id
+msgid "Need"
+msgstr ""
+
+#. module: e_wallet
+#: code:addons/e_wallet/models/e_wallet.py:0
+#: code:addons/e_wallet/models/e_wallet.py:0
+#: code:addons/e_wallet/models/transactions.py:0
+#: code:addons/e_wallet/models/transactions.py:0
+#, python-format
+msgid "New"
+msgstr "جديد"
+
+#. module: e_wallet
+#: model:ir.model.fields.selection,name:e_wallet.selection__res_company__period__night
+msgid "Night "
+msgstr "مسائي"
+
+#. module: e_wallet
+#: model_terms:ir.actions.act_window,help:e_wallet.res_partner_action_responsable
+#: model_terms:ir.actions.act_window,help:e_wallet.res_partner_action_student
+msgid "Odoo helps you easily track all activities related to a responsable."
+msgstr ""
+
+#. module: e_wallet
+#: model:ir.actions.act_window,name:e_wallet.action_office_form
+#: model_terms:ir.ui.view,arch_db:e_wallet.view_office_form
+msgid "Office"
+msgstr "المكتب"
+
+#. module: e_wallet
+#: model:ir.ui.menu,name:e_wallet.menu_office_form
+#: model_terms:ir.ui.view,arch_db:e_wallet.view_education_administration_form
+msgid "Offices"
+msgstr "المكاتب"
+
+#. module: e_wallet
+#: model:ir.ui.menu,name:e_wallet.menu_e_wallet_operations
+msgid "Operations on the wallet"
+msgstr "العمليات على المحفظة"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_pos_config__owner
+msgid "Owner"
+msgstr "المالك"
+
+#. module: e_wallet
+#: model:ir.ui.menu,name:e_wallet.wallet_partner_menu
+msgid "Partners"
+msgstr "المستفيدين"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_res_partner__password
+msgid "Password"
+msgstr "كلمة السر"
+
+#. module: e_wallet
+#: model:ir.model.fields.selection,name:e_wallet.selection__e_wallet__restriction_type__percentage
+msgid "Percentage"
+msgstr "نسبة"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_res_company__period
+msgid "Period"
+msgstr "الفترة"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_education_administration__phone
+#: model:ir.model.fields,field_description:e_wallet.field_res_company__phone
+msgid "Phone"
+msgstr "التلفون"
+
+#. module: e_wallet
+#: model:ir.model,name:e_wallet.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "اعدادات نقطة البيع"
+
+#. module: e_wallet
+#: model:ir.model,name:e_wallet.model_pos_order
+msgid "Point of Sale Orders"
+msgstr ""
+
+#. module: e_wallet
+#: model:ir.model,name:e_wallet.model_pos_payment_method
+msgid "Point of Sale Payment Methods"
+msgstr ""
+
+#. module: e_wallet
+#: model_terms:ir.ui.view,arch_db:e_wallet.view_remove_student_form
+msgid "Remove"
+msgstr "حذف"
+
+#. module: e_wallet
+#: model:ir.actions.act_window,name:e_wallet.action_remove_student_form
+#: model:ir.ui.menu,name:e_wallet.menu_remove_student_form
+#: model_terms:ir.ui.view,arch_db:e_wallet.view_remove_student_form
+#: model_terms:ir.ui.view,arch_db:e_wallet.view_remove_student_tree
+msgid "Remove Student"
+msgstr "حذف طالب"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_res_partner__responsable_rank
+#: model:ir.model.fields,field_description:e_wallet.field_res_users__responsable_rank
+msgid "Responsable Rank"
+msgstr ""
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_res_partner__responsible
+#: model:ir.model.fields,field_description:e_wallet.field_res_users__responsible
+msgid "Responsible"
+msgstr "ولي الامر"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_e_wallet__restriction_type
+msgid "Restriction Type"
+msgstr "نوع القيد"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_add_student__school
+#: model:ir.model.fields,field_description:e_wallet.field_res_partner__school_id
+#: model:ir.model.fields,field_description:e_wallet.field_res_users__school_id
+msgid "School"
+msgstr "المدرسة"
+
+#. module: e_wallet
+#: model_terms:ir.ui.view,arch_db:e_wallet.view_school_company_form
+msgid "School Data"
+msgstr "بيانات المدرسة"
+
+#. module: e_wallet
+#: model_terms:ir.ui.view,arch_db:e_wallet.res_partner_view_form_student
+msgid "School Info"
+msgstr "بيانات المدرسة"
+
+#. module: e_wallet
+#: model:ir.ui.menu,name:e_wallet.menu_school_type_form
+msgid "School Type"
+msgstr "المراحل الدراسية"
+
+#. module: e_wallet
+#: model:ir.actions.act_window,name:e_wallet.action_school_type_form
+#: model_terms:ir.ui.view,arch_db:e_wallet.view_school_type_form
+#: model_terms:ir.ui.view,arch_db:e_wallet.view_school_type_tree
+msgid "School type"
+msgstr "نوع المدرسة"
+
+#. module: e_wallet
+#: model:ir.ui.menu,name:e_wallet.menu_school_company_form
+#: model_terms:ir.ui.view,arch_db:e_wallet.view_education_administration_form
+msgid "Schools"
+msgstr "المدارس"
+
+#. module: e_wallet
+#: model:ir.model.fields.selection,name:e_wallet.selection__res_users__partner_type__s_manager
+msgid "Schools managers"
+msgstr "مدراء المدارس"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_res_partner__second_name
+#: model:ir.model.fields,field_description:e_wallet.field_res_users__second_name
+msgid "Second Name"
+msgstr "الاسم الثاني"
+
+#. module: e_wallet
+#: model:ir.model.fields.selection,name:e_wallet.selection__res_company__building_type__special
+msgid "Special"
+msgstr "خاص"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_students_need__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_add_student__state
+#: model:ir.model.fields,field_description:e_wallet.field_remove_student__state
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_feeding__state
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_transactions__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_add_student__student
+#: model:ir.model.fields,field_description:e_wallet.field_remove_student__student
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_transactions__partner_id
+msgid "Student"
+msgstr "الطالب"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_res_company__student_advisor
+msgid "Student Advisor "
+msgstr "المشرف الطلابي"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_res_partner__student_rank
+#: model:ir.model.fields,field_description:e_wallet.field_res_users__student_rank
+msgid "Student Rank"
+msgstr ""
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_education_administration__services_manage_id
+msgid "Student Services Manager "
+msgstr "مدير خدمات الطلاب"
+
+#. module: e_wallet
+#: model:ir.model.fields.selection,name:e_wallet.selection__res_users__partner_type__s_advisor
+msgid "Student advisor"
+msgstr "المشرف الطلابي"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_res_company__students_count
+#: model:ir.model.fields,field_description:e_wallet.field_res_company__students_ids
+#: model:ir.model.fields,field_description:e_wallet.field_students_need__students_ids
+#: model_terms:ir.ui.view,arch_db:e_wallet.view_school_company_form
+#: model_terms:ir.ui.view,arch_db:e_wallet.view_students_need_form
+msgid "Students"
+msgstr "الطلاب"
+
+#. module: e_wallet
+#: model:ir.ui.menu,name:e_wallet.menu_students_need_form
+msgid "Students need"
+msgstr "الطلاب المحتاجين"
+
+#. module: e_wallet
+#: model_terms:ir.ui.view,arch_db:e_wallet.view_e_wallet_form
+msgid "Stusents"
+msgstr ""
+
+#. module: e_wallet
+#: model:ir.model.fields.selection,name:e_wallet.selection__res_company__building_type__tenant
+msgid "Tenant"
+msgstr "مستأجر"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_res_partner__third_name
+#: model:ir.model.fields,field_description:e_wallet.field_res_users__third_name
+msgid "Third Name"
+msgstr "الاسم الثالث"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_res_partner__in_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_res_users__in_wallet
+msgid "This student added to wallet "
+msgstr "مضاف الي محفظة؟"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_res_partner__needy
+#: model:ir.model.fields,field_description:e_wallet.field_res_users__needy
+msgid "This student needy"
+msgstr "محتاج الي كفالة؟"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_e_wallet__total_amount
+#: model_terms:ir.ui.view,arch_db:e_wallet.view_e_wallet_form
+msgid "Total Amount"
+msgstr "القيمة الكلية"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_transactions__amount_total
+msgid "Total Converted Amount"
+msgstr "القيمة الكلية"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_transactions__transaction_date
+msgid "Transaction Date"
+msgstr "تاريخ المعاملة"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_transactions__transaction_id
+msgid "Transaction Number"
+msgstr "اسم المعاملة"
+
+#. module: e_wallet
+#: model:ir.actions.act_window,name:e_wallet.action_wallet_transactions_form
+#: model:ir.model.fields,field_description:e_wallet.field_e_wallet__transactions_count
+#: model:ir.ui.menu,name:e_wallet.menu_wallet_transactions_form
+#: model_terms:ir.ui.view,arch_db:e_wallet.view_wallet_transactions_form
+#: model_terms:ir.ui.view,arch_db:e_wallet.view_wallet_transactions_tree
+msgid "Transactions"
+msgstr "المعاملات"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_e_wallet__transactions_ids
+msgid "Transfers"
+msgstr ""
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_res_users__partner_type
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_transactions__transaction_type
+msgid "Type"
+msgstr "النوع"
+
+#. module: e_wallet
+#: model_terms:ir.ui.view,arch_db:e_wallet.view_users_form_inhertrr
+msgid "User Type"
+msgstr "نوع المستخدم"
+
+#. module: e_wallet
+#: model:ir.model,name:e_wallet.model_res_users
+msgid "Users"
+msgstr "المستخدمين"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_add_student__wallet
+#: model:ir.model.fields,field_description:e_wallet.field_remove_student__wallet
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_feeding__wallet
+msgid "Wallet"
+msgstr "المحفطة"
+
+#. module: e_wallet
+#: model:ir.ui.menu,name:e_wallet.menu_wallet_feeding_form
+msgid "Wallet Feeding"
+msgstr "شحن المحفظة"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_e_wallet__responsable
+msgid "Wallet Owner"
+msgstr "ولي الامر"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_e_wallet__restriction
+msgid "Wallet Restrictions"
+msgstr "قيود على المحفظة"
+
+#. module: e_wallet
+#: model:ir.model,name:e_wallet.model_add_student
+msgid "add.student"
+msgstr ""
+
+#. module: e_wallet
+#: model:ir.actions.act_window,name:e_wallet.action_class_room_form
+#: model_terms:ir.ui.view,arch_db:e_wallet.view_class_room_form
+msgid "class room"
+msgstr "الصف"
+
+#. module: e_wallet
+#: model:ir.model,name:e_wallet.model_class_room
+msgid "class.room"
+msgstr ""
+
+#. module: e_wallet
+#: model_terms:ir.ui.view,arch_db:e_wallet.view_class_room_tree
+msgid "class_room"
+msgstr ""
+
+#. module: e_wallet
+#: model:ir.model.fields.selection,name:e_wallet.selection__res_users__partner_type__contractor
+msgid "contractors"
+msgstr "متعهد"
+
+#. module: e_wallet
+#: model:ir.model,name:e_wallet.model_e_wallet
+msgid "e.wallet"
+msgstr ""
+
+#. module: e_wallet
+#: model:ir.model,name:e_wallet.model_education_administration
+msgid "education.administration"
+msgstr ""
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_office_office__education_id
+msgid "education_id"
+msgstr ""
+
+#. module: e_wallet
+#: model:ir.model,name:e_wallet.model_need_line
+msgid "need.line"
+msgstr ""
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_education_administration__office_ids
+#: model_terms:ir.ui.view,arch_db:e_wallet.view_office_tree
+msgid "office"
+msgstr "المكتب"
+
+#. module: e_wallet
+#: model:ir.model,name:e_wallet.model_office_office
+msgid "office.office"
+msgstr ""
+
+#. module: e_wallet
+#: model:ir.model,name:e_wallet.model_remove_student
+msgid "remove.student"
+msgstr ""
+
+#. module: e_wallet
+#: model:ir.actions.act_window,name:e_wallet.res_partner_action_responsable
+#: model:ir.ui.menu,name:e_wallet.menu_e_wallet_responsable
+#: model_terms:ir.ui.view,arch_db:e_wallet.res_partner_view_search_wallet
+msgid "responsable"
+msgstr "ولي الامر"
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_education_administration__school_ids
+msgid "school"
+msgstr "المدرسة"
+
+#. module: e_wallet
+#: model:ir.model,name:e_wallet.model_school_school
+msgid "school.school"
+msgstr ""
+
+#. module: e_wallet
+#: model:ir.model,name:e_wallet.model_school_type
+msgid "school.type"
+msgstr ""
+
+#. module: e_wallet
+#: model:ir.actions.act_window,name:e_wallet.res_partner_action_student
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_line__student
+#: model:ir.ui.menu,name:e_wallet.menu_e_wallet_student
+#: model_terms:ir.ui.view,arch_db:e_wallet.res_partner_view_search_student
+msgid "student"
+msgstr "الطالب"
+
+#. module: e_wallet
+#: model:ir.actions.act_window,name:e_wallet.action_students_need_form
+#: model_terms:ir.ui.view,arch_db:e_wallet.view_students_need_form
+#: model_terms:ir.ui.view,arch_db:e_wallet.view_students_need_tree
+msgid "students need"
+msgstr "الطلاب المحتاجين"
+
+#. module: e_wallet
+#: model:ir.model,name:e_wallet.model_students_need
+msgid "students.need"
+msgstr ""
+
+#. module: e_wallet
+#: model:ir.model.fields,field_description:e_wallet.field_wallet_line__wallet
+msgid "wallet"
+msgstr "المحفظة"
+
+#. module: e_wallet
+#: model:ir.actions.act_window,name:e_wallet.action_wallet_feeding_form
+#: model_terms:ir.ui.view,arch_db:e_wallet.view_wallet_feeding_form
+#: model_terms:ir.ui.view,arch_db:e_wallet.view_wallet_feeding_tree
+msgid "wallet feeding"
+msgstr "شحن المحفظة"
+
+#. module: e_wallet
+#: model:ir.model,name:e_wallet.model_wallet_feeding
+msgid "wallet.feeding"
+msgstr ""
+
+#. module: e_wallet
+#: model:ir.model,name:e_wallet.model_wallet_line
+msgid "wallet.line"
+msgstr ""
+
+#. module: e_wallet
+#: model:ir.model,name:e_wallet.model_wallet_transactions
+msgid "wallet.transactions"
+msgstr ""
+
+#. module: e_wallet
+#: model:ir.model.fields.selection,name:e_wallet.selection__e_wallet__restriction_type__amount
+msgid "ِِAmount"
+msgstr "القيمة"

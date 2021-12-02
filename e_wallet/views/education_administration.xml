@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+
+        <record id="view_education_administration_form" model="ir.ui.view">
+            <field name="name">education.administration.form</field>
+            <field name="model">education.administration</field>
+            <field name="arch" type="xml">
+                <form string="Education Edministration">
+                <header>
+                </header>
+                   <sheet>
+                           <group >
+                             <field name="name"  />
+                           </group>
+
+                           <group >
+                           <group >
+                             <field name="ministerial_number"  />
+                             <field name="manager_id"  />
+
+                           </group >
+                           <group >
+                             <field name="phone"  />
+                             <field name="services_manage_id"  />
+
+                           </group >
+                           </group >
+                <notebook colspan="4">
+                    <page string="Schools" name="schools">
+                             <field name="school_ids"  />
+                    </page>
+                    <page string="Offices " name="offices ">
+                             <field name="office_ids"  />
+                    </page>
+		</notebook>
+		   </sheet>
+               </form>
+            </field>
+        </record>
+
+
+        <record id="view_education_administration_tree" model="ir.ui.view">
+            <field name="name">education.administration.tree</field>
+            <field name="model">education.administration</field>
+            <field name="arch" type="xml">
+                <tree string="Education Edministration">
+                             <field name="name"  />
+                             <field name="ministerial_number"/>
+                             <field name="manager_id"  />
+                             <field name="services_manage_id"  />
+
+		             
+               </tree>
+            </field>
+        </record>
+        <record id="action_education_administration_form" model="ir.actions.act_window">
+            <field name="name">Education Administration</field>
+            <field name="res_model">education.administration</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="menu_education_administration" parent="wallet_transaction_menu" name="Education Administration"  action="action_education_administration_form" sequence="1" />
+
+<!-- ____________________________________________________________________________________________________ -->
+
+
+        <record id="view_office_form" model="ir.ui.view">
+            <field name="name">e.office.form</field>
+            <field name="model">office.office</field>
+            <field name="arch" type="xml">
+                <form string="Office">
+                <header>
+                </header>
+                   <sheet>
+                           <group >
+                           <group >
+                             <field name="name"  />
+                             <field name="education_id"  />
+
+                           </group>
+                           </group >
+                
+		   </sheet>
+               </form>
+            </field>
+        </record>
+        <record id="view_office_tree" model="ir.ui.view">
+            <field name="name">e.office.tree</field>
+            <field name="model">office.office</field>
+            <field name="arch" type="xml">
+                <tree string="office">
+                             <field name="name"  />
+                             <field name="education_id"  />
+
+		             
+               </tree>
+            </field>
+        </record>
+        <record id="action_office_form" model="ir.actions.act_window">
+            <field name="name">Office</field>
+            <field name="res_model">office.office</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="menu_office_form" parent="wallet_transaction_menu" name="Offices"  action="action_office_form" sequence="3"/>
+
+
+      
+
+</odoo>
+

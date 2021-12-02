@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!--  ___________________________________     wallet_feeding         _______________________________________ -->
+
+        <record id="view_wallet_feeding_form" model="ir.ui.view">
+            <field name="name">wallet.feeding.form</field>
+            <field name="model">wallet.feeding</field>
+            <field name="arch" type="xml">
+                <form string="wallet feeding">
+                <header>
+                    <button name="action_confirm" id="action_confirm"
+                        string="Add" class="btn-primary" type="object"
+                        attrs="{'invisible': [('state', '=', 'done')]}"/>
+                    
+                    <field name="state" widget="statusbar" statusbar_visible="draft,done"/>
+                </header>
+                   <sheet>
+                           <group >
+                           <group >
+                             <field name="wallet"  attrs="{'readonly': [('state', '=', 'done')]}" />
+                             <field name="amount"  attrs="{'readonly': [('state', '=', 'done')]}" />
+                           </group>
+                           </group >
+		   </sheet>
+               </form>
+            </field>
+        </record>
+
+
+        <record id="view_wallet_feeding_tree" model="ir.ui.view">
+            <field name="name">wallet.feeding.tree</field>
+            <field name="model">wallet.feeding</field>
+            <field name="arch" type="xml">
+                <tree string="wallet feeding">
+                             <field name="wallet"  />
+                             <field name="amount"  />    
+               </tree>
+            </field>
+        </record>
+
+        <record id="action_wallet_feeding_form" model="ir.actions.act_window">
+            <field name="name">wallet feeding</field>
+            <field name="res_model">wallet.feeding</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_wallet_feeding_form" parent="menu_e_wallet_operations" name="Wallet Feeding" sequence="1" action="action_wallet_feeding_form" />
+
+
+<!-- _______________________________ add student ____________________________________________________________ -->
+
+        <record id="view_add_student_form" model="ir.ui.view">
+            <field name="name">add.student.form</field>
+            <field name="model">add.student</field>
+            <field name="arch" type="xml">
+                <form string="Add Student">
+                <header>
+                    <button name="action_confirm" id="action_confirm"
+                        string="Add" class="btn-primary" type="object"
+                        attrs="{'invisible': [('state', '=', 'done')]}"/>
+                    
+                    <field name="state" widget="statusbar" statusbar_visible="draft,done"/>
+                </header>
+                   <sheet>
+                           <group >
+                           <group >
+                             <field name="wallet" attrs="{'readonly': [('state', '=', 'done')]}" />
+                             <field name="student" attrs="{'readonly': [('state', '=', 'done')]}" />
+                           </group>
+                           </group >
+		   </sheet>
+               </form>
+            </field>
+        </record>
+
+
+        <record id="view_add_student_tree" model="ir.ui.view">
+            <field name="name">add.student.tree</field>
+            <field name="model">add.student</field>
+            <field name="arch" type="xml">
+                <tree string="Add Student">
+                             <field name="wallet"  />
+                             <field name="student"  />    
+               </tree>
+            </field>
+        </record>
+
+        <record id="action_add_student_form" model="ir.actions.act_window">
+            <field name="name">Add Student</field>
+            <field name="res_model">add.student</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_add_student_form" parent="menu_e_wallet_operations" name="Add Student" sequence="2" action="action_add_student_form" />
+
+<!-- ______________________________________________ remove student __________________________________ -->
+
+
+        <record id="view_remove_student_form" model="ir.ui.view">
+            <field name="name">remove.student.form</field>
+            <field name="model">remove.student</field>
+            <field name="arch" type="xml">
+                <form string="Remove Student">
+                <header>
+                    <button name="action_confirm" id="action_confirm"
+                        string="Remove" class="btn-primary" type="object"
+                        attrs="{'invisible': [('state', '=', 'done')]}"/>
+                    
+                    <field name="state" widget="statusbar" statusbar_visible="draft,done"/>
+                </header>
+                   <sheet>
+                        <group >
+                           <group >
+                             <field name="wallet" attrs="{'readonly': [('state', '=', 'done')]}" />
+                             <field name="student" attrs="{'readonly': [('state', '=', 'done')]}" />
+                           </group>
+                       </group>
+		   </sheet>
+               </form>
+            </field>
+        </record>
+
+
+        <record id="view_remove_student_tree" model="ir.ui.view">
+            <field name="name">remove.student.tree</field>
+            <field name="model">remove.student</field>
+            <field name="arch" type="xml">
+                <tree string="Remove Student">
+                             <field name="wallet"  />
+                             <field name="student"  />    
+               </tree>
+            </field>
+        </record>
+
+        <record id="action_remove_student_form" model="ir.actions.act_window">
+            <field name="name">Remove Student</field>
+            <field name="res_model">remove.student</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_remove_student_form" parent="menu_e_wallet_operations" name="Remove Student" sequence="3" action="action_remove_student_form" />
+
+
+      
+
+</odoo>
+

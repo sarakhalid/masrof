@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+
+        <record id="res_partner_view_search_wallet" model="ir.ui.view">
+            <field name="name">res.partner.search.inherit.wallet</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='inactive']" position="before">
+                   <filter string="responsable" name="responsable" domain="[('responsable_rank','=', True)]"/>
+                   <separator/>
+                </xpath>
+            </field>
+        </record>
+
+
+
+        <record id="res_partner_action_responsable" model="ir.actions.act_window">
+            <field name="name">responsable</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="context">{'search_default_responsable': 1,'res_partner_search_mode': 'responsable',  'default_responsable_rank': True ,  }</field>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Create a new responsabl in your address book
+              </p><p>
+                Odoo helps you easily track all activities related to a responsable.
+              </p>
+            </field>
+        </record>
+
+
+        <menuitem id="wallet_partner_menu" parent="e_wallet_root_menu" name="Partners"  sequence="4" />
+
+    <menuitem id="menu_e_wallet_responsable"
+        name="responsable"
+        parent="wallet_partner_menu"
+        action="res_partner_action_responsable"
+        sequence="3"/>
+
+<!-- ___________________________________________ Students ___________________________________________________ -->
+
+
+
+        <record id="res_partner_view_search_student" model="ir.ui.view">
+            <field name="name">res.partner.search.inherit.student</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='inactive']" position="before">
+                   <filter string="student" name="student" domain="[('student_rank','=', True)]"/>
+                   <separator/>
+                </xpath>
+            </field>
+        </record>
+
+
+
+        <record id="res_partner_action_student" model="ir.actions.act_window">
+            <field name="name">student</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="context">{'search_default_student': 1,'res_partner_search_mode': 'student',  'default_student_rank': True }</field>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Create a new responsabl in your address book
+              </p><p>
+                Odoo helps you easily track all activities related to a responsable.
+              </p>
+            </field>
+        </record>
+
+
+
+    <menuitem id="menu_e_wallet_student"
+        name="student"
+        parent="wallet_partner_menu"
+        action="res_partner_action_student"
+        sequence="3"/>
+
+
+
+
+        <record id="res_partner_view_tree_student" model="ir.ui.view">
+            <field name="name">res.partner.view.tree.student</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='email']" position="replace">               
+        <field name="identification" />
+
+                </xpath>
+             </field>
+          </record>
+
+
+        <record id="res_partner_view_form_student" model="ir.ui.view">
+            <field name="name">res.partner.view.form.student</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+
+
+                <xpath expr="//div[@name='button_box']" position="inside">
+
+                    <button type="object"
+                        name="action_view_transactions"
+                        class="oe_stat_button"
+                        icon="fa-briefcase"
+attrs="{'invisible': [ ('responsable_rank', '=', False)] }"
+                        >
+                        <field name="transactions_count" widget="statinfo" string="Total Amount"/>
+                    </button>
+
+                </xpath>
+
+
+
+                <xpath expr="//field[@name='name']" position="replace">
+
+<field name="full_name"  invisible="1" />
+					<div >
+						<group col="4">
+                            <label for="name"   attrs="{'invisible': [ ('company_type', '=', 'company')]}" />
+                            <label for="second_name"   attrs="{'invisible': [ ('company_type', '=', 'company')]}" />
+                            <label for="third_name"   attrs="{'invisible': [ ('company_type', '=', 'company')]}" />
+                            <label for="fourth_name"   attrs="{'invisible': [ ('company_type', '=', 'company')]}" />
+                            <h1><field name="name"  required="True"   /></h1>
+			    <h1><field name="second_name"   attrs="{'invisible': [ ('company_type', '=', 'company')],'required': [('company_type', '!=', 'company')] }" /></h1>
+                            <h1><field name="third_name"   attrs="{'invisible': [ ('company_type', '=', 'company')],'required': [('company_type', '!=', 'company')] }" /></h1>
+                            <h1><field name="fourth_name"      attrs="{'invisible': [ ('company_type', '=', 'company')],'required': [('company_type', '!=', 'company')] }" /></h1>
+</group>
+</div>
+
+
+                        
+                </xpath>
+
+
+
+				<xpath expr="//field[@name='company_type']" position="attributes" > 
+           			<attribute name="invisible">1</attribute>
+		    	</xpath>
+
+				<xpath expr="//field[@name='parent_id']" position="attributes" > 
+           			<attribute name="invisible">1</attribute>
+		    	</xpath>
+
+				<xpath expr="//field[@name='parent_id']" position="attributes" > 
+           			<attribute name="invisible">1</attribute>
+		    	</xpath>
+
+
+				<xpath expr="//field[@name='type']" position="attributes" > 
+           			<attribute name="invisible">1</attribute>
+		    	</xpath>
+				
+
+                <xpath expr="//label[@name='address_name']" position="replace">
+                            <label for="" name="address_name">
+                           
+                                <b >Address</b>
+                            </label>
+
+                </xpath>
+
+				
+                <xpath expr="//field[@name='type']" position="before">
+                     
+                       <field name="identification" attrs="{'invisible': [ ('company_type', '=', 'company')]}" />
+                       <field name="birthday" attrs="{'invisible': [ ('company_type', '=', 'company')]}"  />
+
+                      
+                        
+                </xpath>
+
+                <xpath expr="//field[@name='function']" position="before">
+                     
+
+                       <field name="birthday2" attrs="{'invisible': [ ('company_type', '=', 'company')]}"  />
+                          <field name="password" attrs="{'invisible': [ ('responsable_rank', '!=', True)],
+                          }" readonly="1"/>
+
+                        
+                </xpath>
+
+
+                     <xpath expr="//field[@name='vat']" position="replace"></xpath>
+                     <xpath expr="//field[@name='function']" position="replace"></xpath>
+                     <xpath expr="//field[@name='website']" position="replace"></xpath>
+                     <xpath expr="//field[@name='title']" position="replace"></xpath>
+                     <xpath expr="//field[@name='category_id']" position="replace"></xpath>
+
+
+
+                <xpath expr="//page[@name='sales_purchases']" position="before">
+                       <field name="responsable_rank" invisible='1'/>
+                       <field name="student_rank" invisible='1'/>
+                     <page name='student_info' string='School Info' attrs="{'invisible': [('student_rank', '!=', True)]}">
+                         <group>
+                       <field name="school_id"/>
+
+                       <field name="responsible" attrs="{'invisible': [ ('student_rank', '=', False)],
+                          'required': [ ('student_rank', '=', True)] }" />
+                       <field name="school_type" attrs="{'invisible': [ ('student_rank', '=', False)],
+                          'required': [ ('student_rank', '=', True)] }" />
+                       <field name="class_room" attrs="{'invisible': [ ('student_rank', '=', False)],
+                          'required': [ ('student_rank', '=', True)] }" />
+                       <field name="in_wallet" attrs="{'invisible': [ ('student_rank', '=', False)],
+                          'required': [ ('student_rank', '=', True)] }" />
+                       <field name="needy" attrs="{'invisible': [ ('student_rank', '=', False)],
+                          'required': [ ('student_rank', '=', True)] }" />
+
+                        </group>
+                     </page>
+                </xpath>
+            </field>
+        </record>
+
+
+
+
+        <record id="view_users_form_inhertrr" model="ir.ui.view">
+            <field name="name">view.users.form.inhert</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='login']" position="after">
+			<label for="partner_type" class="oe_edit_only" string="User Type"/>
+                   <field name="partner_type" />
+			<label for="education_administration" class="oe_edit_only" string="Education Administration" attrs="{'invisible': [ ('partner_type', '!=', 'education_manager')]}"/>
+                        <field name="education_administration" attrs="{'invisible': [ ('partner_type', '!=', 'education_manager')],
+                          'required': [ ('partner_type', '=', 'education_manager')] }" />
+<label for="Bank_account_number" class="oe_edit_only" string="Bank Account Number" attrs="{'invisible': [ ('partner_type', '!=', 'contractor')]}"/>
+
+                       <field name="Bank_account_number" attrs="{'invisible': [ ('partner_type', '!=', 'contractor')],
+                          'required': [ ('partner_type', '=', 'contractor')] }" />
+
+
+                    
+                </xpath>
+            </field>
+        </record>
+
+       
+</odoo>

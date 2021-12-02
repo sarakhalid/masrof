@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record model="crm.team" id="mobikul.salesteam_mobikul_sales">
+            <field name="name">Mobikul Sales</field>
+        </record>
+        <record model="fcm.registered.topics" id="mobikul.fcm_default_topic">
+            <field name="name">DEFAULT</field>
+        </record>
+
+        <record id="d_mobikul_setting" model="mobikul">
+            <field name="name">Mobikul App</field>
+            <field name="salesteam_id" ref="mobikul.salesteam_mobikul_sales"/>
+        </record>
+         <record id="payment_status_cron" model="ir.cron">
+        <field name="name">payment status</field>
+        <field name="model_id" ref="model_sale_order"/>
+        <field name="state">code</field>
+        <field name="code">model.payment_status()</field>
+        <field name="interval_number">10</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+         <field name="doall" eval="False"/>
+    </record>
+
+
+        <record model="ir.cron" id="mobikul_banner_cron_call">
+          <field name="name">Automated mobikul banner Scheduler</field>
+          <field name="active" eval="True"/>
+          <field name="interval_number">1</field>
+          <field name="interval_type">days</field>
+          <field name="numbercall">-1</field>
+          <field name="doall" eval="False"/>
+          <field name="model_id" ref="model_mobikul_banners"/>
+          <field name="code">model.process_inactive_mobikul_banner()</field>
+      </record>
+
+      <record model="ir.actions.server" id="sync_cat_server_action">
+          <field name="name">Sync Category</field>
+          <field name="model_id" ref="model_mobikul_category"/>
+          <field name="code">
+                 action=model.sync_category()
+          </field>
+      </record>
+          <record model="start.end.delivery.schedule" id="start_end_delivery_schedule_data">
+          <field name="start_time">8.00</field>
+          <field name="end_time">21.00</field>
+      </record>
+        <record model="sale.order.schedule.dashboard" id="sale_order_schedule_dashboard_data">
+          <field name="name">SALE DASHBOARD</field>
+
+      </record>
+         <record model="mobikul.terms" id="mobikul_terms_data">
+          <field name="name">Terms</field>
+
+      </record>
+           <record id="mobikul_push_notification_3" model="mobikul.push.notification.template">
+            <field name="name">signupNotify</field>
+            <field name="image" type="base64" file="mobikul/static/src/img/Sign-up.png"/>
+            <field name="condition">signup</field>
+            <field name="notification_title">Congrats...you have successfully created your account.</field>
+            <field name="notification_body">Feel free to contact us in case of any doubts.</field>
+            <field name="banner_action">none</field>
+        </record>
+
+        <record id="mobikul_push_notification_4" model="mobikul.push.notification.template">
+            <field name="name">OrderNotify</field>
+            <field name="image" type="base64" file="mobikul/static/src/img/Order-Placed.png"/>
+            <field name="condition">orderplaced</field>
+            <field name="notification_title">Thank you for your purchase !</field>
+            <field name="notification_body">Your Order has been placed, successfully.</field>
+            <field name="banner_action">none</field>
+        </record>
+
+
+
+        <!-- <record id="test_more_item_1" model="ir.values">
+            <field eval="'client_action_multi'" name="key2"/>
+            <field eval="'mobikul.category'" name="model"/>
+            <field name="name">Test Item</field>
+            <field eval="'ir.actions.server,%d'%sync_cat_server_action" name="value"/>
+        </record> -->
+
+    </data>
+</odoo>

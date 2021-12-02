@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="mobikul_banner_image_1" model="mobikul.banners">
+            <field name="image" type="base64" file="mobikul/static/src/img/Demo-Banner-1.png"/>
+            <field name="name">Banner1</field>
+            <field name="banner_action">product</field>
+            <field name="product_id">16</field>
+        </record>
+
+        <record id="mobikul_banner_image_2" model="mobikul.banners">
+            <field name="image" type="base64" file="mobikul/static/src/img/Demo-Banner-2.png"/>
+            <field name="name">Banner2</field>
+            <field name="banner_action">none</field>
+        </record>
+
+
+        <record id="mobikul_push_notification_1" model="mobikul.push.notification.template">
+            <field name="name">signupNotify</field>
+            <field name="image" type="base64" file="mobikul/static/src/img/Sign-up.png"/>
+            <field name="condition">signup</field>
+            <field name="notification_title">Congrats...you have successfully created your account.</field>
+            <field name="notification_body">Feel free to contact us in case of any doubts.</field>
+            <field name="banner_action">none</field>
+        </record>
+
+        <record id="mobikul_push_notification_2" model="mobikul.push.notification.template">
+            <field name="name">OrderNotify</field>
+            <field name="image" type="base64" file="mobikul/static/src/img/Order-Placed.png"/>
+            <field name="condition">orderplaced</field>
+            <field name="notification_title">Thank you for your purchase !</field>
+            <field name="notification_body">Your Order has been placed, successfully.</field>
+            <field name="banner_action">none</field>
+        </record>
+
+    <record id="mobikul_product_slider_1" model="mobikul.product.slider">
+            <field name="name">Discount for You</field>
+            <field name="product_selection">automatic</field>
+            <field name="product_based_on">new</field>
+            <field name="slider_mode">default</field>
+            <field name="item_limit">5</field>
+            <field name="item_display_limit">5</field>
+            <!-- <field name="product_image_position">center</field> -->
+        </record>
+        <record id="mobikul_product_slider_2" model="mobikul.product.slider">
+            <field name="name">Deal of the day</field>
+            <field name="product_selection">manual</field>
+            <field name="product_ids" eval="[(6,0,[ref('product.product_product_4_product_template')])]"/>
+                   <!--eval="[(6,0,[ref('product.product_product_4_product_template')])]"/>-->
+                   <!--eval="[(4,ref('product.product_product_4_product_template'))]"/>-->
+
+            <!--product_product_4c-->
+
+            <field name="slider_mode">fixed</field>
+            <field name="item_limit">5</field>
+            <field name="item_display_limit">5</field>
+            <!-- <field name="product_image_position">center</field> -->
+        </record>
+        <record id="mobikul_product_slider_3" model="mobikul.product.slider">
+            <field name="name">New </field>
+            <field name="product_selection">automatic</field>
+            <field name="product_based_on">wCategory</field>
+            <field name="wcategory_id" ref="website_sale.public_category_desks"/>
+            <field name="slider_mode">fixed</field>
+            <field name="item_limit">5</field>
+            <field name="item_display_limit">5</field>
+            <!-- <field name="product_image_position">center</field> -->
+        </record>
+    </data>
+</odoo>

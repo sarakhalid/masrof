@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="payment_acquirer_hyperpay" model="payment.acquirer">
+            <field name="name">HyperPay</field>
+            <field name="provider">hyperpay</field>
+            <field name="image_128" type="base64" file="payment_hyperpay/static/src/img/hyperpay-logo.jpg"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="state">test</field>
+            <field name="view_template_id" ref="hyperpay_form"/>
+            <field name="hyperpay_authorization">OGE4Mjk0MTc0ZDA1OTViYjAxNGQwNWQ4MjllNzAxZDF8OVRuSlBjMm45aA==</field>
+            <field name="hyperpay_merchant_id">8a8294174d0595bb014d05d82e5b01d2</field>
+            <field name="pre_msg"><![CDATA[
+            <div>Testing Credential for Hyperpay Test Mode</div>
+            <div> Card Number : 4200000000000000</div>
+            <div>CVV : any 3 digits</div>
+            <div>Expiry Date : any date after today</div>
+            ]]>
+            </field>
+        </record>
+
+    </data>
+</odoo>
