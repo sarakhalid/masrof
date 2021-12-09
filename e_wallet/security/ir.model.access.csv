@@ -14,3 +14,4 @@ access_need_line,need_line,model_need_line,group_e_wallet,1,1,1,1
 access_student_calendar,student_calendar,model_school_calendar,group_e_wallet,1,1,1,1
 access_school_semester,school_semester,model_school_semester,group_e_wallet,1,1,1,1
 access_contract_contract,contract_contract,model_contract_contract,group_e_wallet,1,1,1,1
+access_platform_platform,platform_platform,model_platform_platform,group_e_wallet,1,1,1,1

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+<template id="button_render_js" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script src="/e_wallet/static/src/js/e_wallet.js" type="text/javascript"/>
+        </xpath>
+    </template>
+</odoo>
+
+
+ 
+ 
+ 
+

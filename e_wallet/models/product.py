@@ -7,4 +7,11 @@ from odoo.exceptions import UserError
 class ProductTemplate(models.Model):
     _inherit = 'product.template'
 
+
+class product_product(models.Model):
+    _inherit = 'product.product'
+    
+    is_wallet = fields.Boolean(string="is wallet")
+
+
    

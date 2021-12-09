@@ -1,0 +1,167 @@
+<odoo>
+    <template id="portal_my_home_menu_transaction" name="Portal layout : transaction menu entries" inherit_id="portal.portal_breadcrumbs" priority="30">
+        <xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
+            <li t-if="page_name == 'transaction'" t-attf-class="breadcrumb-item #{'active ' if not transaction else ''}">
+                <a t-if="transaction" t-attf-href="/my/transactions?{{ keep_query() }}">Transactions1</a>
+                <t t-else="">Transactions2</t>
+            </li>
+            <li t-if="transaction" class="breadcrumb-item active">
+                <t t-esc="transaction.transaction_id" t-if="transaction.transaction_id != '/'"/>
+                <t t-else=""><em>Draft transaction</em></t>
+            </li>
+        </xpath>
+    </template>
+
+    <template id="portal_my_home_transaction" name="Portal My Home : transaction entries" inherit_id="portal.portal_my_home" priority="30">
+        <xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
+            <t t-if="transaction_count" t-call="portal.portal_docs_entry">
+                <t t-set="title">Transactions3</t>
+                <t t-set="url" t-value="'/my/transactions'"/>
+                <t t-set="count" t-value="transaction_count"/>
+            </t>
+        </xpath>
+    </template>
+
+    <template id="portal_my_transactions" name="My Transactions and Payments">
+      <t t-call="portal.portal_layout">
+        <t t-set="breadcrumbs_searchbar" t-value="True"/>
+            <t t-foreach="companies" t-as="company">
+
+            <h3>Amount in your Wallet :  <span t-esc="company.wallet_amount"/>  </h3> 
+            </t>
+
+        <t t-call="portal.portal_searchbar">
+            <t t-set="title">Transactions4</t>
+        </t>
+        <t t-if="not transactions">
+            <p>There are currently no transactions and payments for your account.</p>
+        </t>
+        <t t-if="transactions" t-call="portal.portal_table">
+            <thead>
+                <tr class="active">
+                    <th>Transaction</th>
+                    <th>Sale Order</th>
+                     <th>Tags</th>
+                    <th>Transaction Date</th>
+                     <th>Transaction Type</th>
+                    <th>State</th>
+                    <th >Amount </th>
+                    <th >Balance </th>
+                </tr>
+            </thead>
+            <tbody>
+                <t t-foreach="transactions" t-as="transaction">
+                    <tr>
+
+                        <td><span t-field="transaction.transaction_id"/></td>
+                        <td><span t-field="transaction.sale_order"/></td>
+                        <td >xx
+<t t-foreach="transaction.transaction_tags" t-as="bank">
+    <span t-field="bank.name" />z
+</t>
+
+
+
+                         </td>
+                        <td><span t-field="transaction.transaction_date"/></td>
+                        
+                        <td t-if="transaction.transaction_type == 'credit'" class="badge-pill badge-primary float-left" >Credit</td>
+                        <td t-if="transaction.transaction_type == 'debit'" class="badge-pill  badge-dark float-left">Debit</td>
+
+
+                        <td t-if="transaction.state == 'done'" class="badge-pill badge-success float-center" >Done</td>
+                        <td t-if="transaction.state == 'draft'" class="badge-pill badge-primary float-center" >draft</td>
+
+
+                        <td><span t-field="transaction.amount"/></td>
+                        <td><span t-field="transaction.amount_total"/></td>
+
+
+                        
+                    </tr>
+                </t>
+            </tbody>
+        </t>
+      </t>
+    </template>
+
+    <template id="portal_transaction_page" name="Transaction Portal Template" inherit_id="portal.portal_sidebar" primary="True">
+        <xpath expr="//div[hasclass('o_portal_sidebar')]" position="inside">
+            <t t-set="o_portal_fullwidth_alert" groups="sales_team.group_sale_salesman,account.group_account_invoice">
+                <t t-call="portal.portal_back_in_edit_mode">
+                    <t t-set="backend_url" t-value="'/web#model=%s&amp;id=%s&amp;action=%s&amp;view_type=form' % (transaction._transaction_id, transaction.id, transaction.env.ref('ways_wallet.action_ways_transactions').id)"/>
+                </t>
+            </t>
+
+            <div class="row mt16 o_portal_transaction_sidebar">
+                <!-- Sidebar -->
+                <t t-call="portal.portal_record_sidebar">
+                    <t t-set="classes" t-value="'col-lg-auto d-print-none'"/>
+                    <t t-set="title">
+                        <h2 class="mb-0">
+                            <b t-if="transaction.amount > 0" t-field="transaction.amount"/>
+                            <b t-else="1" t-field="transaction.amount"/>
+                        </h2>
+                        <div class="small"><i class="fa fa-clock-o"/><span class="o_portal_sidebar_timeago ml4" 
+                        t-att-datetime="transaction.transaction_date"/></div>
+                    </t>
+
+                    <t t-set="entries">
+                        <ul class="list-group list-group-flush flex-wrap flex-row flex-lg-column">
+                            <li class="list-group-item flex-grow-1">
+                                <div class="o_download_pdf btn-toolbar flex-sm-nowrap">
+                                    <div class="btn-group  flex-grow-1 mr-1 mb-1">
+                                        <a class="btn btn-secondary btn-block o_download_btn" t-att-href="transaction.get_portal_url(report_type='pdf', download=True)" title="Download"><i class="fa fa-download"/> Download</a>
+                                    </div>
+                                    <div class="btn-group flex-grow-1 mb-1">
+                                        <a class="btn btn-secondary btn-block o_print_btn o_portal_transaction_print" t-att-href="transaction.get_portal_url(report_type='pdf')" id="print_transaction_report" title="Print" target="_blank"><i class="fa fa-print"/> Print</a>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    </t>
+                </t>
+
+                <!-- Page Content -->
+                <div id="transaction_content" class="col-12 col-lg">
+                    <t t-if="error or warning" t-call="account.portal_transaction_error"/>
+                    <t t-if="success and (not error and not warning)" t-call="ways_wallet.portal_transaction_success"/>
+
+                    <div class="o_portal_html_view shadow p-3">
+                        <div class="o_portal_html_loader text-center">
+                            <i class="fa fa-circle-o-notch fa-spin fa-2x fa-fw text-black-50"></i>
+                        </div>
+                        <iframe id="transaction_html" class="mt8 mb8" width="100%" height="100%" frameborder="0" scrolling="no" t-att-src="transaction.get_portal_url(report_type='html')"/>
+                    </div>
+                    <!-- chatter -->
+                    <div id="transaction_communication" class="mt-4">
+                        <h2>History</h2>
+                        <t t-call="portal.message_thread">
+                            <t t-set="object" t-value="transaction"/>
+                        </t>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="portal_transaction_error" name="Transaction error/warning display">
+        <div class="row mr16">
+            <div t-attf-class="'col-lg-12 mr16 ml16 alert alert-dismissable' #{'alert-danger' if error else 'alert-warning'}" role="alert">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+                <t t-if="error == 'generic'" name="generic">
+                    There was an error processing this page.
+                </t>
+            </div>
+        </div>
+    </template>
+
+    <template id="portal_transaction_success" name="Transaction success display">
+        <div class="row mr16">
+            <div class="col-lg-12 mr16 ml16 alert alert-dismissable alert-success" role="status">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+            </div>
+        </div>
+    </template>
+</odoo>

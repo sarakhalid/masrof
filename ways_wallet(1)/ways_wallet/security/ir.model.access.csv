@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ways_transactions,ways.transactions,model_ways_transactions,base.group_user,1,1,1,1
+access_Website_ewallet,Website.ewallet,model_website_ewallet,base.group_user,1,1,1,1
+access_transaction_tags,transaction.tags,model_transaction_tags,base.group_user,1,1,1,1
+access_wallet_reference,Wallet.reference,model_wallet_reference,base.group_user,1,1,1,1

@@ -1,0 +1,194 @@
+<odoo>
+	<data>
+		       <record id="view_ways_transactions_calendar" model="ir.ui.view">
+            <field name="name">ways.transactions.calendar</field>
+            <field name="model">ways.transactions</field>
+            <field name="arch" type="xml">
+                <calendar string="Transactions" date_start="transaction_date" color="state" >
+                    <field name="currency_id" invisible="1"/>
+                    <field name="partner_id" avatar_field="image_128"/>
+                    <field name="amount_total" widget="monetary"/>
+                    <field name="transaction_id"/>
+                </calendar>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_ways_transactions_graph">
+            <field name="name">ways.transactions.graph</field>
+            <field name="model">ways.transactions</field>
+            <field name="arch" type="xml">
+                <graph string="Transactions">
+                    <field name="partner_id"/>
+                    <field name="amount_total" type="measure"/>
+                </graph>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_ways_transactions_pivot">
+            <field name="name">ways.transactions.pivot</field>
+            <field name="model">ways.transactions</field>
+            <field name="arch" type="xml">
+                <pivot string="Transactions">
+                    <field name="transaction_date" type="row"/>
+                    <field name="amount_total" type="measure"/>
+                </pivot>
+            </field>
+        </record>
+
+        <!-- Sales Orders Kanban View  -->
+        <record model="ir.ui.view" id="view_ways_transactions_kanban">
+            <field name="name">ways.transactions.kanban</field>
+            <field name="model">ways.transactions</field>
+            <field name="arch" type="xml">
+                <kanban class="o_kanban_mobile">
+                    <field name="transaction_id"/>
+                    <field name="partner_id"/>
+                    <field name="amount_total"/>
+                    <field name="transaction_date"/>
+                    <field name="state"/>
+                    <field name="currency_id"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_card oe_kanban_global_click">
+                                <div class="o_kanban_record_top mb16">
+                                    <div class="o_kanban_record_headings mt4">
+                                        <strong class="o_kanban_record_title"><span><t t-esc="record.partner_id.value"/></span></strong>
+                                    </div>
+                                    <strong><field name="amount_total" widget="monetary"/></strong>
+                                </div>
+                                <div class="o_kanban_record_bottom">
+                                    <div class="oe_kanban_bottom_left text-muted">
+                                        <span><t t-esc="record.transaction_id.value"/> <t t-esc="record.transaction_date.value"/></span>
+                                    </div>
+                                    <div class="oe_kanban_bottom_right">
+                                        <field name="state" widget="label_selection" options="{'classes': {'draft': 'default',  'done': 'success'}}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="view_ways_transactions_tree" model="ir.ui.view">
+            <field name="name">ways.transactions.tree</field>
+            <field name="model">ways.transactions</field>
+            <field name="priority">2</field>
+            <field name="arch" type="xml">
+                <tree string="Transactions" >
+                    <field name="transaction_id"/>
+                    <field name="transaction_date"/>
+                    <field name="partner_id"/>
+                    <field name="amount_total"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="view_ways_transactions_filter" model="ir.ui.view">
+            <field name="name">ways.transactions.select</field>
+            <field name="model">ways.transactions</field>
+            <field name="arch" type="xml">
+                <search string="Transactions">
+
+                    
+                     <group expand="0" string="Group By">
+                        <filter string="Type" name="type" domain="[]" context="{'group_by': 'transaction_type'}"/>
+                    
+                    </group>
+                </search>
+            </field>
+        </record>
+
+
+
+       <record id="view_ways_transactions_form" model="ir.ui.view">
+            <field name="name">ways.transactions.form</field>
+            <field name="model">ways.transactions</field>
+            <field name="arch" type="xml">
+              <form string="Transactions" class="o_sale_order">
+                <header>
+
+                    <button name="action_confirm" id="action_confirm"
+                        string="Credit" class="btn-primary" type="object"
+                        attrs="{'invisible': [('state', '=', 'done')]}"/>
+                    
+                    <field name="state" widget="statusbar" statusbar_visible="draft,done"/>
+                </header>
+                <sheet>
+
+                    <group>
+                        <group>
+                    		<field name="transaction_id"/>
+                    		<field name="transaction_date"/>
+                        </group>
+                        <group>
+                    		<field name="ewallet_id"/>
+                        </group>
+                    </group>
+
+                    <group>
+                        <group>
+		                    <field name="partner_id"/>
+		                    <field name="transaction_type"/>
+		                    <field name="transaction_tags" widget="many2many_tags"/>
+                        </group>
+                        <group>
+                         
+                            <field name="reference"/>
+                            <field name="amount"/>
+		                    <field name="currency_id"/>
+                        </group>
+                    </group>
+
+                    <group>
+
+		                    <field name="amount_total"/>                            
+                        </group>
+
+                    <group>
+                        <group>
+                    		<field name="journal_id"/>
+                            <field name="sale_order"/>
+                        </group>
+                        <group>
+                    		<field name="account_id"/>
+                    		<field name="record"/>
+
+                        </group>
+                    </group>
+
+
+                </sheet>
+              </form>
+            </field>
+        </record>
+
+
+
+        <record id="action_ways_transactions" model="ir.actions.act_window">
+            <field name="name">Transactions</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">ways.transactions</field>
+            <field name="view_mode">tree,kanban,form,calendar,pivot,graph</field>
+            <field name="context">{'search_default_type': 1}</field>        </record>
+
+
+
+
+
+        <menuitem id="ways_wallet"
+            name="Ways Wallet"
+            parent="website.menu_website_configuration"
+            />
+
+        <menuitem id="ways_transactions_ways"
+            name="Transactions"
+            parent="ways_wallet"
+            action="action_ways_transactions"
+            sequence="1"/>
+
+
+		
+	</data>
+</odoo>

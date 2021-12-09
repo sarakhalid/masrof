@@ -30,8 +30,8 @@
 		             <!--field name="total_amount"  /-->
                            </group>
                            <group >
-                             <field name="restriction"  />
-		             <field name="restriction_type" attrs="{'invisible': [('restriction', '=', False)]}" />
+                             <field name="wallet_name"  />
+		             <!--field name="restriction_type" attrs="{'invisible': [('restriction', '=', False)]}" /-->
                             
                            </group>
                            </group>

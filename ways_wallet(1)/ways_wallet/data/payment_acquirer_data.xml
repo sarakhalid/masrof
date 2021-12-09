@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="payment_acquirer_wallet" model="payment.acquirer">
+            <field name="name">E-Wallet</field>
+            <field name="provider">transfer</field>
+            <field name="image_128" type="base64" file="ways_wallet/wallet"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="state">test</field>
+           <field name="is_wallet">True</field>
+
+           
+            <field name="pre_msg"><![CDATA[
+            <div>Welciom in ways wallet</div>
+           
+            ]]>
+            </field>
+        </record>
+        
+        
+        
+            <record id="product_product_wallet" model="product.product">
+            <field name="name">SAR in the wallet </field>
+            <field name="type">service</field>
+            <field name="image_1920" type="base64" file="ways_wallet/real.jpg"/>
+            <field name="company_id" ref="base.main_company"/>
+           <field name="is_wallet">True</field>
+        </record>
+        
+       
+       
+       
+                   <record id="wallet_reference_wallet" model="wallet.reference">
+            <field name="name">From Sale Order</field>
+            <field name="from_sale">True</field>
+            
+        </record> 
+
+    </data>
+</odoo>

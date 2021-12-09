@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <template xml:space="preserve">
+    <t t-extend="ListView.buttons">
+      <t t-jquery="button.o_list_button_add" t-operation="before">
+<button t-if="widget.modelName == 'res.users'" class="btn btn-primary oe_action_button" type="button" accesskey="f"  >Add user permissions </button>
+      </t>
+
+    </t>
+
+
+
+
+
+
+  </template>
+
+
+
+
+
+

@@ -149,3 +149,8 @@ class ResUsers(models.Model):
     education_administration = fields.Many2one('education.administration', string='Education Administration')
     Bank_account_number = fields.Char(string='Bank account number' )
 
+
+    def add_wallet(self):
+        print ("GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG ")
+
+

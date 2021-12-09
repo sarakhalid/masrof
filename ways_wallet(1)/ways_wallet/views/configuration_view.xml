@@ -1,0 +1,245 @@
+<odoo>
+	<data>
+		     
+
+        <record id="view_website_ewallet_tree" model="ir.ui.view">
+            <field name="name">website.ewallet.tree</field>
+            <field name="model">website.ewallet</field>
+            <field name="priority">2</field>
+            <field name="arch" type="xml">
+                <tree string="E-Wallet" >
+                    <field name="name"/>
+                    <field name="website_tag"/>
+                    <field name="active"/>
+                    <field name="show_transactions"/>
+                </tree>
+            </field>
+        </record>
+
+
+       <record id="view_website_ewallet_form" model="ir.ui.view">
+            <field name="name">website.ewallet.form</field>
+            <field name="model">website.ewallet</field>
+            <field name="arch" type="xml">
+              <form string="E-Wallet" class="o_sale_order">
+                
+                <sheet>
+
+                    <group>
+                        <group>
+                            <field name="name"/> 
+                            <field name="website_tag"/>    
+                            <field name="show_transactions"/>                        
+                        </group>
+                        <group>
+                            <field name="active"/>   
+                            <field name="image" widget="image"/>                   
+                        </group>
+
+                    </group>
+                </sheet>
+              </form>
+            </field>
+        </record>
+
+
+
+        <record id="action_website_ewallet" model="ir.actions.act_window">
+            <field name="name">Website E-Wallet</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">website.ewallet</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <!--menuitem id="website_ewallet"
+            name="Website E-Wallet"
+            parent="ways_wallet"
+            action="action_website_ewallet"
+            sequence="4"/-->
+
+
+
+
+
+
+
+        <record id="view_transaction_tags_tree" model="ir.ui.view">
+            <field name="name">transaction.tags.tree</field>
+            <field name="model">transaction.tags</field>
+            <field name="priority">2</field>
+            <field name="arch" type="xml">
+                <tree string="Tags" >
+                    <field name="name"/>
+                    <field name="tag_type"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+
+       <record id="view_transaction_tags_form" model="ir.ui.view">
+            <field name="name">transaction.tags.form</field>
+            <field name="model">transaction.tags</field>
+            <field name="arch" type="xml">
+              <form string="Tags" class="o_sale_order">
+                
+                <sheet>
+
+                    <group>
+                        <group>
+                    <field name="name"/>
+                    <field name="tag_type"/>
+                    <field name="active"/>
+                 </group>
+                    </group>
+                </sheet>
+              </form>
+            </field>
+        </record>
+
+
+
+        <record id="action_transaction_tags" model="ir.actions.act_window">
+            <field name="name">Transaction Tags</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">transaction.tags</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <menuitem id="transaction_tags"
+            name="Transaction Tags"
+            parent="ways_wallet"
+            action="action_transaction_tags"
+            sequence="2"/>
+
+
+
+
+
+
+
+
+
+
+
+
+    <record id="view_inhirt_customers_form2" model="ir.ui.view">
+            <field name="name">res.customers.form.inherit2</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+
+
+        <xpath expr="//div[@name='button_box']" position="inside">
+                    <button type="object"
+                        name="action_view_transactions"
+                        class="oe_stat_button"
+                        icon="fa-briefcase"
+                        >
+                        <field name="transactions_count" widget="statinfo" string="Wallet SAR"/>
+                    </button>
+
+                </xpath>
+
+
+        <xpath expr="//field[@name='vat']" position="after">
+              <field name ="wallet_amount" invisible= "1"/>
+                </xpath>
+
+            </field>
+    </record>
+
+
+
+
+
+
+        <menuitem id="transaction_partner_customer_form"
+            name="Customers"
+            parent="ways_wallet"
+            action="base.action_partner_customer_form"
+            sequence="3"/>
+
+
+
+
+
+
+
+
+    <record id="view_inhirt_product_form2" model="ir.ui.view">
+            <field name="name">res.product.form.inherit2</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_variant_easy_edit_view"/>
+            <field name="arch" type="xml">
+
+            <sheet position="inside">
+                                <field name="is_wallet" invisible='1'/>
+                        </sheet>
+
+            </field>
+    </record>
+
+
+
+
+
+        <record id="view_wallet_reference_tree" model="ir.ui.view">
+            <field name="name">twallet.reference.tree</field>
+            <field name="model">wallet.reference</field>
+            <field name="priority">2</field>
+            <field name="arch" type="xml">
+                <tree string="Tags" >
+                    <field name="name"/>
+                    <field name="from_sale"/>
+                </tree>
+            </field>
+        </record>
+
+
+       <record id="view_wallet_reference_form" model="ir.ui.view">
+            <field name="name">wallet.reference.form</field>
+            <field name="model">wallet.reference</field>
+            <field name="arch" type="xml">
+              <form string="Tags" class="o_sale_order">
+                
+                <sheet>
+
+                    <group>
+                        <group>
+                    <field name="name"/>
+                    <field name="from_sale"/>
+                 </group>
+                    </group>
+                </sheet>
+              </form>
+            </field>
+        </record>
+
+
+
+        <record id="action_wallet_reference" model="ir.actions.act_window">
+            <field name="name">Wallet Reference</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">wallet.reference</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <menuitem id="wallet_reference"
+            name="Wallet Reference"
+            parent="ways_wallet"
+            action="action_wallet_reference"
+            sequence="4"/>
+
+
+
+
+
+
+
+		
+	</data>
+</odoo>

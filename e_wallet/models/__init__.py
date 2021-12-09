@@ -10,4 +10,5 @@ from . import wallet_operations
 from . import education_administration
 from . import contract
 from . import product
+from . import platform
 

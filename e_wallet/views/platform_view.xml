@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+
+        <record id="view_platform_form" model="ir.ui.view">
+            <field name="name">e.platform.form</field>
+            <field name="model">platform.platform</field>
+            <field name="arch" type="xml">
+                <form string="platform">
+                
+                   <sheet>
+
+
+                           <group >
+
+                             <field name="name"  />
+
+                           </group>
+                           <group >
+                           <group >
+                             <field name="owner"  />
+                             <field name="commercial_register"  />
+                                                        <field name="date"  />
+                           </group>
+                           <group >
+                             <field name="id_number"  />
+                             <field name="account_id"  />
+		       
+                           </group>
+                           </group>
+
+
+             
+		   </sheet>
+               </form>
+            </field>
+        </record>
+
+
+        <record id="view_platform_tree" model="ir.ui.view">
+            <field name="name">e.platform.tree</field>
+            <field name="model">platform.platform</field>
+            <field name="arch" type="xml">
+                <tree string="platform">
+				 <field name="name"  />
+                             <field name="owner"  />
+                             <field name="id_number"  />
+		             <field name="date"  />
+		             
+               </tree>
+            </field>
+        </record>
+
+        <record id="action_platform_form" model="ir.actions.act_window">
+            <field name="name">platform</field>
+            <field name="res_model">platform.platform</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <menuitem id="menu_root_platform"  parent="e_wallet_root_menu" name="Platform" sequence="7" action="action_platform_form" />
+
+        
+      
+
+</odoo>
+

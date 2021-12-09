@@ -10,7 +10,7 @@ import re
 
 class e_wallet(models.Model):
     _name = 'e.wallet'
-    _rec_name = 'wallet_no'
+    _rec_name = 'wallet_name'
 
 
     @api.depends('transactions_ids')
@@ -21,6 +21,13 @@ class e_wallet(models.Model):
                 amount = line.amount_total
             order.transactions_count = amount
 
+    @api.depends('responsable')
+    def _compute_wallet_name(self):
+        name = "Wallet"
+        for order in self:
+            if order.responsable:
+                name = order.responsable.full_name +" "+name
+            order.wallet_name = name
 
     def action_view_transactions(self):
         '''
@@ -59,7 +66,8 @@ class e_wallet(models.Model):
    
 
     wallet_no = fields.Char(string="E-Wallet Number"  , required=True ,default=lambda self: _('New') ,readonly=True) 
-    responsable = fields.Many2one('res.partner', string='Wallet Owner',domain=[('responsable_rank','=',True)])
+    wallet_name = fields.Char(string="E-Wallet Name"  , required=True ,compute='_compute_wallet_name') 
+    responsable = fields.Many2one('res.partner', required= True , string='Wallet Owner',domain=[('responsable_rank','=',True)])
     restriction = fields.Boolean(string='Wallet Restrictions' , default=False)
     restriction_type = fields.Selection([('amount', 'Amount'),('percentage', 'Percentage')],string="Restriction Type")
     
